@@ -1,3 +1,3 @@
 # My-Notes
 
-Just some reading notes.
+Opened in Macdown will be better.
