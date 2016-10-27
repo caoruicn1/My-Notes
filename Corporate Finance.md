@@ -1,4 +1,39 @@
-[TOC]
+# 《CORPORATE FINANCE》
+**Edition**: Third
+, **Author**: Jonathen Berk & Perter Demarzo
+
+## Content
+* PART 1 INTRODUCTION
+	* [Chapter 1 The Corporation](#1)
+	* [Chapter 2 Introduction to Financial Statement Analysis](#2)
+	* [Chapter 3 Financial Deciasion Making and the Law of One Price](#3)
+* PART 2 TIME, MONEY, AND INTEREST RATES
+	* [Chapter 4 The Time Value of Money](#4)
+	* [Chapter 5 Interest Rates](#5)
+	* [Chapter 6: Valuing Bonds](#6)
+* PART 3 VALUING PROJECTS AND FIRMS
+	* [Chapter 7 Investment Decision Rules](#7)
+	* [Chapter 8 Fundamentals of Capital Budgeting](#8)
+	* []()
+* PART 4 RISK AND RETURN
+	* []()
+	* []()
+* PART 5 CAPITAL STRUCTURE
+
+* PART 6 ADVANCED VALUATION
+
+* PART 7 OPTIONS
+
+* PART 8 LONG-TERM FINANCING
+
+* PART 9 SHORT-TERM FINANCING
+
+* PART 10 SPECIAL TOPICS
+* [Chapter 3 Vector Spaces and SubSpaces](#3)
+
+---
+
+<span id="1"></span>
 # Part 1 Introduction
 ## Chapter 1 The Corporation
 
@@ -23,6 +58,7 @@
 	* Primary market & Secondary market 
 	* NYSE(one market maker) & NASDAQ(more than one)
 
+<span id="2"></span>
 ## Chapter 2 Introduction to Financial Statement Analysis
 * **Firms' Disclosure of Financial information**
 	* Preparation Financial Statements: Generally Accepted Accounting Principles(GAAP), Auditor
@@ -56,6 +92,7 @@
 * Change in Stockholders' Equity = Retained Earnings + Net sales of stock = Net Income - Dividends + Sales of stock - Repurchases of stock
 
 * **Management discussion and analysis(MD&A)**: disclose any off-balance sheet transactions
+* EBIT：earnings before interest and tax。
 
 * **Financial Statement Analysis**
 	* **Profitability Ratio**
@@ -100,6 +137,7 @@
 	* Fraud 1: Sold assets with a promise to buy back at an even higher future price.
 	* Fraud 2: Reclassify money in operating expenses as long-term capital expenditures. Because then operating expenses are decuted from earnings immediately and capital expenditures are depreciated slowly over time. It boost the reported earnings but not cash flow because long-term investments must be deducted in cash flow statement.
 
+<span id="3"></span>
 ## Chapter 3 Financial Deciasion Making and the Law of One Price
 * **Important Concept:**
 	* Law of one price, NPV Decision Rule, Separation Priciple
@@ -116,6 +154,7 @@
 	* $Expected\ return\ of\ a\ risky\ investment = \frac{Expected\ gain\ at\ end\ of\ year}{Initial\ cost}$
 	* Risk Premium: $r_s = r_f + (risk\ premium\ for\ investment\ S)$
 
+<span id="4"></span>
 #Part 2 Time, Money and Interest Rate
 ## Chapter 4 The Time Value of Money
 * **The Timeline**: Stream of cash flows, timeline
@@ -142,6 +181,7 @@
 	* $IRR\ with\ two\ cash\ flows = (\frac{FV}{P})^{1/N}-1$
 	* $IRR\ of\ growing\ perpetuity = \frac{C}{P}+g$
 
+<span id="5"></span>
 ## Chapter 5 Interest Rates
 * **Interest Rate Quotes and Adjustments**
 	* Effective Annual Rate**(EAR)**: The actual amount of interest that will be earned at the end of one year.
@@ -165,6 +205,7 @@
 * **Present Value of a Continuously Growing Perpetuity**: $$PV=\frac{C}{r_{cc}-g_{cc}}\\ r_{cc}=ln(1+r),\ g_{cc}=ln(1+g)$$
 * **Mid-year convention** pretend that all of the cash flows for the year arrive in the middle of the year. $\overline{C_1}$ is the total cash flwos that arrive during the first year.  $$\frac{C}{r_{cc}-g_{cc}}\approx \frac{\overline{C_1}}{r-g}\times (1+r)^{1/2}$$
 
+<span id="6"></span>
 ## Chapter 6: Valuing Bonds
 * **Bond Cash Flows, Prices, and Yields**
 	* bond certificate, maturity date, term, coupons, face value, coupon rate
@@ -203,6 +244,7 @@
 	* **Computing Bonds Yields from Forward Rates**: $(1+f_1)\times (1+f_2)\times \ldots (1+f_n) = (1+ YTM_n)^n$
 	* $Expected\ Future\ Spot\ Interest\ Rate = Forward\ Interest\ Rate + Risk\ Premium$
 
+<span id="7"></span>
 # Part 3 Valuing Projects and Firms
 ## Chapter 7 Investment Decision Rules
 * **NPV and Stand-Alone Projects**
@@ -236,19 +278,43 @@
 	* $Profitability\ Index= \frac{Value\ Created}{Resource\ Consumed}=\frac{NPV}{Resource\ Consumed}$
 	* Necessary conditions: exhausted, single relevent resource constraint.
 
+<span id="8"></span>
 ## Chapter 8 Fundamentals of Capital Budgeting
 * **Forecasting Earnings**
-	* $$Unlervered\ Net\ Income = EBIT\times (1-t_c) = (Revenues - Costs - Depreciation)\times (1-t_c)$$
+	* **Capital budget**: lists the projects and investments that a company plans to undertake during the coming year.
+	* **Incremental earnings**: the amount by which the firm's earnings are expected to change as a result of the investment decision.
+	* **Straight-line depreciation**: the asset's cost divided equally over its estimated useful life.
+	* $$\begin{align} Unlervered\ Net\ Income & = EBIT\times (1-t_c) \\ & = (Revenues - Costs - Depreciation)\times (1-t_c) \end{align}$$
 
 * **Determining Free Cash Flow and NPV**
-	* $Net\ working\ capital = Cash+Inventory+Receivables-Payables$
+	* $\begin{align}Net\ working\ capital(NWC) & = Current\ Assets-Current\ Liabilities \\ & = Cash+Inventory+Receivables-Payables \end{align}$
+	* $\begin{align} Free\ Cash\ Flow & = \overbrace{(Revenues-Costs-Depreciation)\times (1-t_c)}^{Unlevered\ Net\ Income} \\ & + Depreciation - CapEx - 	\Delta NWC \\& = (Revenues-Costs)\times (1-t_c) - CapEx - 	\Delta NWC + Depreciation \times t_c \end{align}$
+		* $Depreciation \times t_c$ is called the **depreciation tax shield**. It has *positive* impact on free cash flow.
+		* $Capital\ Expenditures$
+	* $PV(FCF_t)=\frac{FCF_t}{(1+r)^t} = FCF_t \times \frac{1}{\underbrace{(1+r)^t}_{t-year\ discount\ factor}}$
 * **Choosing Among Alternatives**
-	* $Free\ Cash\ Flow = \overbrace{(Revenues-Costs-Depreciation)\times (1-t_c)}^{Unlevered\ Net\ Income} \\+ Depreciation - CapEx - 	\Delta NWC$
-
+	* Comparing **NPV** and **Free Cash Flows**.
 * **Further Adjustments to Free Cash Flow**
+	* Other Non-Cash Items
+	* Timing of Cash Flows
+	* Accelerated Depreciation
+		* Modified Accelerated Cost Recovery System(MACRS) depreciation: the firm first categorizes assets according to their recovery period. Then based on the recovery period, MACRS depreciation tables assign a fraction of the purchase price that the firm can recover each year.
+	* Liquidation or Salvage Value
+		* Assets that are no longer needed often have a resale value, or some salvage value if the parts are sold for scrap.
+		* $Gain\ on\ Sale = Sale\ Price-Book\ Value$
+		* $Book\ Value = Purchase\ Price-Accumulated\ Depreciation$
+		* $After\text{-}Tex\ Cash\ Flow\ from\ Asset\ Sale=Sale\ Price-(t_c \times Gain\ on\ Sale)$
+	* Terminal or Continuation Value
+		* It's common to explicitly calculate free cash flow over a short horizon, and then assume that cash flows grow at some constant rate beyond the forecast horizon.
+	* Tax Carryforwards
+		* When a firm can **carry back losses**, it receives a refund for back taxes in the current year. Otherwise, the firm must **carry forward the loss** and use it to offset future taxable income. When a firm has **tax loss carryforwards** well in excess of its current pretax income, then additional income it earns today will not increase the taxes it owes until after it exhausts its **carryforwards**. This delay reduces the present value of the tax liability.
 
 * **Analyzing the Project**
-
+	* Break-Even Analysis
+		* It is the level for which the investment has an **NPV of zero**.
+		* **Parameter**: Units sole, Wholesale price, Cost of goods, Cost of capital.
+	* Sensitivity Analysis
+	* Scenario Analysis
 
 
 

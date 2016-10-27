@@ -4,16 +4,17 @@
 , **Video**: [MIT Opencourse in 163](http://open.163.com/special/opencourse/daishu.html) & [MIT Opencourseware](https://ocw.mit.edu/courses/mathematics/18-700-linear-algebra-fall-2013/)
 
 
+
 ## Content
-- [Chapter 1 Introduction to Vectors](##Chapter 1 Introduction to Vectors)
-- [Chapter 2 Solving Linear Equations](##Chapter 2 Solving Linear Equations)
-- [Chapter 3 Vector Spaces and SubSpaces](##Chapter 3 Vector Spaces and SubSpaces)
- 
+* [Chapter 1 Introduction to Vectors](#1)
+* [Chapter 2 Solving Linear Equations](#2)
+* [Chapter 3 Vector Spaces and SubSpaces](#3)
+* 
 
 ---
 
-
-##Chapter 1 Introduction to Vectors
+<span id="1"></span>
+##Chapter 1 Introduction to Vectors 
 
 * **Vector addition:** $v+w$ and 
 * **linear combinations**: $Ax_1+Bx_2=b$* **The dot product:** $v·w$ of two vectors
@@ -35,8 +36,9 @@
 	1. Dot product
 	2. combination of the columns of the matrix
 
+<span id="2"></span>
+##Chapter 2 Solving Linear Equations 
 
-##Chapter 2 Solving Linear Equations
 ### Vectors and Linear Equations
 
 * **Coefficient matrix**: On the left side of the equations
@@ -135,8 +137,9 @@ $$
 	* Make pivot not zero.
 	* $PA=LU$, A is invertible
 
-
+ <span id="3"></span>
 ## Chapter 3 Vector Spaces and SubSpaces
+ 
 ### Spaces of Vectors
 
 * **Vector Space Definition**: 
@@ -189,7 +192,7 @@ $$x=C\begin{bmatrix}-1 \\ -1 \\ 1 \end{bmatrix} =C\begin{bmatrix}-F\\I \end{bmat
 
 
 * The **Rank** of A: number of pivot
-* **Number of Free variables** in a $n \times m$: $n-r$
+* **Number of Free variables** in a $m \times n$: $n-r$
 
 ### The Complete Solution to Ax=b
 * Augmented matrix
@@ -233,17 +236,40 @@ $$C_1x_1+c_2x_2+\dots +C_nx_n \neq 0$$
 * **Basis**
 	1. They are independent
 	2. They span the space
+* The columns of every **invertible and singular** $n$ by $n$ matrix give a basis for $R^n$
 
 * **Dimension**
 	* Every basis for the space has the same number of vector.
+	* This number of vectors in a basis is the dimension of the space.
 
 * $rank(A)= number\ of\ pivot\ columns = dim\ C(A)$
 * $dim\ N(A) = number\ of\ free\ varibles = n-r$
 
+### Dimensions of the Four Subspaces
+
+![Four fundamental Subspaces](https://raw.githubusercontent.com/Chandlercjy/My-Notes/Chandler/Pictures/线性代数，四个子空间.png)
+
+* **Four Fundamental Subspaces**
+	1. The $row\ space$ is $C(A^T)$, a subspace of $R^n$, $r$ dimensions
+	2. The $column\ space$ is $C(A)$, a subspace of $R^m$, $r$ dimensions
+	3. The $nulls\ space$ is $N(A)$, a subspace of $R^n$, $n-r$ dimensions
+	4. The $left\ nullspace$ is $N(A^T)$, a subspace of $R^m$. $m-r$ dimensions. This is our new space.
+* The row space and column space have the same dimension $r$
+
+* **The Four Subspaces for R**
 
 
+	* $$E\begin{bmatrix} A&I \end{bmatrix} \rightarrow \begin{bmatrix} R&E \end{bmatrix}$$
+$$EA=R$$
+	* in chapter 2, $R$ was $I$. Then $E$ was $A^{-1}$.
 
+* **Key ideas**	1. The $r$ pivot rows of $R$ are a basis for the row spaces of $R$ and $A$ (same space).	2. The $r$ pivot columns of $A$  are a basis for its column space.	3. The $n - r$ special solutions are a basis for the nullspaces of $A$ and $R$ (same space). 
+	4. The last $m-r$ rows of $I$ are a basis for the left null space of $R$.	5. The last $m-r$ rows of $E$ are a basis for the left null space of $A$.
 
+* **New vector space**
+	* All $3\times 3$ matrix
+$$Subspaces\ of\ M < upper\ trangular < Symmetric < Diagonal$$
+$$\begin{bmatrix}1&0&0 \\ 0&3&0 \\ 0&0&0 \end{bmatrix},\begin{bmatrix}1&0&0 \\ 0&0&0 \\ 0&0&0 \end{bmatrix},\begin{bmatrix}0&0&0 \\ 0&0&0 \\ 0&0&7 \end{bmatrix}$$
 
 
 
