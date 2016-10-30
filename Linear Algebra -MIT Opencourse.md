@@ -6,15 +6,19 @@
 
 
 ## Content
-* [Chapter 1 Introduction to Vectors](#1)
-* [Chapter 2 Solving Linear Equations](#2)
-* [Chapter 3 Vector Spaces and SubSpaces](#3)
-* 
+* [CHAPTER 1 Introduction to Vectors](#1)
+* [CHAPTER 2 Solving Linear Equations](#2)
+* [CHAPTER 3 Vector Spaces and SubSpaces](#3)
+* [CHAPTER 4 Orthogonality]()* [CHAPTER 5 Determinants]()
+* [CHAPTER 6 Eigenvalues and Eigenvectors]()* [CHAPTER 7 Linear Transformations]()
+* [CHAPTER 8 Applications]()
+* [CHAPTER 9 Numerical Linear Algebra]()
+* [CHAPTER 10 Complex Vectors and Matrices]()
 
 ---
 
 <span id="1"></span>
-##Chapter 1 Introduction to Vectors 
+##CHAPTER 1 Introduction to Vectors 
 
 * **Vector addition:** $v+w$ and 
 * **linear combinations**: $Ax_1+Bx_2=b$* **The dot product:** $v·w$ of two vectors
@@ -37,7 +41,7 @@
 	2. combination of the columns of the matrix
 
 <span id="2"></span>
-##Chapter 2 Solving Linear Equations 
+##CHAPTER 2 Solving Linear Equations 
 
 ### Vectors and Linear Equations
 
@@ -138,7 +142,7 @@ $$
 	* $PA=LU$, A is invertible
 
  <span id="3"></span>
-## Chapter 3 Vector Spaces and SubSpaces
+## CHAPTER 3 Vector Spaces and SubSpaces
  
 ### Spaces of Vectors
 
@@ -249,6 +253,8 @@ $$C_1x_1+c_2x_2+\dots +C_nx_n \neq 0$$
 
 ![Four fundamental Subspaces](https://raw.githubusercontent.com/Chandlercjy/My-Notes/Chandler/Pictures/线性代数，四个子空间.png)
 
+* The matrix A is m by n
+
 * **Four Fundamental Subspaces**
 	1. The $row\ space$ is $C(A^T)$, a subspace of $R^n$, $r$ dimensions
 	2. The $column\ space$ is $C(A)$, a subspace of $R^m$, $r$ dimensions
@@ -261,7 +267,7 @@ $$C_1x_1+c_2x_2+\dots +C_nx_n \neq 0$$
 
 	* $$E\begin{bmatrix} A&I \end{bmatrix} \rightarrow \begin{bmatrix} R&E \end{bmatrix}$$
 $$EA=R$$
-	* in chapter 2, $R$ was $I$. Then $E$ was $A^{-1}$.
+	* in CHAPTER 2, $R$ was $I$. Then $E$ was $A^{-1}$.
 
 * **Key ideas**	1. The $r$ pivot rows of $R$ are a basis for the row spaces of $R$ and $A$ (same space).	2. The $r$ pivot columns of $A$  are a basis for its column space.	3. The $n - r$ special solutions are a basis for the nullspaces of $A$ and $R$ (same space). 
 	4. The last $m-r$ rows of $I$ are a basis for the left null space of $R$.	5. The last $m-r$ rows of $E$ are a basis for the left null space of $A$.
@@ -270,8 +276,37 @@ $$EA=R$$
 	* All $3\times 3$ matrix
 $$Subspaces\ of\ M < upper\ trangular < Symmetric < Diagonal$$
 $$\begin{bmatrix}1&0&0 \\ 0&3&0 \\ 0&0&0 \end{bmatrix},\begin{bmatrix}1&0&0 \\ 0&0&0 \\ 0&0&0 \end{bmatrix},\begin{bmatrix}0&0&0 \\ 0&0&0 \\ 0&0&7 \end{bmatrix}$$
+	* Rank 1 matrix: $A=uv^T$
+	* Subset of rank 1 matrices not a subspace.
+
+* **Expample**:
+	* In $R^4$, $v=\begin{bmatrix} v_1\\v_2\\v_3\\v_4 \end{bmatrix}$
+	* $S=$ all $ v\ $in $R^4$ 
+	* $Av=0$ $\rightarrow$ $v_1+v_2+v_3+v_4=0$ 
+	* $S=$ nullspace of $A=\begin{bmatrix} 1&1&1&1 \end{bmatrix}$ 
+	* $rank = 1, dimN(A)=n-r=3$
+	* Basis for S: $\begin{bmatrix} -1\\1\\0\\0 \end{bmatrix},\begin{bmatrix} -1\\0\\1\\0 \end{bmatrix},\begin{bmatrix} -1\\0\\0\\1 \end{bmatrix}$
+
+### Graph
+* $Graph=\{nodes, edges\}$
+* Incidence matrix: a matrix that tells you what the graph tells you.
+* $Ax=0 \rightarrow$ Ohm's Law
+* $A^Ty=0 \rightarrow$ Kirchoff's Current Law(KCL)
+* **Euler Formula**: $\#nodes-\#edges+\#loops=1$
+* **Balance equation**: $A^TCAx=f$
+	* $e=Ax$, Potential differences,Ohm's Law
+	* $y=Ce$, The current come from the potential difference
+	* $A^Ty=f$, f means current source, KCL
+
+* $N(CD)=N(D)$ if C is invertible.
+* $B^2=0$ doesn't mean $B=0$
+
+## CHAPTER 4 Orthogonality
 
 
 
-
-
+## CHAPTER 5 Determinants
+## CHAPTER 6 Eigenvalues and Eigenvectors## CHAPTER 7 Linear Transformations
+## CHAPTER 8 Applications
+## CHAPTER 9 Numerical Linear Algebra
+## CHAPTER 10 Complex Vectors and Matrices

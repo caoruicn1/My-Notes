@@ -525,10 +525,16 @@
 * **The Flow-to-Equity Method**
 	* $FCFE=FCF-(1-\tau_c) \times (Interest\ Payments)+(Net\ Borrowing)$
 * **Project-Based Costs of Capital**
+* $$\begin{align} & r_U =\frac{E}{E+D}r_E+\frac{D}{E+D}r_D=Pretax WACC \\ &   r_E=r_U+\frac{D}{E}(r_U-r_D) \\ & r_{wacc}=r_U-d\tau_c r_D \end{align}$$
 * 
 * **APV with Other Leverage Policies**
 * **Other Effects of Financing**
 * **Advanced Topics in Capital Budgeting**
+* $r_U =\frac{E}{E+D}r_E+\frac{D}{E+D}r_D=Pretax WACC$ or, equivalently, $r_E=r_U+\frac{D^s}{E}(r_U-r_D)$
+* $r_{wacc}=r_U-d\tau_c[r_D+\phi (r_U-r_D)]$
+* $r_D^* \equiv r_D\frac{(1-\tau_i)}{1-\tau_e}$
+* $\tau^*=1-\frac{(1-\tau_c)(1-\tau_e)}{(1-\tau_i)}$
+* $r_U=\frac{E}{E+D^s}r_E+\frac{D^s}{E+D^s}r_D^*$
 
 <span id="19"></span>
 ## CHAPTER 19 Valuation and Financial Modeling: A Case Study
@@ -536,8 +542,12 @@
 * **Valuation Using Comparables**
 * **The Business Plan**
 * **Building the Financial Model**
+	* $New\ Goodwill = Acquisition\ Price-Value\ of\ Net\ Assets\ Acquired$
+	* $NEW\ Stockholders \Equity = Equity\ Contributions- Expensed\ Transaction\ Fees$
 * **Estimating the Cost of Capital**
 * **Valuing the Investment**
+	* $Enterprise\ Value\ in\ Year\ T = V_T^L= \frac{FCF_{T+1}}{r_{wacc}-g}$
+	* $Cash\ Multiple=\frac{Total\ Cash\ Received}{Total\ Cash\ Invested}$
 * **Sensitivity Analysis**
 
 <span id="20"></span>
@@ -546,7 +556,10 @@
 
 * **Option Basics**
 * **Option Payoffs at Expiration**
+	* $C=max(S-K,0)$
+	* $P=max(K-S,0)$
 * **Put-Call Parity**
+	* $C=P+S-PV(K)-PV(Div)$
 * **Factors Affecting Option Prices**
 * **Exercising Options Early**
 * **Options and Corporate Finance**
@@ -556,11 +569,24 @@
 ## CHAPTER 21 Option Valuation
 
 * **The Binomial Option Pricing Model**
+	* $\Delta=\frac{C_u-C_d}{S_u-S_d}$ and $B=\frac{C_D-S_d\Delta}{1+r_f}$
+	* $C=S\Delta +B$
 * **The Black-Scholes Option Pricing Model**
+	* $C=S\times N(d_1)-PV(K) \times N(d_2)$
+	* $d_1=\frac{ln[S/PV(K)]}{\sigma \sqrt T}+\frac{\sigma \sqrt T}{2}$
+	* $d_2=d_1-\sigma \sqrt T$
+	* $P=PV(K)[1-N(d_2)]-S[1-N(d_1)]$
+	* $S^x=S-PV(Div)$
+	* $S^x=S/(1+q)$
+	* $\Delta = N(d_1)$ and $B=-PV(K)N(d_2)$
+	* $\Delta=-[1-N(d_1)]$  and  $B=PV(K)[1-N(d_2)]$
 * **Risk-Neutral Probabilities**
+	* $\rho = \frac{(1+r_f)S-S_d}{S_u-S_d}$
 * **Risk and Return of an Option**
+	* $\beta_{option}=\frac{S \Delta}{S \Delta+B}\beta_S$
 * **Corporate Applications of Option Pricing**
-
+	* $\beta_E=\Delta(1+\frac{D}{E})\beta_U$, $\beta_D=(1-\Delta)(1+\frac{E}{D})\beta_U$
+	* $$\frac{NPV}{I} > \frac{1-\Delta}{\Delta}=\frac{\beta_DD}{\beta_EE}$$
 
 <span id="22"></span>
 ## CHAPTER 22 Real Options
@@ -579,6 +605,7 @@
 ## CHAPTER 23 Raising Equity Capital
 
 * **Equity Financing for Private Companies**
+	* $Post-money\ Valuation=Pre\text{-}money\ Valuation+Amount\ Invested$
 * **The Initial Public Offering**
 * **IPO Puzzles**
 * **The Seasoned Equity Offering**
@@ -648,15 +675,23 @@
 <span id="30"></span>
 ## CHAPTER 30 Risk Management
 * **Insurance**
+	* $\frac{Pr(Loss)\times E[Payment\ in\ the\ Event\ of\ Loss]}{1+r_L}$
 * **Commodity Price Risk**
 * **Exchange Rate Risk**
+	* $F_T=S \times \frac{(1+r_{\$})^T}{(1+r_€)^T}$
+	* $C=\frac{S}{(1+r_€)^T}N(d_1)-\frac{K}{(1+r_\$)^T}N(d_2)$
+	* $d_1=\frac{ln(F_T/K)}{\sigma \sqrt T}+\frac{\sigma \sqrt T}{2}$ and $d_2=d_1- \sigma \sqrt T$
+	* $Duration=\sum_t \frac{PV(C_t)}{P} \times t$
 * **Interest Rate Risk**
+	* $Percent\ Change\ in\ Value \approx -Duration \times \frac{\epsilon}{1+r/k}$
+	* $D_E=D_{A-L}=\frac{A}{A-L}D_A-\frac{L}{A-L}D_L$
 
 <span id="31"></span>
 ## CHAPTER 31 International Corporate Finance
 
 * **Internationally Integrated Capital Markets**
 * **Valuation of Foreign Currency Cash Flows**
+	* $$r_£^*=\frac{1+r_£}{1+r_\$}(1+r_\$^*)-1 \approx r_£+(r_\$^* - r_\$)$$
 * **Valuation and International Taxation**
 * **Internationally Segmented Capital Markets**
 * **Capital Budgeting with Exchange Risk**
