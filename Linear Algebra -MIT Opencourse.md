@@ -302,7 +302,27 @@ $$\begin{bmatrix}1&0&0 \\ 0&3&0 \\ 0&0&0 \end{bmatrix},\begin{bmatrix}1&0&0 \\ 0
 * $B^2=0$ doesn't mean $B=0$
 
 ## CHAPTER 4 Orthogonality
-
+### Orthogonality of the Four Subspaces
+* **Orthogonal vectors**: $v^Tw=0$ and $||v||^2+||w||^2=||v+w||^2$
+* ![Four fundamental Subspaces](https://raw.githubusercontent.com/Chandlercjy/My-Notes/Chandler/Pictures/线性代数，四个子空间.png)
+	* The row space $\bot$ nullspace of A
+	* The column space $\bot$ nullspace of $A^T$
+* **Orthogonal subspaces**: $v^Tw=0,\ for\ all\ v\ in\ V\ and\ all\ w\ in\ W$
+* **The orthogonal complement**: a subspace contains *every* vector that is perpendicualr to $V$, denoted by $V^{\bot}$
+	* $N(A)$ is the orthogonal complement of the row space $C(A^T)$(in $R^n$)
+	* $N(A^T)$ is the orthogonal complement of the column space $C(A)$(in $R^n$)
+* **Combining Bases from Subspaces**
+	* Any $n$ indiendent vectors in $R^n$ must span $R^n$. So they are basis.
+	* Any $n$ vectors that span $R^n$ must be independent. So they are a basis.
+	* If the $n$ columns of $A$ are independent, they span $R^n$. So $Ax=b$ is solvable.
+	* If the $n$ columns span $R^n$, they are independent. So $Ax=b$ has only one solution.
+* Every $x$ in $R^n$ has a nullspace component $x_n$ and a row space component $x_r$.
+	
+	
+	
+### Projections
+### Least Squares Approximations
+### Orthogonal Bases and Gram-Schmidt
 
 
 ## CHAPTER 5 Determinants
