@@ -318,8 +318,8 @@ $$\begin{bmatrix}1&0&0 \\ 0&3&0 \\ 0&0&0 \end{bmatrix},\begin{bmatrix}1&0&0 \\ 0
 	* If the $n$ columns of $A$ are independent, they span $R^n$. So $Ax=b$ is solvable.
 	* If the $n$ columns span $R^n$, they are independent. So $Ax=b$ has only one solution.
 * Every $x$ in $R^n$ has a nullspace component $x_n$ and a row space component $x_r$.
-	
-	
+* $Ax=0 \rightarrow \ A^TAx=A^Tb$
+	* $A^TA$ is invertible exactly if $A$ has independent columns.
 	
 ### Projections
 ### Least Squares Approximations
