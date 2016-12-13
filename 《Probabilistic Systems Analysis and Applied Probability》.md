@@ -45,11 +45,20 @@
 * **Continuous Models**: 
 	* Infinite outcomes
 	* Probability of proportion
-	* The probability of singular point is Zero.
+	* The probability of singular point is Zero. But zero probability things do happen though the it's extremely unlikely.
 
 
 ### Conditional Probability
+* Conditional probability of A given B. denoted by $P(A|B)$
+* $$P(A|B)=\frac{P(A\bigcap B)}{P(B)}=\frac{number\ of\ elements\ of\ A\bigcap B}{number\ of\ elements\ of\ B}$$
+ 
 ### Total Probability Theorem and Bayes's Rule
+* **Total Probability Theorem**
+	* $$ \begin{align} P(B) &=P(A_1 \bigcap B)+ \dots+P(A_n \bigcap B) \\ &=P(A_1)P(B|A_1)+\dots+P(A_n)P(B|A_n) \end{align}$$
+* **Bayes's Rule**
+	* $$\begin{align} P(A_i|B) &=\frac{P(A_i)P(B|A_i)}{P(B)} \\ &=\frac{P(A_i)P(B|A_i)}{P(A_1)P(B|A_1)+\dots P(A_n)P(B|A_n)} \end{align}$$
+
+
 ### Independence
 ### Counting
 ### Summary and Discussion Problems
@@ -66,4 +75,4 @@
 ## CHAPTER 6 The Bernoulli and Poisson Processes
 ## CHAPTER 7 Markov Chains
 ## CHAPTER 8 Bayesian Statistical Inference
-## CHAPTER 9 Classical Statistical Inference
+## CHAPTER 9 Classical Statistical Inference  

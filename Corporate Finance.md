@@ -120,7 +120,7 @@
 
 * **Financial Statement Analysis**
 	* **Profitability Ratio**
-		1. $Gross Margin = \frac{Gross\ Profit}{Sales}$
+		1. $Gross\ Margin = \frac{Gross\ Profit}{Sales}$
 		1. $Operating\ Margin = \frac{Operating\ Income}{Sales}$
 		1. $EBIT\ margin = \frac{EBIT}{Sales}$
 		1. $Net\ Profit\ Margin = \frac{Net\ Income}{Sales}$

@@ -322,7 +322,35 @@ $$\begin{bmatrix}1&0&0 \\ 0&3&0 \\ 0&0&0 \end{bmatrix},\begin{bmatrix}1&0&0 \\ 0
 	* $A^TA$ is invertible exactly if $A$ has independent columns.
 	
 ### Projections
+* **Projection Onto a Line**
+	* The multiplication $a^Tb$ is the same as $a \cdot b$. Using the transpose is better, because it applies also to matrices.
+	* Projecting $b$ onto $a$, error $$e\ = b-p = b-\hat{x}a$$ $$a \cdot (b-\hat{x}a)=0$$ $$a\cdot b-\hat{x}a \cdot a=0$$
+	* $$\hat{x}=\frac{a\cdot b}{a\cdot a}=\frac{a^Tb}{a^Ta}$$
+	* Projection matrix P: $p=a\hat{x}=a \frac{a^Tb}{a^Tb}$ when the matrix is $P=\frac{aa^T}{a^Ta}$
+	* $P^T=P$ & $P^2=P$
+	* $C(P)$=line through a
+	* $rank(P)=1$
+
+* **Why project?**
+	* Because $Ax=b$ may have no solution. Solve $A\hat{x}=p$ instead, $p$ is projection of b onto column space.
+
+* **Projection Onto a Subspace**
+	* $p=A\hat{x}$, Find $\hat{x}$
+	* Key: $b-A\hat{x}$ is perp. to plane $\rightarrow$
+	* $a_1^T(b-A\hat{x})=0$, $a_2^T(b-A\hat{x})=0$
+	* $\begin{bmatrix}a_1^T \\ a_2^T \end{bmatrix} (b-A\hat{x})=\begin{bmatrix} 0\\0 \end{bmatrix}$
+	* $A^T(b-A\hat{x})=0$
+	* $e$ in $N(A^T)$ $\rightarrow$ $e\ \bot\ C(A)$
+	* $A^TA \hat{x}=A^Tb\ \rightarrow \hat{x}=(A^TA)^{-1} A^Tb$
+	* $p=A\hat{x}=A(A^TA)^{-1}A^Tb$
+	* matrix $P=A(A^TA)^{-1}A^T$
+	* $P^T=P$ & $P^2=P$
+
 ### Least Squares Approximations
+* When $Ax=b$ has no solution, multiply by $A^T$ and solve $A^TA\hat{x}=A^Tb$
+
+
+
 ### Orthogonal Bases and Gram-Schmidt
 
 
