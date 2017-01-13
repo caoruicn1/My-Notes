@@ -47,10 +47,9 @@
 	* Probability of proportion
 	* The probability of singular point is Zero. But zero probability things do happen though the it's extremely unlikely.
 
-
 ### Conditional Probability
-* Conditional probability of A given B. denoted by $P(A|B)$
-* $$P(A|B)=\frac{P(A\bigcap B)}{P(B)}=\frac{number\ of\ elements\ of\ A\bigcap B}{number\ of\ elements\ of\ B}$$
+* Conditional probability of A given B. denoted by $P(A|B)$    
+$$P(A|B)=\frac{P(A\bigcap B)}{P(B)}=\frac{number\ of\ elements\ of\ A\bigcap B}{number\ of\ elements\ of\ B}$$
  
 ### Total Probability Theorem and Bayes's Rule
 * **Total Probability Theorem**

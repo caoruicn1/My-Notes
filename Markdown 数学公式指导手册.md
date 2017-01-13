@@ -70,6 +70,9 @@ $$ 数学公式 $$
 $$
 J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha}
 $$
+$$
+\sum^{m=0} 
+$$
 显示：
 
 α ( x ) = ∑ m = 0 ∞ ( − 1 ) m m ! Γ ( m + α + 1 ) ( x 2 ) 2 m + α
