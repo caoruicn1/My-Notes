@@ -2,7 +2,6 @@
 Second Edition (Ian Stewart and David Tall)
 ## Numeber System：
 * F、Z、N、Q、R。
-	* 
 * 1+（-1）和1-（+1）的意义是不同的，虽然结果相同。
 * 有理数和无理数是相互混杂的，有理数之间一定有无理数，无理数之间一定有有理数。
 * 数字与数字之间有精确度的问题，这在于小数点后面扩展多少位，而两个长得差不多的数字，它们之间的大小相差绝对不超过正负$\frac{1}{10^n}$.
@@ -94,7 +93,7 @@ Second Edition (Ian Stewart and David Tall)
 
 * **Restriction**: If $f: A \rightarrow B$ is a function and $X\subseteq A$, the *restriction* of $f$ to $X$ is the function $$f|_x: X\rightarrow B$$ for which $$f|_x(x)=f(x)\ (for\ x\in X)$$.
 
-* **Inclusion function**: Restroctomg the *identity function* $i_A:A\rightarrow A$ to a subset $X \subseteq A$ gives the *inclusion* function $$i_A|_X:X\rightarrow A$$ for which $$i_A|_X(x)=x(x\in X)$$
+* **Inclusion function**: Restricting the *identity function* $i_A:A\rightarrow A$ to a subset $X \subseteq A$ gives the *inclusion* function $$i_A|_X:X\rightarrow A$$ for which $$i_A|_X(x)=x(x\in X)$$
 
 --
 		
@@ -112,6 +111,29 @@ Second Edition (Ian Stewart and David Tall)
 
 
 
+
+
+## 哈哈哈
+* Induction
+	* To prove statement of the form $\forall n A(n)$ where $n$ ranges over the natrual number.
+	* **Summary**
+		1. You want to prove $A(n)$ is valid for all natural numbers n.
+		2. First prove $A(1)$. Usually a matter of simple observation.
+		3. Give an algebraic argument to establish the conditional $(\forall n)[A(n) \Rightarrow A(n+1)]$
+			* Reduce $A(n+1)$ to $A(n)$
+		4. Conclusion: By the *principle of mathematical induction*, the proves $\forall n A(n)$
+	* PS: Assuming A(n) is ture first
+
+ 
+* Prime number Definition: A primer number is a positive integer $n$, greater than 1, whose only exact divisors are 1 and $n$.
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
