@@ -52,7 +52,7 @@
 (6)强制安装：rpm -ivh --nodeps somesoft.rpm 或 rpm -ivh --nodeps --force somesoft.rpm
 
 2.源代码包安装：
-查阅README基本用法 
+查阅README基本用法
 (1)配置：解压目录下 ./configure
 (2)编译：解压目录下 make
 (3)安装：解压目录下 make install
