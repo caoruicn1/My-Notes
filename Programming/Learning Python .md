@@ -124,7 +124,7 @@
       ```
   - `in`关系表达式允许我们查询字典中一个键是否存在。`'f' in D ; False`
   - 其他创建字典并避免获取不存在的字典键： get方法、Python 2.X的has_key方法、 try语句， 以及if／else表达式
-  - `map(function, sequence[, sequence, ...])`--`map(lambda x: x**2, [1,2,3,4,5])`
+  - `map(function, sequence[, sequence, ...])`, `map(lambda x: x**2, [1,2,3,4,5])`
   - `Filter(function or None, sequence)`会对sequence每个元素调用function，返回结果为True的元素
 
 - **元组**
