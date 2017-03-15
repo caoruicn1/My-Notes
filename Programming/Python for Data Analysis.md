@@ -1,5 +1,10 @@
 # Python for Data Analysis
 
+
+
+
+
+
 ## Chapter 3 IPython: An Interactive Computing and Development Environment
 
 - Tab自动完成
@@ -10,7 +15,7 @@
 - `Ctrl-C`：终止正在执行的代码
 - `%paste`或者`%cpaste`：执行剪贴板中的代码
 
-- **IPython Keyboard Shortcuts**
+### **IPython Keyboard Shortcuts**
 
   Command              | Description
   -------------------- | ------------------------------------------------------------------------------------
@@ -27,7 +32,7 @@
   Ctrl-B               | Move cursor back one character
   Ctrl-L               | Clear screen
 
-- **Magic Commands**
+### **Magic Commands**
 
   Command              | Description
   -------------------- | -----------------------------------------------------------------------------------------------------------------------------------
@@ -47,7 +52,7 @@
   %who, %who_ls, %whos | Display variables defined in interactive namespace, with varying levels of information / verbosity
   %xdel variable       | Delete a variable and attempt to clear any references to the object in the IPython internals
 
-- **Input and Output Variables**
+### **Input and Output Variables**
   - `_number`: for the Output.
   - `_inumber`: for the Input.
 
@@ -62,10 +67,10 @@
     Out[29]: 'bar'
     ```
 
-- **Logging the Input and Output**
+### **Logging the Input and Output**
   - %logstart, %logoff, %logon, %logstate, and %logstop.
 
-- **Interacting with the Operating System**
+### **Interacting with the Operating System**
 
   Command               | Description
   --------------------- | ---------------------------------------------------------------
@@ -81,7 +86,7 @@
   %dhist                | Print the history of visited directories
   %env                  | Return the system environment variables as a dict
 
-- **Interactive Debugger**
+### **Interactive Debugger**
 
   Command                  | Action
   ------------------------ | --------------------------------------------------------------
@@ -99,13 +104,13 @@
   l(ist) statement         | Show current position and context at current level of stack
   w(here)                  | Print full stack trace with context at current position
 
-- **Basic Profiling: %prun and %run -p**
+### **Basic Profiling: %prun and %run -p**
   - In shell:  python -m cProfile -s cumulative cprof_example.py
   - In IPython:
     - %prun -l 7 -s cumulative run_experiment()
     - %load_ext line_profiler ; %lprun -f func1 -f func2 statement_to_profile
 
-- **Making Your Own Classes IPython-friendly**
+### **Making Your Own Classes IPython-friendly**
   - IPython takes the string returned by the __repr__ magic method.
 
     ```{python}
@@ -117,14 +122,28 @@
         return 'Message: %s' % self.msg
     ```
 
+### **Pylab**
+  - Equivalent to import the lib below
+    ```python
+    import numpy
+    import matplotlib
+    from matplotlib import pylab, mlab, pyplot
+    np = numpy
+    plt = pyplot
+    from IPython.display import display
+    from IPython.core.pylabtools import figsize, getfigs
+    from pylab import *
+    from numpy import *
+    ```
+
 ## Chapter 4 NumPy Basics: Arrays and Vectorized Computation
 
 - `arr.ndim`: Return the number of dimensions of an array.
 - `arr.dtype`: Return structured type.
 - `arr.shape`: Return the shape of an array.
-- `arr.astpye(np.float64)`: Convert or cast an array from one dtype.
+- `arr.astype(np.float64)`: Convert or cast an array from one dtype.
 
-- **Array creation function**
+### **Array creation function**
 
   Function          | Description
   ----------------- | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -136,13 +155,13 @@
   empty, empty_like | Create new arrays by allocating new memory, but do not populate with any values like ones and zeros
   eye, identity     | Create a square N x N identity matrix (1's on the diagonal and 0's elsewhere)
 
-- **Data Types for ndarrays**
+### **Data Types for ndarrays**
   ```python
   In [27]: arr1 = np.array([1, 2, 3], dtype=np.float64)
   In [28]: arr2 = np.array([1, 2, 3], dtype=np.int32)
   ```
 
-- **NumPy data types**
+### **NumPy data types**
 
   Type                             | Type Code    | Description
   -------------------------------- | ------------ | --------------------------------------------------------------------------------------------------------------------
@@ -160,14 +179,14 @@
   string_                          | S            | Fixed-length string type (1 byte per character). For example, to create a string dtype with length 10, use 'S10'.
   unicode_                         | U            | Fixed-length unicode type (number of bytes platform specific). Same specification semantics as string_ (e.g. 'U10').
 
-- **Basic Indexing and Slicing**
+### **Basic Indexing and Slicing**
   - `arr_slice[1] = 12345`: Changeable
-  - **Indexing with slices**
+  ### **Indexing with slices**
     - `arr[5:8].copy()`: Copy the array, in case affect the original slice.
 
   - `arr[0][2] = arr[0,2]`: Equivalent way to accessed individual elements.
 
-- **Boolean Indexing**
+### **Boolean Indexing**
   - The boolean array can be passed when indexing the array:
   - Selecting data from an array by boolean indexing _always creates a copy of the data_.
 
@@ -202,7 +221,7 @@
          [-0.0523, 0.0672]])
   ```
 
-- **Fancy Indexing**
+### **Fancy Indexing**
   - Fancy indexing is a term adopted by NumPy to describe indexing using integer arrays.
     ```python
     In [102]: arr
@@ -264,10 +283,270 @@
              [ 8, 11, 9, 10]])
       ```
 
+### **Transposing Arrays and Swapping Axes**
+  - `arr.reshape((x,y))`
+  - `arr.T`
+  - `np.dot(arr.T,arr)`: inner matrix product $X^TX$
+  - `arr.transpose((x,y,z))`: here x,y,z mean to change the index's position of arr.shape
+  - `arr.swapaxes(x,y)`: swapes a pair of axes.
+    ```python
+    In [110]: arr = np.arange(15).reshape((3, 5))
+    In [111]: arr
+    Out[111]:
+    array([[ 0, 1, 2, 3, 4],
+           [ 5, 6, 7, 8, 9],
+           [10, 11, 12, 13, 14]])
 
+    In [112]: arr.T
+    Out[112]:
+    array([[ 0,  5, 10],
+           [ 1,  6, 11],
+           [ 2,  7, 12],
+           [ 3,  8, 13],
+           [ 4,  9, 14]])
 
+    In [29]: c
+    Out[29]:
+    array([[[1, 2, 3]],
+
+            [[4, 5, 6]],
+
+            [[7, 8, 9]]])
+
+    In [32]: c.shape
+    Out[32]: (3, 1, 3)
+
+    In [30]: c.transpose(1,0,2)
+    Out[30]:
+    array([[[1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]]])
+
+    In [31]: c.reshape(1,3,3)
+    Out[31]:
+    array([[[1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]]])
+
+    In [50]: c.swapaxes(0,1)
+    Out[50]:
+    array([[[1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]]])
+    ```
+
+### **Unary ufuncs**
+
+  Function                                          | Description
+  ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------
+  abs, fabs                                         | Compute the absolute value element-wise for integer, floating point, or complex values. Usefabsas a faster alternative for non-complex-valued data
+  sqrt                                              | Compute the square root of each element. Equivalent to arr ** 0.5
+  square                                            | Compute the square of each element. Equivalent to arr ** 2
+  exp                                               | Compute the exponent ex of each element
+  log, log10, log2, log1p                           | Natural logarithm (base e), log base 10, log base 2, and log(1 + x), respectively
+  sign                                              | Compute the sign of each element: 1 (positive), 0 (zero), or -1 (negative)
+  ceil                                              | Compute the ceiling of each element, i.e. the smallest integer greater than or equal to each element
+  floor                                             | Compute the floor of each element, i.e. the largest integer less than or equal to each element
+  rint                                              | Round elements to the nearest integer, preserving the dtype
+  modf                                              | Return fractional and integral parts of array as separate array
+  isnan                                             | Return boolean array indicating whether each value isNaN(Not a Number)
+  isfinite, isinf                                   | Return boolean array indicating whether each element is finite (non-inf, non-NaN) or infinite, respectively
+  cos, cosh, sin, sinh,tan, tanh                    | Regular and hyperbolic trigonometric functions
+  arccos, arccosh, arcsin, arcsinh, arctan, arctanh | Inverse trigonometric functions
+  logical_not                                       | Compute truth value of not x element-wise. Equivalent to -arr.
+
+### **Binary universal functions**
+
+  Function                                                   | Description
+  ---------------------------------------------------------- | -----------------------------------------------------------------------------------------------------------
+  add                                                        | Add corresponding elements in arrays
+  subtract                                                   | Subtract elements in second array from first array
+  multiply                                                   | Multiply array elements
+  divide, floor_divide                                       | Divide or floor divide (truncating the remainder)
+  power                                                      | Raise elements in first array to powers indicated in second array
+  maximum, fmax                                              | Element-wise maximum.fmaxignoresNaN
+  minimum, fmax                                              | Element-wise minimum.fminignoresNaN
+  mod                                                        | Element-wise modulus (remainder of division)
+  copysign                                                   | Copy sign of values in second argument to values in first argument
+  greater, greater_equal, less, less_equal, equal, not_equal | Perform element-wise comparison, yielding boolean array. Equivalent to infix operators >, >=, <, <=, ==, !=
+  logical_and,logical_or, logical_xor                        | Compute element-wise truth value of logical operation. Equivalent to infix operators & \| , ^
+
+- `np.where(cond, xarr, yarr)`: Return elements, either from x or y, depending on condition.
+
+### **Mathematical and Statistical Methods**
+
+  Method         | Description
+  -------------- | ------------------------------------------------------------------------------------------------------------------
+  sum            | Sum of all the elements in the array or along an axis. Zero-length arrays have sum 0.
+  mean           | Arithmetic mean. Zero-length arrays haveNaNmean.
+  std, var       | Standard deviation and variance, respectively, with optional degrees of freedom adjustment (default denominatorn).
+  min, max       | Minimum and maximum.
+  argmin, argmax | Indices of minimum and maximum elements, respectively.
+  cumsum         | Cumulative sum of elements starting from 0
+  cumprod        | Cumulative product of elements starting from 1
+
+### **Methods for Boolean Arrays**
+
+  ```python
+  In [162]: bools = np.array([False, False, True, False])
+  In [163]: bools.any()
+  Out[163]: True
+  In [164]: bools.all()
+  Out[164]: False
+  ```
+
+### **Sorting**
+  - `arr.sort()`: Sorted _in-place_.
+
+### **Array set operations**
+
+  Method            | Description
+  ----------------- | ----------------------------------------------------------------------------------
+  unique(x)         | Compute the sorted, unique elements inx
+  intersect1d(x, y) | Compute the sorted, common elements inxandy
+  union1d(x, y)     | Compute the sorted union of elements
+  in1d(x, y)        | Compute a boolean array indicating whether each element ofxis contained iny
+  setdiff1d(x, y)   | Set difference, elements inxthat are not iny
+  setxor1d(x, y)    | Set symmetric differences; elements that are in either of the arrays, but not both
+
+### **File Input and Output with Arrays**
+- Save&Load array:
+```python
+In [183]: arr = np.arange(10)
+In [184]: np.save('some_array', arr)
+
+In [185]: np.load('some_array.npy')
+Out[185]: array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+# save multiple arrays in a zip archive
+In [186]: np.savez('array_archive.npz', a=arr, b=arr)
+In [187]: arch = np.load('array_archive.npz')
+In [188]: arch['b']
+Out[188]: array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+#loadtxt, more in Chapter 12
+In [192]: arr = np.loadtxt('array_ex.txt', delimiter=',')
+```
+
+### **Linear Algebra**
+
+  Function | Description
+  -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------
+  diag     | Return the diagonal (or off-diagonal) elements of a square matrix as a 1D array, or convert a 1D array into a square matrix with zeros on the off-diagonal
+  dot      | Matrix multiplication # x.dot(y) equivalent to np.dot(x,y)
+  trace    | Compute the sum of the diagonal elements
+  det      | Compute the matrix determinant
+  eig      | Compute the eigenvalues and eigenvectors of a square matrix
+  inv      | Compute the inverse of a square matrix
+  pinv     | Compute the Moore-Penrose pseudo-inverse inverse of a square matrix
+  qr       | Compute the QR decomposition
+  svd      | Compute the singular value decomposition (SVD)
+  solve    | Solve the linear system Ax = b for x, where A is a square matrix
+  lstsq    | Compute the least-squares solution to y = Xb
+
+### **Random Number Generation**
+- **Partial list of numpy.random functions**
+
+  Function    | Description
+  ----------- | ----------------------------------------------------------------------------------------------------
+  seed        | Seed the random number generator
+  permutation | Return a random permutation of a sequence, or return a permuted range
+  shuffle     | Randomly permute a sequence in place
+  rand        | Draw samples from a uniform distribution
+  randint     | Draw random integers from a given low-to-high range
+  randn       | Draw samples from a normal distribution with mean 0 and standard deviation 1 (MATLAB-like interface)
+  binomial    | Draw samples a binomial distribution
+  normal      | Draw samples from a normal (Gaussian) distribution
+  beta        | Draw samples from a beta distribution
+  chisquare   | Draw samples from a chi-square distribution
+  gamma       | Draw samples from a gamma distribution
+  uniform     | Draw samples from a uniform [0, 1) distribution
 
 ## Chapter 5 Getting Started with pandas
+
+### **Series**
+  - `Series([number])`
+  - `Series(dict)`: Create a Series by passing the dict.
+  - `obj.values`、`obj.index`
+  - `obj['a']`: similar to dict.
+  - `obj[obj > 0]`
+  - `obj * 2`
+  - `obj+obj`
+  - `np.exp(obj)`
+  - `pd.isnull(obj)`: Return boolean
+  - `pd.notnull(obj)`: Return boolean
+  - `obj.name = str`
+  - `obj.index.name = str`
+
+  ```python
+  In [4]: obj = Series([4, 7, -5, 3])
+  In [5]: obj
+  Out[5]:
+  0    4
+  1    7
+  2   -5
+  3    3
+  dtype: int64
+
+  In [8]: obj2 = Series([4, 7, -5, 3], index=['d', 'b', 'a', 'c'])
+  In [9]: obj2
+  Out[9]:
+  d    4
+  b    7
+  a   -5
+  c    3
+  dtype: int64
+  ```
+
+ ### **DataFrame**
+  - `DataFrame(data, columns=[], index[])`: [] means list
+
+    Type                             | Notes
+    -------------------------------- | -----------------------------------------------------------------------------------------------------------------------------------------
+    2D ndarray                       | A matrix of data, passing optional row and column labels
+    dict of arrays, lists, or tuples | Each sequence becomes a column in the DataFrame. All sequences must be the same length.
+    NumPy structured/record array    | Treated as the "dict of arrays" case
+    dict of Series                   | Each value becomes a column. Indexes from each Series are unioned together to form the result's row index if no explicit index is passed.
+    dict of dicts                    | Each inner dict becomes a column. Keys are unioned to form the row index as in the "dict of Series" case.
+    list of dicts or Series          | Each item becomes a row in the DataFrame. Union of dict keys or Series indexes become the DataFrame's column labels
+    List of lists or tuples          | Treated as the "2D ndarray" case
+    Another DataFrame                | The DataFrame's indexes are used unless different ones are passed
+    NumPy MaskedArray                | Like the "2D ndarray" case except masked values become NA/missing in the DataFrame result
+
+  - `obj.values`、`obj.index`
+  - `obj.ix['index']`: index like 123456, return `Series`
+  - `obj['index']= array/number/list`: length must match the length of the DataFrame
+  - `obj['index']= Series([], index=[])`: override or insert missing values in any holes.
+  - `obj.T`
+  - The column returned when indexing a DataFrame is a view on the un- derlying data, not a copy. Thus, any in-place modifications to the Series will be reflected in the DataFrame. The column can be explicitly copied using the Series’s copy method.
+
+### **Intex Objects**
+  - Main Index objects in pandas
+
+    Class         | Description
+    ------------- | ------------------------------------------------------------------------------------------------------------------------------------------
+    Index         | The most general Index object, representing axis labels in a NumPy array of Python objects.
+    Int64Index    | Specialized Index for integer values.
+    MultiIndex    | "Hierarchical" index object representing multiple levels of indexing on a single axis. Can be thought of as similar to an array of tuples.
+    DatetimeIndex | Stores nanosecond timestamps (represented using NumPy'sdatetime64dtype).
+    PeriodIndex   | Specialized Index for Period data (timespans).
+
+  - Index methods and properties
+
+    Method       | Description
+    ------------ | -----------------------------------------------------------------------------------------
+    append       | Concatenate with additional Index objects, producing a new Index
+    diff         | Compute set difference as an Index
+    intersection | Compute set intersection
+    union        | Compute set union
+    isin         | Compute boolean array indicating whether each value is contained in the passed collection
+    delete       | Compute new Index with element at index i deleted
+    drop         | Compute new index by deleting passed values
+    insert       | Compute new Index by inserting element at index i
+    is_monotonic | Returns True if each element is greater than or equal to the previous element
+    is_unique    | ReturnsTrueif the Index has no duplicate values
+    unique       | Compute the array of unique values in the Index
+
+
+
 
 ## Chapter 6 Data Loading, Storage, and File Formats
 
