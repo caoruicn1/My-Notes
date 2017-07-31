@@ -241,6 +241,6 @@ ufo.sample(frac=0.75, random_state=42)  # 75%
 ```python
 pd.concat(df1,df2)
 df1.append(df2)
-pd.merge(df1,df2, on='')   # intersection
+pd.merge(df1,df2, on='', how ='') # intersection how='left','right','outer','inner'
 df1.join(df2)              # based on df1 index
 ```
