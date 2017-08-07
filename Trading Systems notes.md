@@ -118,28 +118,91 @@
 ## Chapter 3: How to develop a trading system step-by-step –using the example of the British pound/US dollar pair
 
 
-### 3.1 The entry logic and code. How to improve a normal moving average crossover system with a breakout filter.
+### 3.2 the importance of commissions and slippage.
+
+- **Main system figures**
+
+~                                        | All Trades | Long Trades | Short Trades
+-----------------------------------------|------------|-------------|-------------
+Total Net Profit                         | $66,318    | $56,918     | $9,400
+Gross Profit                             | $590,530   | $310,301    | $280,230
+Gross Loss                               | ($524,213) | ($253,383)  | ($270,830)
+Profit Factor                            | 1.13       | 1.22        | 1.03
+Total Number of Trades                   | 1913       | 957         | 956
+Percent Profitable                       | 36.49%     | 39.81%      | 33.16%
+Winning Trades                           | 698        | 381         | 317
+Losing Trades                            | 1215       | 576         | 639
+Avg. Trade Net Profit                    | $35        | $59         | $10
+Avg. Winning Trade                       | $846       | $814        | $884
+Avg. Losing Trade                        | ($431)     | ($440)      | ($424)
+Ratio Avg. Win:Avg. Loss                 | 1.96       | 1.85        | 2.09
+Largest Winning Trade                    | $5,628     | $5,628      | $4,338
+Largest Losing Trade                     | ($2,522)   | ($1,652)    | ($2,522)
+Max. Consecutive Winning Trades          | 6          | 6           | 6
+Max. Consecutive Losing Trades           | 16         | 10          | 11
+Avg. Bars in Total Trades                | 37.77      | 39.18       | 36.36
+Avg. Bars in Winning Trades              | 61.84      | 62.96       | 60.5
+Avg. Bars in Losing Trades               | 23.94      | 23.45       | 24.38
+Max. Drawdown (Intra-day Peak to Valley) | ($15,644)  | ($11,133)   | ($19,746)
+Date of Max. Drawdown                    | 27-Nov-03  |             |
+
+### 3.3 Optimisation and stability graphs.
+
+- **What does stability of a system’s input parameter mean?**	- the neighbourhood of your chosen system parameters must be nearly as profitable as your chosen system parameter and the bigger this profitable parameter range is the better
+	- **Example**：比如优化某参数，在5-8之间利润稳定，在10-15利润高，但是波动非常大。此时选5-8为上策。
+- **3D Plot**
+
+### 3.4 Inserting an intraday time filter
+- **Finding the best entry time**
+	- 不同时间可能盈利能力不同，要择时入场
+
+### 3.5 Determination of appropriate exits – risk management
 
 
+- **The concept of Maximum Adverse Excursion (MAE)**
+	- MAE is defined as the most intraday price movement against your position. In other words it’s the lowest open equity during the lifespan of a trade. 
+	- MAE Graph，散点图，横坐标为 Drawdown in dollar,  纵坐标为 Profit(Loss) in dollar
+	- MAE Graph，散点图，横坐标为 Drawdown in %,  纵坐标为 Profit(Loss) in %
+		- Loss diagonal
+		- Trade concentration
+		- Negative Outliers
 
+- **Inserting a risk stop loss**
+	- Graph， 横坐标 Stop Distance（%）， 纵坐标 NP/DD (Ratio of net profit/maximum drawdown)
+		- Stop loss
+		- Trailing stop loss
 
+- **Looking for profit targets: Maximum Favourable Excursion (MFE)**
+	- John Sweeney’s concept of MFE is complementary to MAE
+	- MFE is defined as the most positive price movement for your position. It therefore corresponds to the highest open equity within the lifespan of a trade. 
+	- MFE Graph，散点图，横坐标为 Run-up(%), 纵坐标为 Profit(Loss) in (%)
+		- run-up, which means the highest profit a trade has had in its lifetime.
+		- Win diagonal
+		- biggest profitable trade
+		- trade with biggest run-up
+		- biggest losing trade
+		- profit targets not always work，it is not possible to predict how far the breakout will lead the market. It is better not to set any profit targets but just let the market run as far it goes
+		- Furthermore, profit targets become more valuable if they are set to significant points, e.g. at supports and resistances, gaps etc, where the market is more likely to turn.
 
+- **How exits are affected by money management**
 
-### 3.2 Evaluation of the trading system without parameter optimisation and exits – the importance of commissions and slippage.
-### 3.3 Variation of the input parameters: Optimisation and stability graphs.
-### 3.4 Inserting an intraday time filter: the importance of time for short-term trading.
-### 3.5 Determination of appropriate exits for your system by checking the development of all the system’s trades. How John Sweeney’s Maximum Adverse and Maximum Favourable Excursion can support you.
+### 3.6 Summary: Step-by-step development of a trading system
 
-
-
-
-
-
-
-
-
-
-
+- **Step-by-step**:
+	1. code, define Entries
+		- Starting point **Idea** from book, internet, article, seminar etc.
+	2. Add slippage and commissions
+	3. Stability tests
+		- Check for stable area of input parameters
+	4. Adding filters: Time, Trend(e.g. ADX), Volatility etx.
+	5. MAE/MFA Analysis
+		- Finding Exits
+	6. Optimize
+		- Opt. Stop Loss
+		- Opt. Trailing Stop
+		- Opt. Profit Target
+- **Risk Management**
+- **Money Management**
 
 
 
