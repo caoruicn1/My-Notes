@@ -213,9 +213,67 @@ Date of Max. Drawdown                    | 27-Nov-03  |             |
 
 ## Chapter 4: Two methods for evaluating the system’s predictive power
 
+### 4.1 Timescale analysis
+
+- **Net profit and maximum drawdown dependent on the traded bar length**
+	- Although the trading system makes profits on all the different timescales, the shapes of the equity curves with their drawdown phases appear a bit different.
+	- You must investigate the two factors which contribute to it: **number of trades** and **average profit per trade**
+	- graph, 横坐标 Time scale， 纵坐标 Net Profit
+	- graph, 横坐标  Time scale， 纵坐标 Number of Trades
+	- graph, 横坐标  Time scale， 纵坐标 Average Profit Per Trade
+
+### 4.2 Monte Carlo analysis
+
+- **The principle of Monte Carlo analysis**
+	- Change the positions of all trades accidentally. This permutation method is called “selection without replacement.
+
+- **Probabilities and confidence levels**
+	- Gaussian distribution
+	- confidence level
+	- confidence interval
+
+- **Limitations of the Monte Carlo method**
+	- Monte Carlo analysis is only useful when applied correctly and not to over-fitted trading systems
+	- Although the general behaviour of the markets can be described by the Gauss model, there are some days with very huge percentage changes that are outside the Gaussian curve.
+	- To get more reliable results for such extreme scenarios you have to choose more realistic distributions than the Gaussian distribution
+
+
 ## Chapter 5: The factors around your system
 
+### 5.1 The market’s long/short bias
+
+- **Consequences for system development**
+	- we tend to build the systems without long or short bias
+	- Since you do not know if this uptrend will continue in the future, your system is more stable and less adapted to this market bias if it produces the same amount of long and short signals.
+
+### 5.2 Out-of-sample deterioration
+
+- **Reasons for the out-of-sample deterioration**
+	- the low number of trades is certainly **not** the main reason for the system deterioration
+	- the disclosure of the system is **not** a big reason for its success or failure
+	- **market dynamics**
+	- **The system has been adapted too much to market noise within the training period**
+
+- What your trading system is trying to detect are the patterns which repeat themselves. These patterns are mainly produced by human behaviour like greed, fear and exaggeration and not by random, artificial mathematical processes.
+
+### 5.3 The market data bias
+
+- **Expanding the training period**
+
+- **Conclusion: How to choose your training data**
+	-  it’s advisable to make the training period as long as possible. Since a longer period contains much more data, there is a higher probability that within this longer data range there are some periods which behave similarly to your test data range and therefore train your system better.
+	-  On the other hand, keep in mind that this rule is only valid if your market data contains **a lot of different market phases**.
+
+### 5.4 Optimisation and over-fitting
+
+
+
+
+
 ## Chapter 6: Periodic re-optimisation and walk forward analysis
+
+
+
 
 ## Chapter 7: Position sizing example, using the LUXOR system
 
