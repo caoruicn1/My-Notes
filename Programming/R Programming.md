@@ -57,7 +57,7 @@ df[-(5:7),]		# select rows except 5:7
 ```
 
 
-### Working with Variables and Data in R 1.7
+### 1.7 Working with Variables and Data in R
 
 ```r
 df$a   		# return columns a
@@ -67,7 +67,5 @@ detach(df)	# delete all columns data into memory
 class(df)		# type() check df type
 levels(df)	# unique()
 summary(df)	# describe()
-
-
 
 ```
