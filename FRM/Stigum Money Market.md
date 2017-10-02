@@ -111,6 +111,8 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 
 #### U.S. TREASURY SECURITIES
 -  **Treasury bills(T-bills)**
+	-  T-bills bear no interest.
+	-  An investor in bills earns a return because bills are issued at a discount from face value and redeemed by the Treasury at maturity for face value
 	-  a maturity at issue of a year or less
 	-  T-bills are currently issued in 4-week, 3-month, and 6-month matu- rities
 	- sold at yield auctions, price determined by the market.
@@ -118,8 +120,11 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 	-  Notes have an original maturity (maturity at issue) of 2 to 10 years
 	-  Currently, the Treasury issues 2-, 3-, 5-, and 10-year notes on a regular cycle
 	-  Interest on Treasury notes is paid **semiannually**
+	- sold at yield auctions, price determined by the market.
+
 - **interest-bearing negotiable bonds**
 	- a maturity at issue of 30 years
+	- sold at yield auctions, price determined by the market.
 
 - **Investors**
 	- Banks, other financial institutions, insurance companies, pension funds, and corporations
@@ -151,6 +156,7 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 
 - **Two types of federal agency securities**
 	1. government-sponsored enterprises (GSEs)
+		- the two largest GSEs: Fannie Mae and Freddie Mac
 	2. federally related institutions
 
 - **Issued**
@@ -221,7 +227,7 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 	- Typically, to a dealer hunting money, it’s a repo; to a dealer hunting securities, it’s a reverse
 
 - **GCF (general collateral finance) repo**
-	- reversed every morning and renewed every day
+	- reversed every morning and renewed every day, allowing the borrower use of collateral securities during the trading day
 
 - **System repos**
 	- The Fed’s purchase of collateral in its repo transactions with the Street are called **system repos**
@@ -237,11 +243,11 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 - **Forward rate agreement (FRA)**
 	- A forward rate agreement is the over-the-counter(OTC) equivalent of a Eurodollar futures contract.
 	- two parties agree to trade a specific interest rate on a Eurodollar deposit of a specified currency, maturity, and amount, begin- ning on a specified date in the future, usually between **three and six months**
-	- What distinguishes a FRA from a forward trade is that, when the future date specified in the FRA agreement arrives, no Eurodeposit changes hands, just oay the buyer the difference.
+	- What distinguishes a FRA from a forward trade is that, when the future date specified in the FRA agreement arrives, no Eurodeposit changes hands, just pay the buyer the difference.
 
 #### COMMERCIAL PAPER
 
-- Commercial paper is an unsecured promissory note issued for a spe- cific amount and maturing on a specific day
+- Commercial paper is an unsecured promissory note issued for a specific amount and maturing on a specific day
 - **Maturity**
 	- Maximum maturity: 270 days
 	- Most: 90 days and under
@@ -261,7 +267,7 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 	- natural variation: cross-currency swap
 
 - **Cocktail swap**
-	- When an entity borrows X and then does sev- eral swaps to get to Y, which is what he wants, he is said to cocktail swaps
+	- When an entity borrows X and then does several swaps to get to Y, which is what he wants, he is said to cocktail swaps
 
 - **The standardization of swap**
 	- LIBOR: the London Interbank Offered Rate for Eurodollar deposits
@@ -280,14 +286,17 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 
 - **Caps**
 	- the cap gives the borrower the right to pay either the cap rate or the formula loan-agreement rate, whichever is lower
+	- combination of call option
 
 - **Floors**
 	- A floor in contrast is a series of options that promises a receiver of a variable rate the right to receive either the floor rate or the formula variable rate, whichever is higher
+	- combination of put option
+
 
 - **Collars**
 	- A collar is a cap cum floor that holds a rate within a given range
 	
-- **Opentions pricing**
+- **Options pricing**
 	- Black-Scholes model
 
 - Users of options often engage in cross-hedging, which is a hedge in which the security to be hedged is different from that of the vehicle used for the hedge
@@ -297,7 +306,7 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 #### CERTIFICATES OF DEPOSIT AND DEPOSIT NOTES
 
 - **Certificates of deposit(CDs)**
-	- A certificate of deposit (CD) is a certificate which indicates that a specified sum of money has been deposited in the issuing depository insti- tution
+	- A certificate of deposit (CD) is a certificate which indicates that a specified sum of money has been deposited in the issuing depository institution
 	- The certificate states _the amount of the deposit_, _maturity date of the deposit_, _the interest rate_, and _the method_ by which the interest is calculated
 	- Nonnegotiable CDs **must be held** by the depositor until the maturity date
 	- Negotiable CDs **allow the owner to sell** the CDs on the open market prior to the maturity date.
@@ -333,7 +342,7 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 
 - **Ussage**
 	- BAs are typically used in the trade of goods, often in importing and exporting with firms from foreign countries
-	- the manufacturer typically presents the BA for payment prior to the matu- rity date and receives a discounted amount, less than the face value
+	- the manufacturer typically presents the BA for payment prior to the maturity date and receives a discounted amount, less than the face value
 	- bank is still responsible for making payment
 	- BAs are highly liquid
 	- Only large banks with well-staffed foreign departments act as accepting banks
@@ -428,7 +437,7 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 - Bonds are issued through auctions in which yields are bid
 - Typically, interest on bonds is paid to the holder semiannually on the coupon dates
 
-- **Bond**: Bonds are typically issued by the federal govern- ment, municipalities, or corporations as a way of raising money
+- **Bond**: Bonds are typically issued by the federal government, municipalities, or corporations as a way of raising money
 - **Bill**: A bond with a maturity, or life, of less than one year is called a bill
 
 - **Yield**
