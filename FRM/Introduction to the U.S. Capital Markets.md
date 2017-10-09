@@ -1,6 +1,6 @@
 # Introduction to the U.S. Capital Markets
 
-## Week 1
+## Week 1 Robert
 
 - **Quantity Theory Of Money**
 - **Primary Dealers**
@@ -22,7 +22,7 @@
 - 作业read chapter1234
 
 
-## Week 3
+## Week 3 Robert
 
 - **作业**
 	- Chapter 8
@@ -48,9 +48,6 @@
 	- 1,000,000 * 92.231/100 = 922,310
 	- 1,000,000 * 4% * 75 / 360 = 8,333.33
 	- 8,333.33 / 922,310
-
-	
-	
 
 
 ## EXAM
@@ -97,3 +94,31 @@
 		- $= -1.0100\%$ for 270days
 
 	- $Anatualized\ return = \frac{HPR}{\frac{\#days\ of\ the\ holding\ period}{\#days\ of\ a\ year}} = \frac{-1.01\%}{3/4} = -1.3466\%$
+
+	
+	
+## Week 4
+
+- **A Posteriori Probabilities**
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
