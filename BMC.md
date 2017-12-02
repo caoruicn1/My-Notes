@@ -225,6 +225,7 @@
 	- EQUITY SCREENING(EQS)
 	- IPO
 	- INDICES(WEI)
+	- TRA
 
 - **Index performance calculation**
 	- $$ \frac{Market\ cap\ of\ one\ stock\ (\$B)}{Total\ market\ caps\ for\ all\ stocks\ in\ index\ (\$B)} = Index\ weight\ \%$$
@@ -237,7 +238,9 @@
 	  New Points contribution of Apple | - | Old Point contribution of Apple | = | Index move contribution
 	  82.67 | - | 81.21 | = | 1.46
 	  
-	  
+- **Factor to consider when comparing returns**
+	- The role of dividends in equity returns
+	- The nominal nature of stock and bond returns
 	  
 - **Appeal of equities**
 - **Reason for stock-market volability**

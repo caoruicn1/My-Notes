@@ -1,12 +1,4 @@
-$$
-\left.
-\begin{array}{l}
-\text{if n is even:}&n/2\\
-\text{if n is odd:}&3n+1
-\end{array}
-\right\}
- =f(n)
-$$ # Cmd Markdown 公式指导手册
+# Cmd Markdown 公式指导手册
 Cmd Markdown 公式指导手册
 
 * 一、公式使用参考

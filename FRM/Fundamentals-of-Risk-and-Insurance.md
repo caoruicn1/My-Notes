@@ -221,3 +221,164 @@
 
 - **Evidence of Intensity of Competition**	1. Industry is highly cyclical, indicating inability to control output, prices, or profits.	2. Profits in recent years have consistently been below those for most industries.	3. Recurring insurer insolvencies indicate an intense degree of price competition.
 ## CHAPTER 7 Functions of Insurers
+
+- **Financial aspects of operations**
+	1. Ratemaking	2. Production	3. Underwriting	4. Loss adjustment 
+	5. Investment
+
+### RATEMAKING
+
+- **Definition**
+	- The process of predicting future losses and future expenses and allocating these costs among the various classes of insureds is called **ratemaking**.
+
+
+- **Some Basic Concepts**
+	- **rate**
+		- A *rate* is the price charged for each unit of protec- tion or exposure and should be distinguished from a *premium*, which is determined by multiplying the rate by the number of units of protection purchased.
+	- **final premium**
+		- The *final premium* the insured pays is called the *gross premium* and is based on a *gross rate*.
+	- **gross rate** is composed of two parts
+		1. one that provides for the payment of losses.
+		2. one that called a **loading**, that covers the expenses of operation.
+			- Commissions			- Other acquisition expenses			- General administrative expenses
+			- Premium taxes			- Allowance for contingencies and profit
+
+	-  That part of the rate intended to cover losses is called the **pure premium** when expressed in dollars and cents, and the **expected loss ratio** when expressed as a percentage.
+
+	- **permissible loss ratio**: $1-Expense\ Ratio$
+
+$$Pure\ premium = \frac{Losses}{Exposure\ Units}$$
+$$ Gross\ Rate = \frac{Pure\ Premium}{1-Expense\ Ratio} $$
+
+- **Types of Rates**
+	1. **Class Rates**
+		- The term class rating refers to the practice of computing a price per unit of insurance that applies *to all* applicants possessing a given set of characteristics
+	2. **Individual Rates**
+		- Measure *more precisely* the loss-producing characteristics of the individual.
+		- *Four basic individual rating approaches*
+			- Judgment Rating
+			- Schedule Rating
+			- Experience Rating
+				- $Modification = \frac{Actual\ Loss\ Ratio - Expected\ Loss\ Ratio}{Expected\ Loss\ Ratio} \times Credibility\ Factor$
+			- Retrospective Rating
+		- **Credibility factor**
+			- reflects the degree of confidence the ratemakers believe they should attach to past losses as predic- tors of future losses.
+		
+	
+	- *Catastrophe modeling* (also called cat modeling) uses computer simulations based on experience and the insurer’s known distribution of insured property.
+
+
+
+### PRODUCTION
+
+- The **production** department of an insurance com- pany, sometimes called the agency department, is its sales or marketing division.
+
+
+### UNDERWRITING
+
+- **Underwriting** is the process of selecting and clas- sifying exposures. 
+
+- **Underwriter**
+	- refers to an agent
+
+- **Process of Underwriting**
+	1. Application containing the insured’s statements 
+	2. Information from the agent or broker
+	3. Information from external agencies 
+	4. Physical examinations or inspections
+
+- **Postselection Underwriting**
+	- **Postselection (or renewal) underwriting**, in which the insurer decides if the insurance should be continued.
+
+- **Credit Scoring**
+
+
+### LOSS ADJUSTMENT
+
+- **Adjustment Process**
+	1. Notice of Loss
+	2. Investigation
+	3. Proof of Loss
+	4. Payment or Denial
+
+### THE INVESTMENT FUNCTION
+
+- insurance companies accumulate large amounts of money for the payment of claims in the future and to manage on behalf of others
+
+### MISCELLANEOUS FUNCTIONS
+
+- Legal
+- Accounting
+- Engineering
+
+
+# CHAPTER 8 Financial Aspects Of Insurer Operations
+
+### STATUTORY ACCOUNTING REQUIREMENTS
+
+- The set of accounting procedures embraced by insurance regulators is referred to as the statutory accounting system because it is required by the statutes of the various states.
+
+- **Differences Between Statutory Accounting and GAAP**
+	1. criteria for inclusion of assets in the balance sheet
+		- *Admitted Assets* 
+			- Assets that readily convertible into cash.
+		- *Nonadmitted Assets* 
+			- Assets such as supplies, furniture and fixtures, office machines and equipment, and premiums past due 90 days or more
+	2. Valuation of Assets
+	3. Matching of Revenues and Expenses
+
+- **Terminology**
+	- **Policyholder’s Surplus**
+		- The equity section of the balance sheet for any business consists of the excess of asset values over the liabilities of the firm.
+	- **Reserves**
+		- The major liabilities of insurance com- panies are debts to policyholders; they are called reserves.
+
+
+### PROPERTY AND LIABILITY INSURERS
+
+- **Concept of Earned Premiums**
+	- First, insurers are permitted to include premiums as income only as the premiums become earned, that is, only as the time for which protection is provided passes.
+	- Second, the insurer is required to establish a deferred income account as a liability, called the *unearned premium reserve*, the primary purpose of which is to place a claim against assets that will presumably be required to pay losses occurring in the future.
+
+- **Unearned Premium Reserve**
+	- The unearned premium reserve represents the premiums that insureds have paid in advance for the unexpired terms of their outstanding policies
+	- insurance company enters them as a liability on its books
+
+- **Incurred Losses & Paid losses**
+	- **Incurred losses** refer to those losses taking place during the particular period under consideration, regardless of when they are paid
+	- **Paid losses** refer to losses paid during a particular period regardless of the time that the loss occurred.
+	- The *difference* between paid and incurred losses is recog- nized through liability accounts called loss or claim reserves.
+	- *Two types ofLoss Reserves*
+		1. a reserve for losses reported but not paid
+		2. a reserve for losses that have occurred but have not been reported to the insurance company.
+
+- **Two sources of profit or contribution to surplus**
+	1. Underwriting gains 
+	2. Investments
+
+- **The Combined Ratio**
+	- Combined ratio, which is derived by adding the **loss ratio** and the **expense ratio** for the period under consideration
+	- **The loss ratio**
+		- The loss ratio is computed by dividing losses incurred during the year by premiums earned
+	- **The expense ratio**
+		- The expense ratio is computed by dividing expenses incurred by premi- ums written.
+
+
+### REINSURANCE
+
+- **Types of Reinsurance Treaties**
+	1. Facultative
+		- the risks are considered individually by both parties
+	2. Automatic
+		- the reinsurer agrees in advance to accept a portion of the gross line of the direct writing company or a portion of certain risks that meet the reinsurance underwriting rules of the reinsurer.
+
+
+- **Functions of Reinsurance**
+	1. the spreading of risk
+	2. It is a financial function
+
+
+# CHAPTER 9 The Legal Framework
+
+
+
