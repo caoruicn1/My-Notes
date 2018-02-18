@@ -1,5 +1,5 @@
 """
-
+O(N^2)
 1. Find the position of the smallest item X, in the range of [L...N−1],
 2. Swap X with the L-th item,
 3. Increase the lower-bound L by 1 and repeat Step 1 until L = N-2.

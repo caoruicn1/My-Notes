@@ -6,13 +6,11 @@ O(N^2)
 4. By now, the largest item will be at the last position. We then reduce N by 1 and repeat Step 1 until we have N = 1.
 """
 
-def bubble_sort(series):
-
-    N = len(series)
-    while N:
-        for i in range(N-1):
-            if series[i] > series[i+1]:
-                series[i],series[i+1] = series[i+1],series[i]
-        N -= 1
-
-    return series
+def bubble_sort(lists):
+    # 冒泡排序
+    count = len(lists)
+    for i in range(0, count):
+        for j in range(i + 1, count):  # 把最小的数放到的前面，所以从第i+1个开始算
+            if lists[i] > lists[j]:
+                lists[i], lists[j] = lists[j], lists[i]
+    return lists
