@@ -1,8 +1,8 @@
 # Data analysis in Python with pandas
 
 
-Youtube: https://www.youtube.com/channel/UCnVzApLJE2ljPZSeQylSEyg
-Bilibili: http://www.bilibili.com/video/av6785636/
+- Youtube: https://www.youtube.com/channel/UCnVzApLJE2ljPZSeQylSEyg
+- Bilibili: http://www.bilibili.com/video/av6785636/
 
 ### 2. Read a tabular data file
 ```python
