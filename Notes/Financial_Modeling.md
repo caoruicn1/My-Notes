@@ -42,7 +42,7 @@
 
 - $R_{t+1} = \frac{S_{t+1}}{S_t}-1$
 - $R_{t+1} = \ln(S_{t+1}) - \ln(S_t)$
-    - $$S_{t+1} = e^{R_{t+1}}S_t$
+    - $$S_{t+1} = e^{R_{t+1}}S_t$$
 
 ### Stylized fact
 
