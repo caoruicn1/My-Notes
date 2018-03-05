@@ -1,6 +1,11 @@
 # My-Notes
 
-Opened in Macdown will be better.
+- **Course Notes**
+    - [Equity_Market](./Notes/Equity_Market.md)
+    - [Financial_Modeling](./Notes/Financial_Modeling.md)
+
+
+
 
 
 - **Homebrew 安装**
