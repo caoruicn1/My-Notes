@@ -1,3 +1,3 @@
 {
-    "clugins": ["mathjax"]
+    "plugins": ["mathjax"]
 }
