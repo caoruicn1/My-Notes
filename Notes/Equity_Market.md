@@ -5,27 +5,27 @@
 
 * [Part 1](#part-1)
     * [Lecture 1 Risk and Return Measures](#lecture-1-risk-and-return-measures)
-    * [Nominal Risk-free Rate(NRFR)](#nominal-risk-free-ratenrfr)
-    * [Risk Premium](#risk-premium)
-    * [Holding Period Yiekd(HPY)](#holding-period-yiekdhpy)
-    * [Measuring Multi-period historical returns](#measuring-multi-period-historical-returns)
-    * [Measuring Risk](#measuring-risk)
-    * [The Normal Distribution](#the-normal-distribution)
-    * [Value at Risk and Expected Shortfall](#value-at-risk-and-expected-shortfall)
+        * [Nominal Risk-free Rate(NRFR)](#nominal-risk-free-ratenrfr)
+        * [Risk Premium](#risk-premium)
+        * [Holding Period Yiekd(HPY)](#holding-period-yiekdhpy)
+        * [Measuring Multi-period historical returns](#measuring-multi-period-historical-returns)
+        * [Measuring Risk](#measuring-risk)
+        * [The Normal Distribution](#the-normal-distribution)
+        * [Value at Risk and Expected Shortfall](#value-at-risk-and-expected-shortfall)
     * [Lecture 2: Equity markets trading and Stock-Trak](#lecture-2-equity-markets-trading-and-stock-trak)
-    * [Margin](#margin)
-    * [Return on Invested Capital(ROIC)](#return-on-invested-capitalroic)
-    * [Transaction Orders](#transaction-orders)
+        * [Margin](#margin)
+        * [Return on Invested Capital(ROIC)](#return-on-invested-capitalroic)
+        * [Transaction Orders](#transaction-orders)
     * [Lecture 3: Stock market indexes](#lecture-3-stock-market-indexes)
-    * [Weighting method used for calculation](#weighting-method-used-for-calculation)
+        * [Weighting method used for calculation](#weighting-method-used-for-calculation)
 * [Part 2: Portfolio Theory and Market Efficiency](#part-2-portfolio-theory-and-market-efficiency)
     * [Lecture 1: Portfolio Theory](#lecture-1-portfolio-theory)
-    * [Historic returns of a portfolio](#historic-returns-of-a-portfolio)
-    * [Historical Risk](#historical-risk)
-    * [Efficient Assets, Assumptions about investors](#efficient-assets-assumptions-about-investors)
-    * [Global Minimum variance portfolio](#global-minimum-variance-portfolio)
-    * [Portfolio Frontier](#portfolio-frontier)
-    * [Optimal risky portfolio and risk-free asset](#optimal-risky-portfolio-and-risk-free-asset)
+        * [Historic returns of a portfolio](#historic-returns-of-a-portfolio)
+        * [Historical Risk](#historical-risk)
+        * [Efficient Assets, Assumptions about investors](#efficient-assets-assumptions-about-investors)
+        * [Global Minimum variance portfolio](#global-minimum-variance-portfolio)
+        * [Portfolio Frontier](#portfolio-frontier)
+        * [Optimal risky portfolio and risk-free asset](#optimal-risky-portfolio-and-risk-free-asset)
     * [Lecture 2:](#lecture-2)
 
 <!-- vim-markdown-toc -->
@@ -35,20 +35,20 @@
 
 ## Lecture 1 Risk and Return Measures
 
-## Nominal Risk-free Rate(NRFR)
+### Nominal Risk-free Rate(NRFR)
 - RRFR: The Real Risk-Free Rate
 - E(x): The Expected Rate of Inflation
 - Exact: $$[1+NRFR]=[1+RRFR] \times [1+E(x)]$$
 - Approx: $$NRFR \approx RRFR+E(x)$$
 
-## Risk Premium
+### Risk Premium
 1. Business Risk
 2. Financial Risk
 3. Liqudity Risk
 4. Exchange Risk Risk
 5. Country Risk
 
-## Holding Period Yiekd(HPY)
+### Holding Period Yiekd(HPY)
 - Discrete compounding $$HPY_D=\frac{END}{Begin}-1$$
 $$HPY_D=[\frac{END}{Begin}]^\frac{1}{n}-1$$
 - continuous compunding $$HPY_C=\ln \frac{END}{Begin}$$
@@ -56,7 +56,7 @@ $$HPY_C=\ln [\frac{END}{Begin}] \times \frac{1}{n}$$
 - Relationship 
 $$[e^{HPR}]^n = \frac{END}{Begin}$$
 
-## Measuring Multi-period historical returns
+### Measuring Multi-period historical returns
 1. Arithmetic Mean(AM) 
     - Good Measure of Expected Return Next Period.
 $$AM=\frac{\sum^{N}_{i=1}HPY_i}{N}$$
@@ -65,33 +65,33 @@ $$AM=\frac{\sum^{N}_{i=1}HPY_i}{N}$$
     - Good Measure for long term Performance.
 $$GM = [[1+HPY_1]\times [1+HPY_2] \times ... \times [1+HPY_N]]^\frac{1}{N}-1$$
 
-## Measuring Risk
+### Measuring Risk
 - Variance, Standard Deviation
 $$\sigma^2 = \frac{\sum^N_{i=1}(HPY-E(HPY))^2}{N}$$
 $$Sample\ \sigma^2 = \frac{\sum^N_{i=1}(HPY-E(HPY))^2}{N}$$
 - Coefficient of Variation (risk per unit of return)
 $$CV = \frac{StdDeviation}{AM} = \frac{\sigma}{mu}$$ 
 
-## The Normal Distribution
+### The Normal Distribution
 - Skewness is a measure of symmetry. 看mean两边那些值多
 $$Skewness = \frac{\frac{\sum^n_{i=1}[HPY_i-E(HPY)]^3}{n}}{\sigma^3}$$
 - Kurtosis measures extreme values. 表示肥尾程度
 $$Kurtosis= \frac{\frac{\sum^n_{i=1}[HPY_i-E(HPY)]^4}{n}}{\sigma^4}$$
 
-## Value at Risk and Expected Shortfall
+### Value at Risk and Expected Shortfall
 
 ## Lecture 2: Equity markets trading and Stock-Trak
 
-## Margin
+### Margin
 $$Margin \% = \frac{Total\ Value\ of\ Security-Loan\ Value\ at\
 Purchase}{Total\ Value\ of\ Security}$$ 
 $$Margin \% = \frac{Value\ of\ equity\ in\ account}{Total\ Value\ of\ Security}$$
 
-## Return on Invested Capital(ROIC)
+### Return on Invested Capital(ROIC)
 $$ROIC = \frac{Cap\ Gain\ or\ Loss\ on\ Position + Dividends- Commissions - Margin\
 Internet}{Beg\ Ammount\ Inversted}$$
 
-## Transaction Orders
+### Transaction Orders
 1. Market order
 2. Limit order(You want a little bit better price)
     - Buy limit: below current price
@@ -105,7 +105,7 @@ Internet}{Beg\ Ammount\ Inversted}$$
 
 ## Lecture 3: Stock market indexes
 
-## Weighting method used for calculation
+### Weighting method used for calculation
 1. Price-weighted (larger priced stocks carry more weight)
     - affected by stock splits
     - Dow Jones Index Average(DJIA)
@@ -128,10 +128,10 @@ $$Index_t = \frac{\sum^n_{i=1}(P_{i,t}) \times (\#OutstdgShares_{i,t})}{
 
 ## Lecture 1: Portfolio Theory
 
-## Historic returns of a portfolio
+### Historic returns of a portfolio
 - $$HPY_p = \sum^K_{j=1}\omega_j \times HPY_j$$
 
-## Historical Risk
+### Historical Risk
 - Variance
 $$\sigma_p^2 = \omega_a^2 \sigma_a^2 + \omega_b^2 \sigma_b^2 + 2\omega_a
 \omega_b cov_{ab}$$ 
@@ -151,7 +151,7 @@ $$\rho_{i,j} = \frac{Cov_{i,j}}{\sigma_i * \sigma_j}$$
     - The lower the  correlation coefficient between assets, the
         greater the benefits from diversification.
 
-## Efficient Assets, Assumptions about investors
+### Efficient Assets, Assumptions about investors
 1. Non-satiation
 2. Rational
 3. Risk Aversion
@@ -160,13 +160,13 @@ $$\rho_{i,j} = \frac{Cov_{i,j}}{\sigma_i * \sigma_j}$$
 6. All investors have access to the same information and share similar views
     on expected returns.
 
-## Global Minimum variance portfolio
-- ![GMP](./what/Equity_Market_1.png)
+### Global Minimum variance portfolio
+- ![GMP](what/Equity_Market_1.png)
 
-## Portfolio Frontier
-- ![Portfolio_Frontier](./what/Equity_Market_2.png)
+### Portfolio Frontier
+- ![Portfolio_Frontier](what/Equity_Market_2.png)
 
-## Optimal risky portfolio and risk-free asset
+### Optimal risky portfolio and risk-free asset
 - $$
 \begin{align}
 E(R_c) & = \omega_p \times E(R_p) + (1-\omega_p) \\

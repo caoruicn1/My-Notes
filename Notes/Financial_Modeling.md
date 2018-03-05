@@ -81,7 +81,7 @@
     - Sort the returns in ascending order, and choose percentile
     - Pros: easy and model-free
     - Cons: Not clear how to choose the data sample length
-        - ![Historical Simulation](./what/Financial_Modeling_1.png)
+        - ![Historical Simulation](what/Financial_Modeling_1.png)
     - The HS VaR reacts too slowly to increases in volatility as well as to 
         decreases in volatility.
 
@@ -115,10 +115,10 @@
 - AR(1):$R_t = \phi_0 + \phi_1 R_{t-1} + \epsilon$
 - ACF
     - AR(p): $E_t(R_{t+1}) = \phi_0 + \phi_1 R_{t} + \phi_p R_{t+1-p}$
-    - ![AR_Model](./what/Financial_Modeling_2.png)
-    - ![ARModel](./what/Financial_Modeling_3.png)
-    - ![ARModel](./what/Financial_Modeling_4.png)
-    - For AR(2)的 ACF(1): ![AR2](./what/Financial_Modeling_5.png)
+    - ![AR_Model](what/Financial_Modeling_2.png)
+    - ![ARModel](what/Financial_Modeling_3.png)
+    - ![ARModel](what/Financial_Modeling_4.png)
+    - For AR(2)的 ACF(1): ![AR2](what/Financial_Modeling_5.png)
 - PACF
     - The optimal lag order p in the AR(p) can be chosen as the largest p such
      that is significant in the PACF.
@@ -137,8 +137,8 @@
 - ACF
     - The ACF for MA(q) is non-zero for the first q lags and then drops
       abruptly to zero.
-    - ![MAModel](./what/Financial_Modeling_6.png) 
-    - ![MAModel](./what/Financial_Modeling_7.png) 
+    - ![MAModel](what/Financial_Modeling_6.png) 
+    - ![MAModel](what/Financial_Modeling_7.png) 
 
 ### ARMA Models##
 
@@ -158,8 +158,8 @@
 - ARMA(p,q):$R_t=\phi_0+\sum_{i=1}^p\phi_iR_{t-i} +
   \sum_{i=1}^q\theta_i\epsilon_{t-i} + \epsilon_t$
 - ACF
-    - ![ARMA](./what/Financial_Modeling_8.png)
-    - ![ARMA](./what/Financial_Modeling_9.png)
+    - ![ARMA](what/Financial_Modeling_8.png)
+    - ![ARMA](what/Financial_Modeling_9.png)
 
 ### Random Walk Model
 
@@ -219,7 +219,7 @@
 - Puts weights decline exponentially
     - $\sigma_{t+1}^2 = (1-\lambda)\sum_{\tau-1}^{\infty}R_{t+1-\tau}^2$, for $
       0<\lambda<1$
-    - ![ARModel](./what/Financial_Modeling_10.png)
+    - ![ARModel](what/Financial_Modeling_10.png)
     - $\sigma_{t+1}^2 = \lambda\sigma_t^2+(1-\lambda)R_t^2$
     - Cons:
         1. Not allow for a leverage effect(下跌更容易使波动率上升)
