@@ -16,7 +16,13 @@
         * [Autoregressive(AR) Models](#autoregressivear-models)
         * [Moving Average(MA) Models](#moving-averagema-models)
         * [ARMA Models](#arma-models)
-        * [Random Walks](#random-walks)
+        * [Random Walk Model](#random-walk-model)
+        * [ARIMA Model](#arima-model)
+        * [Pitfall!!!](#pitfall)
+        * [Cointegration](#cointegration)
+    * [Volatility Modeling](#volatility-modeling)
+        * [Simple Variance Forecasting](#simple-variance-forecasting)
+        * [The GARCH Variance Model](#the-garch-variance-model)
 
 <!-- vim-markdown-toc -->
 
@@ -155,6 +161,92 @@
     - ![ARMA](./what/Financial_Modeling_8.png)
     - ![ARMA](./what/Financial_Modeling_9.png)
 
-### Random Walks
+### Random Walk Model
 
-- 
+- Define: $R_t = \ln(S_t) - ln(S_{t-1})=s_t-s_{t-1}$ 
+- Random walk: $s_t = s_{t-1} + \epsilon_t$
+- $E_t(s_{t+\tau}) = s_t$
+- $Var_t(s_{t+\tau}) = \tau\sigma_\epsilon^2$
+- A small positive mean in Equity returns drift the model:
+    - $s_t = \mu + s_{t-1} + \epsilon_t$
+- ACF
+    - ACF($\tau$) = 1
+
+### ARIMA Model
+
+- ARIMA(p,1,q) = ARMA(p,q)  <--- $s_t$ has a unit Roots
+- ARMA(0,0) = ARIMA(0,1,0) = Random Walk  <--- Because $s_t-s_{t-1}=\epsilon_t$
+- ARIMA(p,n,q), 若n为2，则应用$(s_3-s_2)-(s_2-s_1)$,以此类推，为difference of
+  difference.
+
+### Pitfall!!!
+
+1. Spurious Mean-Reversion
+    - Hurwitz bias or the Dickey- Fuller bias: $\phi_1$越接近1,越容易低估$R_t$
+        - Testing for Unit Roots, $H_0:\phi_1=1$, $H_A:\phi_1<1$
+        - P-value < 5% : Stationary, reject Hypothesis 0.
+    - 若sample太小，可能会导致ACF不准确，误以为有autocorrelation
+    - 俩时间序列(比如price)跑出线性模型，但检查残差项的ACF **dies off slowly**,
+      应该做差分运算
+      $$(s_{1t}-s_{1t-1}) = a + b(s_{2t}-s_{2t-1})+e_t$$,
+      然后再跑回归，再检查残差项。
+
+2. Spurious Regression
+    - 俩完全不相关的时间序列(比如price)竟然能跑出显著的线性模型，但检查残差项的
+      ACF 发现**highly persistent**, 说明不符合残差相互独立的假设，应该做差分运算
+      $$(s_{1t}-s_{1t-1}) = a + b(s_{2t}-s_{2t-1})+e_t$$,然后再跑回归，再检查残差项。
+
+### Cointegration
+
+- If two variables that are both integrated have a linear combination with no 
+  unit root then we say they are cointegrated.
+- 比如pairs trading strategy, arbitrage
+
+## Volatility Modeling
+
+### Simple Variance Forecasting
+
+- Assumption
+    - $R_{t+1} = \sigma_{t+1}z_{t+1},with\ z_{t+1} ~ i.i.d. N(0,1)$
+    - i.i.d. N(0,1):Independently and identically normally distributed with mean
+      equal to zero and variance equal to 1.
+- Puts equal weights on the past m obervations.
+    - $\sigma_{t+1}^2= \frac{1}{m} \sum_{\tau=1}^m R_{t+1-\tau}^2 = 
+      \sum_{\tau=1}^m R_{t+1-\tau}^2$
+    - Cons: 
+        1. 无法定义$E(sigma_t^2)$
+        2. 极值R影响过大
+- Puts weights decline exponentially
+    - $\sigma_{t+1}^2 = (1-\lambda)\sum_{\tau-1}^{\infty}R_{t+1-\tau}^2$, for $
+      0<\lambda<1$
+    - ![ARModel](./what/Financial_Modeling_10.png)
+    - $\sigma_{t+1}^2 = \lambda\sigma_t^2+(1-\lambda)R_t^2$
+    - Cons:
+        1. Not allow for a leverage effect(下跌更容易使波动率上升)
+        2. provides counterfactual longer-horizon forecasts.
+
+### The GARCH Variance Model
+
+- The simplest generalized autoregressive conditional hetroskedasticity(GARCH)
+  model of dynamic variance: 
+  $$\sigma_{t+1}^2 = \omega + \alpha R_t^2 + \beta \sigma_t^2, with\
+  \alpha+\beta<1$$
+  - The RiskMetrics model can be viewed as a special case: $\alpha=1-\lambda,
+    \beta=\lambda, s.t. \alpha+\beta=1, \omega=0$
+
+- Now we can define **variance!**
+    - $$\begin{align} \sigma^2 
+      &= E[\sigma_{t+1}^2]\\
+      &= \omega+\alpha E[R_t^2]+\beta E[\sigma_t^2]\\
+      &= \omega+\alpha \sigma^2 + \beta \sigma^2\\
+      &= \frac{\omega}{1-\alpha-beta}
+      \end{align}$$
+
+- Substitute $\omega$ we can get:
+  $$\begin{align}\sigma_{t+1}^2 
+  &= (1-\alpha-\beta)\sigma^2 + \alpha R_t^2 + \beta \sigma_t^2\\
+  &= \sigma^2 + \alpha(R_t^2-\sigma^2)+\beta(\sigma_t^2-\sigma^2)\\
+  \end{align}$$
+
+- Parameters computed by **Maximum likelihood Estimation(MLE)**
+
