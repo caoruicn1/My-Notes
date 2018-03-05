@@ -14,7 +14,6 @@
 ## Returns and Risk
 
 - **Risk**
-
     1. Market risk
     2. Liqudity risk
     3. Operational risk
@@ -22,13 +21,11 @@
     5. Business risk
 
 - **Asset Returns**
-
     - $$R_{t+1} = \frac{S_{t+1}}{S_t}-1$$
     - $$R_{t+1} = \ln(S_{t+1}) - \ln(S_t)$$
         - $$S_{t+1} = e^{R_{t+1}}S_t$$
 
 - **Stylized fact**
-
     1. Daily returns have very little autocorrelation.(unpredictable)
         - $$Corr(R_{t+1},R_{t+1-\tau})\approx 0, for \tau = 1,2,3,...,100$$
     2. Daily returns have fat tail than normal distribution
@@ -44,7 +41,6 @@
         distribution.
 
 - **Model of asset returns**
-
     - $$R_{t+1} = \mu_{t+1}+\sigma_{t+1} z_{t+1} , with\ z_{t+1} ~ i.i.d.D(0,1)$$
 
 - **JP Morgan's RiskMetrics model**
@@ -69,7 +65,6 @@
             decreases in volatility.
 
 - **Expected Shortfall**
-
     - The ES tells us the expected value of tomorrow's loss, conditional on it
         being worse than the VaR.
     - The Expected SHortfall computes the average of the tail outcomes weighted
@@ -84,7 +79,6 @@
 ## Time series
 
 - **Autocorrelation**
-
     - $$\rho_{\tau} = Corr[R_t,R_{t-\tau}] =
         \frac{Cov[R_t,R_{t-\tau}]}{\sqrt{Var[R_t]Var[R_{t-\tau}]}}=
         \frac{Cov[R_t,R_{t-\tau}]}{Var[R_{t}]}$$
@@ -107,7 +101,6 @@
         that is significant in the PACF.
 
 - **Moving Average(MA) Models**
-
     - ACF die off abruptly
     - Assumption
         - $$\epsilon_t$$ and $$\epsilon_{t-1}$$ are independent
@@ -123,8 +116,7 @@
         - ![MAModel](what/Financial_Modeling_6.png) 
         - ![MAModel](what/Financial_Modeling_7.png) 
 
-- **ARMA Models##**
-
+- **ARMA Models**
     - ARMA(1,1)
         - $$R_t = \phi_0 + \phi_1R_{t-1} + \phi_1 \epsilon_{t-1}+ \epsilon_t$$
         - 推导$$E(R_t)$$
@@ -145,7 +137,6 @@
         - ![ARMA](what/Financial_Modeling_9.png)
 
 - **Random Walk Model**
-
     - Define: $$R_t = \ln(S_t) - ln(S_{t-1})=s_t-s_{t-1}$$ 
     - Random walk: $$s_t = s_{t-1} + \epsilon_t$$
     - $$E_t(s_{t+\tau}) = s_t$$
@@ -163,7 +154,6 @@
     difference.
 
 - **Pitfall!!!**
-
     1. Spurious Mean-Reversion
         - Hurwitz bias or the Dickey- Fuller bias: $$\phi_1$$越接近1,越容易低估$$R_t$$
             - Testing for Unit Roots, $$H_0:\phi_1=1$$, $$H_A:\phi_1<1$$
@@ -180,7 +170,6 @@
         $$(s_{1t}-s_{1t-1}) = a + b(s_{2t}-s_{2t-1})+e_t$$,然后再跑回归，再检查残差项。
 
 - **Cointegration**
-
     - If two variables that are both integrated have a linear combination with no 
     unit root then we say they are cointegrated.
     - 比如pairs trading strategy, arbitrage
@@ -188,7 +177,6 @@
 ## Volatility Modeling
 
 - **Simple Variance Forecasting**
-
     - Assumption
         - $$R_{t+1} = \sigma_{t+1}z_{t+1},with\ z_{t+1} ~ i.i.d. N(0,1)$$
         - i.i.d. N(0,1):Independently and identically normally distributed with mean
@@ -209,13 +197,14 @@
             2. provides counterfactual longer-horizon forecasts.
 
 - **The GARCH Variance Model**
-
     - The simplest generalized autoregressive conditional hetroskedasticity(GARCH)
     model of dynamic variance: 
+
     $$\sigma_{t+1}^2 = \omega + \alpha R_t^2 + \beta \sigma_t^2, with\
     \alpha+\beta<1$$
-    - The RiskMetrics model can be viewed as a special case: $$\alpha=1-\lambda,
-        \beta=\lambda, s.t. \alpha+\beta=1, \omega=0$$
+
+    - The RiskMetrics model can be viewed as a special case: 
+    $$\alpha=1-\lambda, \beta=\lambda, s.t. \alpha+\beta=1, \omega=0$$
 
     - Now we can define **variance!**
         - $$\begin{align} \sigma^2 
@@ -226,6 +215,7 @@
         \end{align}$$
 
     - Substitute $$\omega$$ we can get:
+    
     $$\begin{align}\sigma_{t+1}^2 
     &= (1-\alpha-\beta)\sigma^2 + \alpha R_t^2 + \beta \sigma_t^2\\
     &= \sigma^2 + \alpha(R_t^2-\sigma^2)+\beta(\sigma_t^2-\sigma^2)\\

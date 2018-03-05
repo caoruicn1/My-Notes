@@ -160,7 +160,7 @@
     \omega_p \times (1-\omega_p) \times 0$$
 
     $$\sigma_c = \omega_p \sigma_p$$
-    $$\omega_p = \frac{sigma_c}{sigma_p}$$
+    $$\omega_p = \frac{\sigma_c}{\sigma_p}$$
 
     $$E(R_c) = R_f + \sigma_c \times \underbrace{[\frac{E(R_p) - R_f}{
                 \sigma_p}]}_{Sharp\ ratio}$$
