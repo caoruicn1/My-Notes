@@ -1,4 +1,17 @@
+# Equity_ Market
 
+
+<!-- vim-markdown-toc GitLab -->
+
+* [Part 1](#part-1)
+    * [Lecture 1 Risk and Return Measures](#lecture-1-risk-and-return-measures)
+    * [Lecture 2: Equity markets trading and Stock-Trak](#lecture-2-equity-markets-trading-and-stock-trak)
+        * [Lecture 3: Stock market indexes](#lecture-3-stock-market-indexes)
+* [Part 2: Portfolio Theory and Market Efficiency](#part-2-portfolio-theory-and-market-efficiency)
+    * [Lecture 1: Portfolio Theory](#lecture-1-portfolio-theory)
+    * [Lecture 2:](#lecture-2)
+
+<!-- vim-markdown-toc -->
 
 
 # Part 1
