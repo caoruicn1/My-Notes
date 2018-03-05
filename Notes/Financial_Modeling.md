@@ -40,19 +40,19 @@
 
 ### Asset Returns
 
-- $R_{t+1} = \frac{S_{t+1}}{S_t}-1$
-- $R_{t+1} = \ln(S_{t+1}) - \ln(S_t)$
+- $$R_{t+1} = \frac{S_{t+1}}{S_t}-1$$
+- $$R_{t+1} = \ln(S_{t+1}) - \ln(S_t)$$
     - $$S_{t+1} = e^{R_{t+1}}S_t$$
 
 ### Stylized fact
 
 1. Daily returns have very little autocorrelation.(unpredictable)
-    - $Corr(R_{t+1},R_{t+1-\tau})\approx 0, for \tau = 1,2,3,...,100$
+    - $$Corr(R_{t+1},R_{t+1-\tau})\approx 0, for \tau = 1,2,3,...,100$$
 2. Daily returns have fat tail than normal distribution
 3. Negative skewed.(大跌状况比大涨多)
 4. 短期Standard deviation大于mean, 长期看mean=0
 5. Variance displays positive correlation with its own past.(Predictable)
-    - $Corr(R_{t+1}^2,R_{t+1-\tau}^2)>0,for\ small \tau$
+    - $$Corr(R_{t+1}^2,R_{t+1-\tau}^2)>0,for\ small \tau$$
 6. Negative correlation between variance and returns.(leverage effect)
 7. Correlation between assets appears to be time varying, increase in
     highly volatile.
@@ -62,17 +62,17 @@
 
 ### Model of asset returns
 
-- $R_{t+1} = \mu_{t+1}+\sigma_{t+1} z_{t+1} , with\ z_{t+1} ~ i.i.d.D(0,1)$
+- $$R_{t+1} = \mu_{t+1}+\sigma_{t+1} z_{t+1} , with\ z_{t+1} ~ i.i.d.D(0,1)$$
 
 ### JP Morgan's RiskMetrics model
 - $$\sigma_{t+1}^2 = 0.94\sigma_t^2 + 0.06R_t^2$$
 
 ### \$VaR & VaR
 - VaR is defined as a positive number
-- $Pr(\$Loss > \$VaR)=p$
-- $\$VaR = V_{PF}(1-e^{-VaR})$ (log_return)
+- $$Pr(\$Loss > \$VaR)=p$$
+- $$\$VaR = V_{PF}(1-e^{-VaR})$$ (log_return)
 - By **Normal distribution assumption**
-    - $VaR_{t+1} = -\sigma_{PF,t+1} \Phi_p^-1$
+    - $$VaR_{t+1} = -\sigma_{PF,t+1} \Phi_p^-1$$
     - Drawbacks
         - Extreme losses are ignored
         - VaR assumes that the portfolio is constant across the next K days.
@@ -91,10 +91,10 @@
     being worse than the VaR.
 - The Expected SHortfall computes the average of the tail outcomes weighted
     by their probabilities.
-- $ES_{t+1}^p = -E_t[R_{PF,t+1}|R_{PF,t+1} < -VaR^p_{t+1}]$
+- $$ES_{t+1}^p = -E_t[R_{PF,t+1}|R_{PF,t+1} < -VaR^p_{t+1}]$$
 - By **Normal distribution assumption**
-    - $ES_{t+1}^p = \sigma_{PF,t+1} \frac{\phi(\Phi_p^{-1})}{p}$
-    - $\phi(\Phi_p^{-1})$ is the probability of PDF.
+    - $$ES_{t+1}^p = \sigma_{PF,t+1} \frac{\phi(\Phi_p^{-1})}{p}$$
+    - $$\phi(\Phi_p^{-1})$$ is the probability of PDF.
 - By **Historical Simulation**
     - Sum(probability_n X loss_n)/probability
 
@@ -102,19 +102,19 @@
 
 ### Autocorrelation
 
-- $\rho_{\tau} = Corr[R_t,R_{t-\tau}] =
+- $$\rho_{\tau} = Corr[R_t,R_{t-\tau}] =
     \frac{Cov[R_t,R_{t-\tau}]}{\sqrt{Var[R_t]Var[R_{t-\tau}]}}=
-    \frac{Cov[R_t,R_{t-\tau}]}{Var[R_{t}]}$
+    \frac{Cov[R_t,R_{t-\tau}]}{Var[R_{t}]}$$
 
 ### Autoregressive(AR) Models
 - ACF dies of exponentially.
 - Assumption
-    - $E[\epsilon_t] = 0$
-    - $Var[\epsilon_t] = \sigma_\epsilon^2$
-    - $R_{t-\tau}$ and $\epsilon_t$ are independent for all $\tau>0$
-- AR(1):$R_t = \phi_0 + \phi_1 R_{t-1} + \epsilon$
+    - $$E[\epsilon_t] = 0$$
+    - $$Var[\epsilon_t] = \sigma_\epsilon^2$$
+    - $$R_{t-\tau}$$ and $$\epsilon_t$$ are independent for all $$\tau>0$$
+- AR(1):$$R_t = \phi_0 + \phi_1 R_{t-1} + \epsilon$$
 - ACF
-    - AR(p): $E_t(R_{t+1}) = \phi_0 + \phi_1 R_{t} + \phi_p R_{t+1-p}$
+    - AR(p): $$E_t(R_{t+1}) = \phi_0 + \phi_1 R_{t} + \phi_p R_{t+1-p}$$
     - ![AR_Model](what/Financial_Modeling_2.png)
     - ![ARModel](what/Financial_Modeling_3.png)
     - ![ARModel](what/Financial_Modeling_4.png)
@@ -127,13 +127,13 @@
 
 - ACF die off abruptly
 - Assumption
-    - $\epsilon_t$ and $\epsilon_{t-1}$ are independent
-    - $E[\epsilon_t] = 0$
-- MA(1):$R_t = \theta_0 + \epsilon_t + \theta_1\epsilon_{t-1}$
-- MA(q):$R_t = \theta_0 + \theta_1\epsilon_{t-1} + \theta_2\epsilon_{t-2} + ... +
-  \theta_q\epsilon_{t-q} + \epsilon_t$
-- $E[R_t] = \theta_0$
-- $Var(R_t) = (1+\theta_1^2)\sigma_{\epsilon}^2$
+    - $$\epsilon_t$$ and $$\epsilon_{t-1}$$ are independent
+    - $$E[\epsilon_t] = 0$$
+- MA(1):$$R_t = \theta_0 + \epsilon_t + \theta_1\epsilon_{t-1}$$
+- MA(q):$$R_t = \theta_0 + \theta_1\epsilon_{t-1} + \theta_2\epsilon_{t-2} + ... +
+  \theta_q\epsilon_{t-q} + \epsilon_t$$
+- $$E[R_t] = \theta_0$$
+- $$Var(R_t) = (1+\theta_1^2)\sigma_{\epsilon}^2$$
 - ACF
     - The ACF for MA(q) is non-zero for the first q lags and then drops
       abruptly to zero.
@@ -143,47 +143,47 @@
 ### ARMA Models##
 
 - ARMA(1,1)
-    - $R_t = \phi_0 + \phi_1R_{t-1} + \phi_1 \epsilon_{t-1}+ \epsilon_t$
-    - 推导$E(R_t)$
-        - $E(R_t) = \phi_0 + \phi_1E[R_{t-1}]+\theta_1E(\epsilon_{t-1})+E(\epsilon_t)$
-        - $E(R_t) = \phi_0 + \phi_1E[R_{t-1}]+0+0$
-        - $E(R_t) = \frac{\phi_0}{1-phi_1}$ when $|\phi_1|<1$
-    - 推导$Var[R_t]$
-        - $E[R_t\epsilon_t] = \sigma_\epsilon^2$
-        - $Var[R_t] =
+    - $$R_t = \phi_0 + \phi_1R_{t-1} + \phi_1 \epsilon_{t-1}+ \epsilon_t$$
+    - 推导$$E(R_t)$$
+        - $$E(R_t) = \phi_0 + \phi_1E[R_{t-1}]+\theta_1E(\epsilon_{t-1})+E(\epsilon_t)$$
+        - $$E(R_t) = \phi_0 + \phi_1E[R_{t-1}]+0+0$$
+        - $$E(R_t) = \frac{\phi_0}{1-phi_1}$$ when $$|\phi_1|<1$$
+    - 推导$$Var[R_t]$$
+        - $$E[R_t\epsilon_t] = \sigma_\epsilon^2$$
+        - $$Var[R_t] =
           \phi_1^2Var[R_t]+\theta_1^2\sigma_\epsilon^2+\sigma_\epsilon^2 +
-          2\phi_1\theta_1\sigma_\epsilon^2$
-        - $Var(R_t) =
-          \frac{(1+2\phi_1\theta_1+\theta_1^2)\sigma_\epsilon^2}{1-\phi_1^2}$
-- ARMA(p,q):$R_t=\phi_0+\sum_{i=1}^p\phi_iR_{t-i} +
-  \sum_{i=1}^q\theta_i\epsilon_{t-i} + \epsilon_t$
+          2\phi_1\theta_1\sigma_\epsilon^2$$
+        - $$Var(R_t) =
+          \frac{(1+2\phi_1\theta_1+\theta_1^2)\sigma_\epsilon^2}{1-\phi_1^2}$$
+- ARMA(p,q):$$R_t=\phi_0+\sum_{i=1}^p\phi_iR_{t-i} +
+  \sum_{i=1}^q\theta_i\epsilon_{t-i} + \epsilon_t$$
 - ACF
     - ![ARMA](what/Financial_Modeling_8.png)
     - ![ARMA](what/Financial_Modeling_9.png)
 
 ### Random Walk Model
 
-- Define: $R_t = \ln(S_t) - ln(S_{t-1})=s_t-s_{t-1}$ 
-- Random walk: $s_t = s_{t-1} + \epsilon_t$
-- $E_t(s_{t+\tau}) = s_t$
-- $Var_t(s_{t+\tau}) = \tau\sigma_\epsilon^2$
+- Define: $$R_t = \ln(S_t) - ln(S_{t-1})=s_t-s_{t-1}$$ 
+- Random walk: $$s_t = s_{t-1} + \epsilon_t$$
+- $$E_t(s_{t+\tau}) = s_t$$
+- $$Var_t(s_{t+\tau}) = \tau\sigma_\epsilon^2$$
 - A small positive mean in Equity returns drift the model:
-    - $s_t = \mu + s_{t-1} + \epsilon_t$
+    - $$s_t = \mu + s_{t-1} + \epsilon_t$$
 - ACF
-    - ACF($\tau$) = 1
+    - ACF($$\tau$$) = 1
 
 ### ARIMA Model
 
-- ARIMA(p,1,q) = ARMA(p,q)  <--- $s_t$ has a unit Roots
-- ARMA(0,0) = ARIMA(0,1,0) = Random Walk  <--- Because $s_t-s_{t-1}=\epsilon_t$
-- ARIMA(p,n,q), 若n为2，则应用$(s_3-s_2)-(s_2-s_1)$,以此类推，为difference of
+- ARIMA(p,1,q) = ARMA(p,q)  <--- $$s_t$$ has a unit Roots
+- ARMA(0,0) = ARIMA(0,1,0) = Random Walk  <--- Because $$s_t-s_{t-1}=\epsilon_t$$
+- ARIMA(p,n,q), 若n为2，则应用$$(s_3-s_2)-(s_2-s_1)$$,以此类推，为difference of
   difference.
 
 ### Pitfall!!!
 
 1. Spurious Mean-Reversion
-    - Hurwitz bias or the Dickey- Fuller bias: $\phi_1$越接近1,越容易低估$R_t$
-        - Testing for Unit Roots, $H_0:\phi_1=1$, $H_A:\phi_1<1$
+    - Hurwitz bias or the Dickey- Fuller bias: $$\phi_1$$越接近1,越容易低估$$R_t$$
+        - Testing for Unit Roots, $$H_0:\phi_1=1$$, $$H_A:\phi_1<1$$
         - P-value < 5% : Stationary, reject Hypothesis 0.
     - 若sample太小，可能会导致ACF不准确，误以为有autocorrelation
     - 俩时间序列(比如price)跑出线性模型，但检查残差项的ACF **dies off slowly**,
@@ -207,20 +207,20 @@
 ### Simple Variance Forecasting
 
 - Assumption
-    - $R_{t+1} = \sigma_{t+1}z_{t+1},with\ z_{t+1} ~ i.i.d. N(0,1)$
+    - $$R_{t+1} = \sigma_{t+1}z_{t+1},with\ z_{t+1} ~ i.i.d. N(0,1)$$
     - i.i.d. N(0,1):Independently and identically normally distributed with mean
       equal to zero and variance equal to 1.
 - Puts equal weights on the past m obervations.
-    - $\sigma_{t+1}^2= \frac{1}{m} \sum_{\tau=1}^m R_{t+1-\tau}^2 = 
-      \sum_{\tau=1}^m R_{t+1-\tau}^2$
+    - $$\sigma_{t+1}^2= \frac{1}{m} \sum_{\tau=1}^m R_{t+1-\tau}^2 = 
+      \sum_{\tau=1}^m R_{t+1-\tau}^2$$
     - Cons: 
-        1. 无法定义$E(sigma_t^2)$
+        1. 无法定义$$E(sigma_t^2)$$
         2. 极值R影响过大
 - Puts weights decline exponentially
-    - $\sigma_{t+1}^2 = (1-\lambda)\sum_{\tau-1}^{\infty}R_{t+1-\tau}^2$, for $
-      0<\lambda<1$
+    - $$\sigma_{t+1}^2 = (1-\lambda)\sum_{\tau-1}^{\infty}R_{t+1-\tau}^2$$, for $$
+      0<\lambda<1$$
     - ![ARModel](what/Financial_Modeling_10.png)
-    - $\sigma_{t+1}^2 = \lambda\sigma_t^2+(1-\lambda)R_t^2$
+    - $$\sigma_{t+1}^2 = \lambda\sigma_t^2+(1-\lambda)R_t^2$$
     - Cons:
         1. Not allow for a leverage effect(下跌更容易使波动率上升)
         2. provides counterfactual longer-horizon forecasts.
@@ -231,8 +231,8 @@
   model of dynamic variance: 
   $$\sigma_{t+1}^2 = \omega + \alpha R_t^2 + \beta \sigma_t^2, with\
   \alpha+\beta<1$$
-  - The RiskMetrics model can be viewed as a special case: $\alpha=1-\lambda,
-    \beta=\lambda, s.t. \alpha+\beta=1, \omega=0$
+  - The RiskMetrics model can be viewed as a special case: $$\alpha=1-\lambda,
+    \beta=\lambda, s.t. \alpha+\beta=1, \omega=0$$
 
 - Now we can define **variance!**
     - $$\begin{align} \sigma^2 
@@ -242,7 +242,7 @@
       &= \frac{\omega}{1-\alpha-beta}
       \end{align}$$
 
-- Substitute $\omega$ we can get:
+- Substitute $$\omega$$ we can get:
   $$\begin{align}\sigma_{t+1}^2 
   &= (1-\alpha-\beta)\sigma^2 + \alpha R_t^2 + \beta \sigma_t^2\\
   &= \sigma^2 + \alpha(R_t^2-\sigma^2)+\beta(\sigma_t^2-\sigma^2)\\
