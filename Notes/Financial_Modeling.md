@@ -4,16 +4,16 @@
 
 * [Financial Modeling II](#financial-modeling-ii)
     * [Returns and Risk](#returns-and-risk)
-        * [**Risk**](#risk)
-        * [**Asset Returns**](#asset-returns)
-        * [**Stylized fact**](#stylized-fact)
-        * [**Model of asset returns**](#model-of-asset-returns)
-    * [**JP Morgan's RiskMetrics model**](#jp-morgans-riskmetrics-model)
-        * [**\$VaR & VaR**](#var-var)
-        * [**Expected Shortfall**](#expected-shortfall)
+    * [Risk](#risk)
+    * [Asset Returns](#asset-returns)
+    * [Stylized fact](#stylized-fact)
+    * [Model of asset returns](#model-of-asset-returns)
+* [JP Morgan's RiskMetrics model](#jp-morgans-riskmetrics-model)
+    * [\$VaR & VaR](#var-var)
+    * [Expected Shortfall](#expected-shortfall)
     * [Time series](#time-series)
-        * [**Autocorrelation**](#autocorrelation)
-        * [**Autoregressive(AR) Models**](#autoregressivear-models)
+    * [Autocorrelation](#autocorrelation)
+    * [Autoregressive(AR) Models](#autoregressivear-models)
 
 <!-- vim-markdown-toc -->
 
@@ -21,19 +21,19 @@
 
 ## Returns and Risk
 
-### **Risk**
+## Risk
 1. Market risk
 2. Liqudity risk
 3. Operational risk
 4. Credit risk
 5. Business risk
 
-### **Asset Returns**
+## Asset Returns
 - $R_{t+1} = \frac{S_{t+1}}{S_t}-1$
 - $R_{t+1} = \ln(S_{t+1}) - \ln(S_t)$
     - $$S_{t+1} = e^{R_{t+1}}S_t$
 
-### **Stylized fact**
+## Stylized fact
 1. Daily returns have very little autocorrelation.(unpredictable)
     - $Corr(R_{t+1},R_{t+1-\tau})\approx 0, for \tau = 1,2,3,...,100$
 2. Daily returns have fat tail than normal distribution
@@ -48,13 +48,13 @@
 9. As the return-horizon increases, increasingly like the normal
     distribution.
 
-### **Model of asset returns** 
+## Model of asset returns
 - $R_{t+1} = \mu_{t+1}+\sigma_{t+1} z_{t+1} , with\ z_{t+1} ~ i.i.d.D(0,1)$
 
-## **JP Morgan's RiskMetrics model**
+# JP Morgan's RiskMetrics model
 - $$\sigma_{t+1}^2 = 0.94\sigma_t^2 + 0.06R_t^2$$
 
-### **\$VaR & VaR**
+## \$VaR & VaR
 - VaR is defined as a positive number
 - $Pr(\$Loss > \$VaR)=p$
 - $\$VaR = V_{PF}(1-e^{-VaR})$ (log_return)
@@ -72,7 +72,7 @@
     - The HS VaR reacts too slowly to increases in volatility as well as to 
         decreases in volatility.
 
-### **Expected Shortfall**
+## Expected Shortfall
 - The ES tells us the expected value of tomorrow's loss, conditional on it
     being worse than the VaR.
 - The Expected SHortfall computes the average of the tail outcomes weighted
@@ -86,12 +86,12 @@
 
 ## Time series
 
-### **Autocorrelation**
+## Autocorrelation
 - $\rho_{\tau} = Corr[R_t,R_{t-\tau}] =
     \frac{Cov[R_t,R_{t-\tau}]}{\sqrt{Var[R_t]Var[R_{t-\tau}]}}=
     \frac{Cov[R_t,R_{t-\tau}]}{Var[R_{t}]}$
 
-### **Autoregressive(AR) Models**
+## Autoregressive(AR) Models
 - Assumption
     - $E[\epsilon_t] = 0$
     - $Var[\epsilon_t] = \sigma_\epsilon^2$
