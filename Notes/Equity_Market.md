@@ -153,7 +153,7 @@
     - $$
     \begin{align}
     E(R_c) & = \omega_p \times E(R_p) + (1-\omega_p) \\
-            & = R_f = \omega_p \times [E(R_p) - R_f]
+            & = R_f + \omega_p \times [E(R_p) - R_f]
     \end{align}$$
 
     $$\sigma_p^2 = \omega_p^2\sigma_p^2 + (1-\omega_p^2)\times 0 + 2 \times

@@ -27,12 +27,12 @@
 
 - **Stylized fact**
     1. Daily returns have very little autocorrelation.(unpredictable)
-        - $$Corr(R_{t+1},R_{t+1-\tau})\approx 0, for \tau = 1,2,3,...,100$$
+        - $$Corr(R_{t+1},R_{t+1-\tau})\approx 0, for\ \tau = 1,2,3,...,100$$
     2. Daily returns have fat tail than normal distribution
     3. Negative skewed.(大跌状况比大涨多)
     4. 短期Standard deviation大于mean, 长期看mean=0
     5. Variance displays positive correlation with its own past.(Predictable)
-        - $$Corr(R_{t+1}^2,R_{t+1-\tau}^2)>0,for\ small \tau$$
+        - $$Corr(R_{t+1}^2,R_{t+1-\tau}^2)>0,for\ small\ \tau$$
     6. Negative correlation between variance and returns.(leverage effect)
     7. Correlation between assets appears to be time varying, increase in
         highly volatile.

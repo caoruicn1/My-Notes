@@ -1,3 +1,6 @@
 {
+    "styles":{
+        "website":"./Programming/Markdown/orange_style.css"
+    },
     "plugins": ["mathjax"]
 }
