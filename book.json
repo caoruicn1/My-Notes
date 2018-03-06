@@ -19,7 +19,7 @@
         "splitter",
         "anchor-navigation-ex",
         "edit-link",
-        "tbfed-pagefooter",
+        "page-footer",
         "-sharing", "sharing-plus"
     ],
 
@@ -51,11 +51,23 @@
             "base": "https://github.com/Chandlercjy/My-Notes/tree/master",
             "label": "Edit This Page"
         },
-        "tbfed-pagefooter": {
-            "copyright":"Copyright &copy Chandler_Chan 2017",
-            "modify_label": "Updated on：",
-            "modify_format": "YYYY-MM-DD HH:mm:ss"
-        },
+        		"page-footer": {
+			"description": "Modified at",
+			"signature": "Chandler Chan",
+			"wisdom": "Smart is a new sexy.",
+			"format": "yyyy-MM-dd hh:mm:ss",
+			"copyright": "Copyright &#169; Chandler Chan",
+			"timeColor": "#BF360C",
+			"copyrightColor": "#cc000",
+			"utcOffset": "9",
+			"isShowQRCode":false,
+			"baseUri": "https://chandlercjy.gitbooks.io/chandler-s-notes/content/",
+                        "isShowIssues":false,
+			"repo": "Chandlercjy/My-Notes",
+			"issueNum": "8",
+			"token": "6f104ca5f3cbd19eee48fa8c1a207fadad5a453a",
+                        "style": "symmetrical"
+		},
             "sharing": {
        "douban": false,
        "facebook":true,
