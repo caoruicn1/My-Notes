@@ -1,4 +1,5 @@
-# Financial Modeling 
+Financial Modeling 
+------------------
 
 <!-- vim-markdown-toc GitLab -->
 

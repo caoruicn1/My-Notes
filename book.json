@@ -1,6 +1,85 @@
 {
+    "title" : "Gitbook Use",
+    "author" : "Chandler_Chan",
+    "description" : "Just for fun.",
+    "language" : "en",
+    "links" : {
+    "sidebar" : {
+        "Github" : "https://github.com/Chandlercjy"
+    }
+},
     "styles":{
         "website":"./Programming/Markdown/orange_style.css"
     },
-    "plugins": ["mathjax"]
+    "plugins": [
+        "mathjax",
+        "expandable-chapters-small",
+        "-lunr", "-search", "search-plus",
+        "github","github-buttons",
+        "splitter",
+        "anchor-navigation-ex",
+        "edit-link",
+        "tbfed-pagefooter",
+        "-sharing", "sharing-plus"
+    ],
+
+    "pluginsConfig": {
+            "fontsettings": {
+        "theme": "white",
+        "family": "sans",
+        "size": 2 
+    },
+        "github": {
+            "url": "https://github.com/Chandlercjy"
+        },
+        "github-buttons": {
+            "repo": "Chandlercjy/My-Notes",
+            "types": [
+                "star",
+                "watch",
+                "fork"
+            ],
+            "size": "small"
+        },
+        "anchor-navigation-ex": {
+            "showLevel":true,
+            "isShowTocTitleIcon": true,
+            "tocLevel1Icon": "fa fa-hand-o-right",
+            "tocLevel2Icon": "fa fa-hand-o-right",
+            "tocLevel3Icon": "fa fa-hand-o-right"
+        },
+        "edit-link": {
+            "base": "https://github.com/Chandlercjy/My-Notes/tree/master",
+            "label": "Edit This Page"
+        },
+        "tbfed-pagefooter": {
+            "copyright":"Copyright &copy Chandler_Chan 2017",
+            "modify_label": "Updated on：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+            "sharing": {
+       "douban": false,
+       "facebook":true,
+       "google":false,
+       "hatenaBookmark": false,
+       "instapaper": false,
+       "line": false,
+       "linkedin": false,
+       "messenger": false,
+       "pocket": false,
+       "qq": false,
+       "qzone":false,
+       "stumbleupon": false,
+       "twitter": false,
+       "viber": false,
+       "vk": false,
+       "weibo": true,
+       "whatsapp": false,
+       "all": [
+           "facebook", "google", "twitter",
+           "weibo", "instapaper", "linkedin",
+           "pocket", "stumbleupon"
+       ]
+   }
+    }
 }
