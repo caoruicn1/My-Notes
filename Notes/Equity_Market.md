@@ -10,8 +10,8 @@ Equity Market
     * [Lecture 3: Stock market indexes](#lecture-3-stock-market-indexes)
 * [Part 2: Portfolio Theory and Market Efficiency](#part-2-portfolio-theory-and-market-efficiency)
     * [Lecture 1: Portfolio Theory](#lecture-1-portfolio-theory)
-    * [Lecture 2](#lecture-2)
-        * [Market Efficiency](#market-efficiency)
+    * [Lecture 2 CAPM and Multifactor Models](#lecture-2-capm-and-multifactor-models)
+    * [Lecture3 Market Efficiency](#lecture3-market-efficiency)
 
 <!-- vim-markdown-toc -->
 
@@ -221,7 +221,7 @@ Equity Market
     - ![Portfolio_Frontier](what/Equity_Market_4.png)
 
 
-## Lecture 2 
+## Lecture 2 CAPM and Multifactor Models
 
 - **The Capital Asset Pricing Model(CAPM)**
     - $$E(r_i) = R_f + \beta_i [E(r_m)-R_f]$$
@@ -282,7 +282,7 @@ Equity Market
             2. Expected returns on portfolios should _line up_ with the beta.
         - ![Portfolio_Frontier](what/Equity_Market_9.png)
 
-### Market Efficiency
+## Lecture3 Market Efficiency
 
 - **Three Forms of Market Efficiency**
     1. Weak form efficiency
