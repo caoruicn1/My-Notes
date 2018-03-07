@@ -5,20 +5,20 @@ Equity Market
 <!-- vim-markdown-toc GitLab -->
 
 * [Part 1](#part-1)
-    * [Lecture 1 Risk and Return Measures](#lecture-1-risk-and-return-measures)
+    * [Lecture 1: Risk and Return Measures](#lecture-1-risk-and-return-measures)
     * [Lecture 2: Equity markets trading and Stock-Trak](#lecture-2-equity-markets-trading-and-stock-trak)
     * [Lecture 3: Stock market indexes](#lecture-3-stock-market-indexes)
 * [Part 2: Portfolio Theory and Market Efficiency](#part-2-portfolio-theory-and-market-efficiency)
     * [Lecture 1: Portfolio Theory](#lecture-1-portfolio-theory)
-    * [Lecture 2 CAPM and Multifactor Models](#lecture-2-capm-and-multifactor-models)
-    * [Lecture3 Market Efficiency](#lecture3-market-efficiency)
+    * [Lecture 2: CAPM and Multifactor Models](#lecture-2-capm-and-multifactor-models)
+    * [Lecture 3: Market Efficiency](#lecture-3-market-efficiency)
 
 <!-- vim-markdown-toc -->
 
 
 # Part 1
 
-## Lecture 1 Risk and Return Measures
+## Lecture 1: Risk and Return Measures
 
 - **Nominal Risk-free Rate(NRFR)**
     - RRFR: The Real Risk-Free Rate
@@ -221,7 +221,7 @@ Equity Market
     - ![Portfolio_Frontier](what/Equity_Market_4.png)
 
 
-## Lecture 2 CAPM and Multifactor Models
+## Lecture 2: CAPM and Multifactor Models
 
 - **The Capital Asset Pricing Model(CAPM)**
     - $$E(r_i) = R_f + \beta_i [E(r_m)-R_f]$$
@@ -282,7 +282,7 @@ Equity Market
             2. Expected returns on portfolios should _line up_ with the beta.
         - ![Portfolio_Frontier](what/Equity_Market_9.png)
 
-## Lecture3 Market Efficiency
+## Lecture 3: Market Efficiency
 
 - **Three Forms of Market Efficiency**
     1. Weak form efficiency
