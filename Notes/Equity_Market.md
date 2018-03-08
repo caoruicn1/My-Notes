@@ -68,7 +68,7 @@ Equity Market
 
     - Coefficient of Variation (risk per unit of return)
 
-    $$CV = \frac{StdDeviation}{AM} = \frac{\sigma}{mu}$$ 
+    $$CV = \frac{StdDeviation}{AM} = \frac{\sigma}{/mu}$$ 
 
 - **The Normal Distribution**
     - Skewness is a measure of symmetry. 看mean两边那些值多
@@ -140,6 +140,8 @@ Equity Market
             2. Use  either  an  arithmetic  mean  or  geometric  mean  to calculate the average return. 
             3. Multiply  last  day’s  index  value  by  (1  +  the  average  return) from step 2.
 
+    - ![Portfolio_Frontier](what/Equity_Market_10.png)
+
 # Part 2: Portfolio Theory and Market Efficiency
 
 ## Lecture 1: Portfolio Theory
@@ -192,7 +194,7 @@ Equity Market
 - **Optimal risky portfolio and risk-free asset**
     - $$
     \begin{align}
-    E(R_c) & = \omega_p \times E(R_p) + (1-\omega_p) \\
+    E(R_c) & = \omega_p \times E(R_p) + (1-\omega_p)\times R_f \\
             & = R_f + \omega_p \times [E(R_p) - R_f]
     \end{align}$$
 
@@ -224,11 +226,19 @@ Equity Market
         - $$W_p = \frac{E(R_p)-R_f}{A \times \sigma_p^2}, W_f = 1-w_p$$
     - ![Portfolio_Frontier](what/Equity_Market_3.png)
 
+- **Indifference curve**
+    - 无差异曲线是有相同的utility的一系列risk和return的组合。
+
 - **Capital Allocation Line(CAL)**
     - It's a straight line that represents all possible risk-return
       combinations avaiable to the investor.
     - ![Portfolio_Frontier](what/Equity_Market_4.png)
 
+- **Attention!**
+    - The indifference curve represents what is acceptable to the investor
+    - The capital allocation line represents what is available in the market.
+    - The point of tangency represents where the investor can obtain the
+      greatest utility from what is avaiable.
 
 ## Lecture 2: CAPM and Multifactor Models
 
