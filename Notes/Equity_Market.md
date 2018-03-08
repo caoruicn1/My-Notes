@@ -180,6 +180,9 @@ Equity Market
     2. Rational
     3. Risk Aversion
     4. Mean-variance
+        - Returns are normally distributed. The expected returns of all assets
+          are known. The variance and covariances of all assets are also known.
+          Inverstors can ignore skweness and kurtosis.
     5. No transaction costs or taxes.
     6. All investors have access to the same information and share similar views
         on expected returns.
