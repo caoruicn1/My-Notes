@@ -29,7 +29,7 @@ Equity Market
 - **Risk Premium**
     1. Business Risk
     2. Financial Risk
-    3. Liqudity Risk
+    3. Liquidity Risk
     4. Exchange Risk Risk
     5. Country Risk
 
@@ -40,7 +40,7 @@ Equity Market
 
     $$HPY_D=[\frac{END}{Begin}]^\frac{1}{n}-1$$
   
-    - continuous compunding 
+    - continuous compounding
     
     $$HPY_C=\ln \frac{END}{Begin}$$
 
@@ -99,7 +99,7 @@ Equity Market
     2. Limit order(You want a little bit better price)
         - Buy limit: below current price
         - Sell limit: above current price
-    3. Stop orders (Executed only when accross)
+    3. Stop orders (Executed only when across)
         - Buy stop: above current price(to try break)
         - Sell stop: below current price(to protect profit)
     4. Trailing stop orders
@@ -116,14 +116,15 @@ Equity Market
     $$Index_i = \frac{\sum^n_{i=1}P_{i,t}}{n}$$
 
     $$Index_i = \frac{\sum^n_{i=1}P_{i,t}}{Adj.Divisor_t}$$
+    
     2. Market Value-weighted (larger firms’ stocks carry more weight)
         - S&P500
         - Not affected by stock splits
+        - Base value is set arbitrarily, suually 10, 100 or 1000.
 
     $$Index_t = \frac{\sum^n_{i=1}(P_{i,t}) \times (\#OutstdgShares_{i,t})}{
     \sum^n_{i=1}(P_{i,b}) \times (\#OutstdgShares_{i,b})} \times BaseValue$$
 
-        - Base value is set arbitrarily, suually 10, 100 or 1000.
     3. Equal-weighted (all stocks have equal weight, also called Unweighted Index)
         - Biased  towards  returns  of  small companies relative to value weighted indices.
         - Rebalance every day!!
