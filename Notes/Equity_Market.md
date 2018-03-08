@@ -64,14 +64,14 @@ Equity Market
 
     $$\sigma^2 = \frac{\sum^N_{i=1}(HPY-E(HPY))^2}{N}$$
 
-    $$Sample\ \sigma^2 = \frac{\sum^N_{i=1}(HPY-E(HPY))^2}{N}$$
+    $$Sample\ \sigma^2 = \frac{\sum^N_{i=1}(HPY-E(HPY))^2}{N-1}$$
 
     - Coefficient of Variation (risk per unit of return)
 
     $$CV = \frac{StdDeviation}{AM} = \frac{\sigma}{/mu}$$ 
 
 - **The Normal Distribution**
-    - Skewness is a measure of symmetry. 看mean两边那些值多
+    - Skewness is a measure of symmetry. 看mean两边哪些值多
 
     $$Skewness = \frac{\frac{\sum^n_{i=1}[HPY_i-E(HPY)]^3}{n}}{\sigma^3}$$
 
@@ -108,8 +108,8 @@ Equity Market
         - Buy limit: below current price
         - Sell limit: above current price
     3. Stop orders (Executed only when across)
-        - Buy stop: above current price(to try break)
-        - Sell stop: below current price(to protect profit)
+        - Stop buy: above current price(to try break)
+        - Stop sell: below current price(to protect profit)
     4. Trailing stop orders
         - a special kind of stop orders
         - sets the stop price at a fixed amount(% or \$)
@@ -128,7 +128,7 @@ Equity Market
     2. Market Value-weighted (larger firms’ stocks carry more weight)
         - S&P500
         - Not affected by stock splits
-        - Base value is set arbitrarily, suually 10, 100 or 1000.
+        - Base value is set arbitrarily, usually 10, 100 or 1000.
 
     $$Index_t = \frac{\sum^n_{i=1}(P_{i,t}) \times (\#OutstdgShares_{i,t})}{
     \sum^n_{i=1}(P_{i,b}) \times (\#OutstdgShares_{i,b})} \times BaseValue$$
@@ -191,7 +191,8 @@ Equity Market
     1. Minimizes risk for a given expected return
     2. Maximizes return for given risk
 
-- **Portfolio Frontier**
+- **Portfolio Frontier(Markowitz Portfolio Theory)**
+    - ![Portfolio_Frontier](what/Equity_Market_11.png)
     - ![Portfolio_Frontier](what/Equity_Market_2.png)
 
 - **Optimal risky portfolio and risk-free asset**
@@ -201,7 +202,7 @@ Equity Market
             & = R_f + \omega_p \times [E(R_p) - R_f]
     \end{align}$$
 
-    $$\sigma_p^2 = \omega_p^2\sigma_p^2 + (1-\omega_p^2)\times 0 + 2 \times
+    $$\sigma_c^2 = \omega_p^2\sigma_p^2 + (1-\omega_p^2)\times 0 + 2 \times
     \omega_p \times (1-\omega_p) \times 0$$
 
     $$\sigma_c = \omega_p \sigma_p$$
@@ -279,7 +280,7 @@ Equity Market
 
     - Total Risk, Systematic Risk and Firm-specific risk
         - $$R_i = E(R_i)+e_i$$
-        - $$\sigma_i^2 = \beta_u^2\sigma_M^2 + \sigma^2(e_i)$$
+        - $$\sigma_i^2 = \beta_i^2\sigma_M^2 + \sigma^2(e_i)$$
         - Total Risk= Systematic Risk + Firm-specific Risk
         
     - Critiques of the CAPM
@@ -309,7 +310,7 @@ Equity Market
 
 - **Three Forms of Market Efficiency**
     1. Weak form efficiency
-        - Assumption: Market prices incorporate _all past price_ infromation.
+        - Assumption: Market prices incorporate _all past price_ information.
         - Past price information:
             1. past prices
             2. trading volume
@@ -319,9 +320,9 @@ Equity Market
             2. Price Reversal
 
     2. Semi-strong form efficiency
-        - Assumption: Market prices incorporate _all publicly avaiable_ infromation.
-        - Publicly avaiable infromation:
-            1. All past price infromation
+        - Assumption: Market prices incorporate _all publicly avaiable_ information.
+        - Publicly avaiable information:
+            1. All past price information
             2. Fundamental data on the firm
             3. Any public information
         - Anamalies:
@@ -331,9 +332,8 @@ Equity Market
             3. Post earnings announcement drift
             4. Calender effect
     3. Strong form efficiency
-        - Assumption: Market prices incorporate _all_
-          information(both public and private)
-        - All available infromation:
+        - Assumption: Market prices incorporate _all information(both public and private)_
+        - All available information:
             - All public and private information
         - Hard to test private information
     
