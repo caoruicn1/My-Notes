@@ -85,14 +85,22 @@ Equity Market
 
 - **Margin**
 
-    $$Margin \% = \frac{Total\ Value\ of\ Security-Loan\ Value\ at\
-    Purchase}{Total\ Value\ of\ Security} = \frac{Value\ of\ equity\ in\ 
-    account}{Total\ Value\ of\ Security}$$
+    $$\begin{align}
+    Margin \% &= \frac{Total\ Value\ of\ Security-Loan\ Value\ at\
+    Purchase}{Total\ Value\ of\ Security}\\
+    &= \frac{Value\ of\ equity\ in\ account}{Total\ Value\ of\ Security}\\ 
+    &= \frac{利润+初始保证金}{总value}
+    \end{align}$$
 
 - **Return on Invested Capital(ROIC)**
+    - If short，then we should minus dividends.
+    - Usually Dividend means dividend per share, so we should mutiply #shares.
 
-    $$ROIC = \frac{Cap\ Gain\ or\ Loss\ on\ Position + Dividends- Commissions - Margin\
-    Internet}{Beg\ Ammount\ Inversted}$$
+    $$\begin{align}
+    ROIC &= \frac{Cap\ Gain\ or\ Loss\ on\ Position + Dividends- Commissions - Margin\
+    Internet}{Beg\ Ammount\ Inversted} \\ 
+    &= \frac{总利润-commission-interest}{总成本}
+    \end{align}$$
 
 - **Transaction Orders**
     1. Market order
@@ -249,6 +257,7 @@ Equity Market
         3. Portfolio Beta
             - The beta of a portfolio is simple the weighted average of the
               betas of the stocks in the portfolio.
+            - Under CAPM, market has to offer the highest Sharpe ratio.
             - ![Portfolio_Frontier](what/Equity_Market_8.png)
 
     - Security market line(SML)
