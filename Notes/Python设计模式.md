@@ -43,6 +43,7 @@ Github：[faif/python-patterns](https://github.com/faif/python-patterns)
 - **3-tier(三层架构)**
     - 类与类之间互相包装与调用。
     - 结构清晰明显。
+    - 有点像简化的抽象工厂,不同的是抽象工厂关注动态创建类，而三层架构关注类B传入类A后，类AB之间的分离。
 
 - **Adapter(适配器模式)**
     - 用一个Adapter类将不同的但相似的类统一起来，和API对应。
@@ -86,68 +87,98 @@ Github：[faif/python-patterns](https://github.com/faif/python-patterns)
 
 ## Behavioral Patterns
 
-- **chain(职责链模式)**
+- **Chain(职责链模式)**
+    - 使多个对象东渡有机会处理请求，从而避免了请求的发送者对接受者之间的耦合关系。
+      将这些对象连城一条链，并沿着这条链传递该请求，直到有对象处理它为止。
+    - 优点：请求者可以不知道是谁处理的，处理者可以不用知道请求者的全貌。
+      请求和处理是分开的。
 
+- **Catalog(目录设计模式)**
+    - 在类内实现最终接口可调用的多个方法，然后将这些方法放入类内部的一个字典里面。
+      通过初始化类的参数控制最终接口调用的是哪一个方法。
+    - A class that uses different static function depending of a parameter passed in
+      init. Note the use of a single dictionary instead of multiple conditions.
 
-- **catalog()**
+- **Chaining_method**
+    - 优点像3-tier，就是一个类内有不同动作，可以将不同的动作类作为参数传入。
+    - 区别就是3-tier是内置好动作类，而这个可以自有配置不同的动作类。
 
+- **Command(命令模式)**
+    - 将需要执行的一系列命令放入列表里，用一个for循环依次执行。
 
-- **chaining_method**
+- **Iterator(迭代器模式)**
+    - 运用迭代器，iterator。
+    - 可以用关键字yield或者元祖生成generator。
 
+- **Mediator(中介者模式)**
+    - 由一个中介者类，通过setValue接收其他不同的类进行集中交互。
+    - 好处：隔离了各个对象之间的直接耦合。
+    - Encapsulates how a set of objects interact.
 
-- **command(命令模式)**
+- **Memento(备忘录模式)**
+    - Provides the ability to restore an object to its previous state.
+    - 通过copy模块，创建一个函数，将状态保存并提供能够恢复原状态的函数。
 
+- **Observer(观察者模式)**
+    - Maintains a list of dependents and notifies them of any state changes.
+    - 利用property装饰器，和setter，监控每次赋值时候的变化。
 
-- **iterator(迭代器模式)**
+- **Publish_subscribe(发布/订阅模式)**
+    - 和观察者模式差不多，但是将监控模块抽离出来，可以自定义监控模块。
 
+- **Registry(注册树模式)**
+    - 有点像单例模式，但是注册树是创建一个Holder作为metaclass，在每次继承后，
+      会自动更新这个Holder，将新建的类放入Holder的字典中。
+    - 可以通过Holder查看一共建立了多少个class。 
+    - 不在同一页面继承的，只需要import，就会自动记录在Holder中。
 
-- **mediator(终结者模式)**
+- **Specification(规格模式)**
+    - 将业务逻辑抽离出来，利用布尔值在主页面加以控制。
+    - 可以灵活地对业务逻辑进行定制，而不是用逻辑判断语句来处理。
 
+- **State(状态模式)**
+    - Implements state as a derived class of the state pattern interface.
+    - Implements state transitions by invoking methods from the pattern's superclass.
+    - 和组合模式差不多，但是组合模式是覆盖，状态模式不覆盖，只是继承。
 
-- **memento(备忘录模式)**
+- **Strategy(策略模式)**
+    - 函数本身可以作为类的参数放入Strategy类内，并替换内部函数。
+    - 有点像抽象工厂，但是抽象工厂替换的是内部的类，而策略模式替换的是内部的函数。
+    - 用处：当需要在不同时间应用不同的业务规则，就可以考虑用策略模式。
 
+- **Template(模板方法)**
+    - 由骨架函数(skeletons)，动作函数(Action)和制作模板函数(make_templetes)组成。
+    - 骨架函数负责以动作函数为参数进行整合。
+    - 制作模板函数负责完成整合动作，返回制作好的骨架函数。
+    - 用处：动作和骨架进行分离，可以动态创建**函数**。
 
-- **observer(观察者模式)**
-
-
-- **publish_subscribe(发布/订阅模式)**
-
-
-- **registry(注册树模式)**
-
-
-- **specification(规范模式)**
-
-
-- **state(状态模式)**
-
-
-- **strategy(策略模式)**
-
-
-- **template(模板方法)**
-
-
-- **visitor(访问者模式)**
-
+- **Visitor(访问者模式)**
+    - 有数据结构，和基于数据结构的操作。
+    - 通过一个Visitor类，提供导入数据结构的接口，和运行数据结构操作的接口。
+    - 用处：可以使你在不改变各元素的类的前提下定于作用于这些元素的新操作。
+      适用于数据结构相对稳定而基于该数据结构的操作需要经常扩展的系统。
 
 ## Design for Testability Patterns
 
-- **setter_injection(设值注入模式)**
+- **Setter_injection(设值注入模式)**
+    - 提供设值函数。
+    - setter and getter。
 
 ## Fundamental Patterns
 
-- **delegation_pattern(委托模式)**
+- **Delegation_pattern(委托模式)**
+    - 调用类B中的函数时，其实是在调用类A中的函数，形成委托。
+    - 用处：将委托者和被委托者分离出来，达到解耦的目的。
 
 ## Others
 
+- **Blackboard(黑板模式)**
+    - 应用中的多种不同数据处理逻辑相互影响和协同来完成数据分析处理。
+    - 在黑板类内维护字典，作为共享资源，并可向黑板类添加专家。
+      然后通过controller类对黑板类进行控制，做分析处理。
 
-- **blackboard(黑板模式)**
+- **Hsm(层次状态机)**
+    - 用一个Mechine类维护多种状态类。可以进行切换。
 
-
-- **graph_search**
-
-
-- **hsm**
-
+- **Graph_search**
 
