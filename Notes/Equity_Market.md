@@ -1,5 +1,5 @@
-Equity Market
--------------
+# Equity Market
+
 
 
 <!-- vim-markdown-toc GitLab -->

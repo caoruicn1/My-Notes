@@ -1,16 +1,14 @@
-Financial Modeling 
-------------------
+# Financial Modeling 
+
 
 <!-- vim-markdown-toc GitLab -->
 
-* [Financial Modeling II](#financial-modeling-ii)
-    * [Returns and Risk](#returns-and-risk)
-    * [Time series](#time-series)
-    * [Volatility Modeling](#volatility-modeling)
+* [Returns and Risk](#returns-and-risk)
+* [Time series](#time-series)
+* [Volatility Modeling](#volatility-modeling)
 
 <!-- vim-markdown-toc -->
 
-# Financial Modeling II
 
 ## Returns and Risk
 

@@ -1,5 +1,3 @@
-# Course Notes
+# Python Notes
 
-
-* [Equity\_Market](Equity_Market.md)
-* [Financial\_Modeling](Financial_Modeling.md)
+* [Python-pattern 设计模式](Python设计模式.md)

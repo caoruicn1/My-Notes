@@ -1,13 +1,14 @@
-Expected_Returns_An_Investor‘s_Guide_to_Harvesting_Market_Rewards
----
+# Expected_Returns_An_Investor‘s_Guide_to_Harvesting_Market_Rewards
 
+
+**Author:** Antti Ilmanen
 
 
 <!-- vim-markdown-toc GitLab -->
 
 * [PART I OVERVIEW, HISTORICAL RETURNS, AND ACADEMIC THEORIES 1](#part-i-overview-historical-returns-and-academic-theories-1)
     * [1. Introduction](#1-introduction)
-        * [1.1 **Historical Performance**](#11-historical-performance)
+        * [1.1 Historical Performance](#11-historical-performance)
         * [1.2 Financial and behavioral theories: A brief history of ideas](#12-financial-and-behavioral-theories-a-brief-history-of-ideas)
         * [1.3 Forward-looking indicators](#13-forward-looking-indicators)
         * [1.4 View-based expected returns](#14-view-based-expected-returns)
@@ -205,35 +206,69 @@ Expected_Returns_An_Investor‘s_Guide_to_Harvesting_Market_Rewards
     3. RISK FACTORS
         - Growth, Inflation, Illiquidity, Tail risks (Volatility, Correlation, Return asymmetries)
 
-### 1.1 **Historical Performance**
-    - 为何用 historical returns 来预测不可靠？
-        - Any sample period may be biased, 不具有代表性。
-        - Distant historical data may be irrelevant.
-        - Expected returns may vary over time in a cyclical fashion.
-        - Investors Upward biased. 投资者倾向于价格会上涨。
+### 1.1 Historical Performance
 
-    - Findings about historical performance
-        - 长期来看，Stock markets outperformed fixed income markets.
-        - Among fixed income markets, long-term bonds outperformed short-dated
-          bonds.
-        - Illiquid assets offer higher long-run returns.
-            - Corporate bodns VS. Treasuries.
-            - Small-cap VS. Large-cap stock.
+- **为何用 historical returns 来预测不可靠？**
+    - Any sample period may be biased, 不具有代表性。
+    - Distant historical data may be irrelevant.
+    - Expected returns may vary over time in a cyclical fashion.
+    - Investors Upward biased. 投资者倾向于价格会上涨。
 
-    - Other Finding:
-        - Value(overweighting assets that appear cheap based on some valuation metrics, while underweighting richly valued peers)
-        - Carry(overweighting high-yielding assets while underweighting low-yielding assets)
-        - Momentum(overweighting assets that have outperformed over multiple months while underweighting recent laggards)
-        - 不一定高volatility就有高expected return。 这可能体现了 investor
-            - Lottery-seeking bias(overpaying for the hope of jackpot returns)
-            - Leverage constraints (overpaying for inherently volatile assets that give high bang for the buck for naive return seekers)
+- **Findings about historical performance**
+    - 长期来看，Stock markets outperformed fixed income markets.
+    - Among fixed income markets, long-term bonds outperformed short-dated
+        bonds.
+    - Illiquid assets offer higher long-run returns.
+        - Corporate bodns VS. Treasuries.
+        - Small-cap VS. Large-cap stock.
+
+- **Other Finding:**
+    - Value(overweighting assets that appear cheap based on some valuation metrics, while underweighting richly valued peers)
+    - Carry(overweighting high-yielding assets while underweighting low-yielding assets)
+    - Momentum(overweighting assets that have outperformed over multiple months while underweighting recent laggards)
+    - 不一定高volatility就有高expected return。 这可能体现了 investor
+        - Lottery-seeking bias(overpaying for the hope of jackpot returns)
+        - Leverage constraints (overpaying for inherently volatile assets that give high bang for the buck for naive return seekers)
 
 ### 1.2 Financial and behavioral theories: A brief history of ideas
 
+- **History**
+    1. 1950s: Focus on predicting cash flows not on risk or required returns.
+    2. Three decades: CAPM, the efficient market hypothesis, constant risk
+       premia --explain asset prices and expected returns.
 
+- **Theory**
+    - Discount cash flows to the present value
+    - Asset-pricing theory: 主要讨论如何确定discount rates or required returns.
+    - Capital Asset Pricing Model (CAPM): 风险完全由market beta决定，
+      所以Investors can boosts retuns by bearing more beta risk.
+    - 假设Expected returns为constant，则long-run average is a good estimate.
 
+- **Highlight core ideas**
+    - Two ways to earn: 1.bear risks, 2.pursue active management(reap peers)
+    - The interrelations between factors matter. 负相关更好，可diversify.
+    - Rewards来自多方面，mispricing，compensation for risk.
+    - 风险与收益相关性ambiguous，因为 all volatility is not equal.
+      每个asset背负不同的risk，只有systematic risks才能算premium，
+      The reward for volatility can differ depending on which of several 
+      systematic factors is the source of the volatility.
+    - Assets or factors that perform poorly in "bad times" warrant high 
+      required returns.
+        - ![Return in bad time](what/Expected_return_1.png)
+    - Expected rewards on all return sources can vary over time
 
 ### 1.3 Forward-looking indicators 
+
+
+
+
+
+
+
+
+
+
+
 ### 1.4 View-based expected returns 
 ### 1.5 General comments about the book 
 ### 1.6 Notes
@@ -478,3 +513,4 @@ Expected_Returns_An_Investor‘s_Guide_to_Harvesting_Market_Rewards
 ### 29.4 Know thyself: large long-horizon investors’ natural edges
 ### 29.5 Institutional practices
 ### 29.6 Notes
+

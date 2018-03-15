@@ -1,3 +1,39 @@
+# Trading Systems: A New Approach to System Development and Portfolio Optimisation
+
+**Author:** Uban Jaekle, Emilio Tomasini
+
+<!-- vim-markdown-toc GitLab -->
+
+* [Part I: A Practical Guide to Trading System Development and Evaluation](#part-i-a-practical-guide-to-trading-system-development-and-evaluation)
+    * [Chapter 1: What is a trading system?](#chapter-1-what-is-a-trading-system)
+        * [Hypothetic-ductive method has five stages:](#hypothetic-ductive-method-has-five-stages)
+    * [Chapter 2: Design, test, optimisation and evaluation of a trading system](#chapter-2-design-test-optimisation-and-evaluation-of-a-trading-system)
+        * [2.1 Design](#21-design)
+            * [Getting started](#getting-started)
+        * [2.2 Test](#22-test)
+            * [Importance of Market data](#importance-of-market-data)
+            * [Rule complexity and degrees of freedom](#rule-complexity-and-degrees-of-freedom)
+        * [2.4 Evaluation of a trading system](#24-evaluation-of-a-trading-system)
+* [Part II: Trading System Development and Evaluation of a Real Case](#part-ii-trading-system-development-and-evaluation-of-a-real-case)
+    * [Chapter 3: How to develop a trading system step-by-step –using the example of the British pound/US dollar pair](#chapter-3-how-to-develop-a-trading-system-step-by-step-using-the-example-of-the-british-poundus-dollar-pair)
+        * [3.2 the importance of commissions and slippage.](#32-the-importance-of-commissions-and-slippage)
+        * [3.6 Summary: Step-by-step development of a trading system](#36-summary-step-by-step-development-of-a-trading-system)
+    * [Chapter 4: Two methods for evaluating the system’s predictive power](#chapter-4-two-methods-for-evaluating-the-systems-predictive-power)
+        * [4.1 Timescale analysis](#41-timescale-analysis)
+        * [4.2 Monte Carlo analysis](#42-monte-carlo-analysis)
+    * [Chapter 5: The factors around your system](#chapter-5-the-factors-around-your-system)
+        * [5.1 The market’s long/short bias](#51-the-markets-longshort-bias)
+        * [5.2 Out-of-sample deterioration](#52-out-of-sample-deterioration)
+        * [5.3 The market data bias](#53-the-market-data-bias)
+        * [5.4 Optimisation and over-fitting](#54-optimisation-and-over-fitting)
+    * [Chapter 6: Periodic re-optimisation and walk forward analysis](#chapter-6-periodic-re-optimisation-and-walk-forward-analysis)
+    * [Chapter 7: Position sizing example, using the LUXOR system](#chapter-7-position-sizing-example-using-the-luxor-system)
+* [Part III: Systematic Portfolio Trading](#part-iii-systematic-portfolio-trading)
+    * [Chapter 8: Dynamic portfolio construction](#chapter-8-dynamic-portfolio-construction)
+* [Conclusion](#conclusion)
+
+<!-- vim-markdown-toc -->
+
 # Part I: A Practical Guide to Trading System Development and Evaluation
 ## Chapter 1: What is a trading system?
 

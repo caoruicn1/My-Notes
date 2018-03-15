@@ -1,26 +1,50 @@
-# Stigum Money Market
+# Stigum's Money Market
+
+**Author:** MARCIA STIGUM, ANTHONY CRESCENZI
 
 
-## Content
-* [CHAPTER 1 Introduction](#1)
-* [CHAPTER 2 Funds Flows, Banks, and Money Creation](#2)
-* [CHAPTER 3 The Instruments in Brief](#3)
-* [CHAPTER 4 Bond Valuation](#4)
+<!-- vim-markdown-toc GitLab -->
 
-<span id="1"></span>
-## CHPATER 1 Introduction
+* [CHAPTER 1 Introduction](#chapter-1-introduction)
+* [CHAPTER 2 Funds Flows, Banks, and Money Creation](#chapter-2-funds-flows-banks-and-money-creation)
+    * [FUNDS FLOWS IN THE U.S. CAPITAL MARKET](#funds-flows-in-the-us-capital-market)
+    * [FINANCIAL INTERMEDIARIES](#financial-intermediaries)
+    * [THE FEDERAL RESERVE’S ROLE](#the-federal-reserves-role)
+    * [MONEY SUPPLY AND FED CONTROL OVER IT](#money-supply-and-fed-control-over-it)
+* [CHAPTER 3 The Instruments in Brief](#chapter-3-the-instruments-in-brief)
+    * [DEALERS AND BROKERS](#dealers-and-brokers)
+    * [U.S. TREASURY SECURITIES](#us-treasury-securities)
+    * [FEDERAL AGENCY SECURITIES](#federal-agency-securities)
+    * [FEDERAL FUNDS](#federal-funds)
+    * [REPOS AND REVERSES](#repos-and-reverses)
+    * [EURODOLLARS](#eurodollars)
+    * [FRAS](#fras)
+    * [COMMERCIAL PAPER](#commercial-paper)
+    * [INTEREST-RATE SWAPS](#interest-rate-swaps)
+    * [OPTIONS](#options)
+    * [CERTIFICATES OF DEPOSIT AND DEPOSIT NOTES](#certificates-of-deposit-and-deposit-notes)
+    * [BANKERS' ACCEPTANCES](#bankers-acceptances)
+    * [LOAN PARTICIPATIONS](#loan-participations)
+    * [MEDIUM-TERM NOTES](#medium-term-notes)
+    * [MUNICIPAL NOTES](#municipal-notes)
+    * [MORTGAGE-BACKED, PASS-THROUGH SECURITIES](#mortgage-backed-pass-through-securities)
+* [CHAPTER 4 Bond Valuation](#chapter-4-bond-valuation)
+
+<!-- vim-markdown-toc -->
+
+
+# CHAPTER 1 Introduction
 
 The money market is a wholesale market for low-risk, highly liquid, short-term IOUs.
 
-<span id="2"></span>
-## CHPATER 2 Funds Flows, Banks, and Money Creation
+# CHAPTER 2 Funds Flows, Banks, and Money Creation
 
 - **Three major parts**
 	- the stock market
 	- the bond market
 	- the money market
 
-#### FUNDS FLOWS IN THE U.S. CAPITAL MARKET
+## FUNDS FLOWS IN THE U.S. CAPITAL MARKET
 
 - The surplus that nonfinancial businesses rang up in 2005 is highly unusual from a historical perspective, as the business sector tends to have a chronic funds deficit. The deficit is commonly known as the corporate financing gap
 
@@ -32,7 +56,7 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 	- Every funds deficit has to be covered by the receipt of debt or equity capital from outside sources, and every funds surplus must be absorbed by supplying such capital
 
 
-#### FINANCIAL INTERMEDIARIES
+## FINANCIAL INTERMEDIARIES
 	
 - **Direct finance**
 	- borrows directly from ultimate funds-surplus units or sells equity claims against itself directly to such spending units
@@ -54,7 +78,7 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 	- Second, in the course of their lending activity, banks create money
 		- As the T-accounts show, the immediate effect of the loan is to increase total demand deposits, but no offsetting decrease has occurred in the amount of currency in circulation
 
-#### THE FEDERAL RESERVE’S ROLE
+## THE FEDERAL RESERVE’S ROLE
 
 - First, the Fed was charged with treating an elastic supply of currency
 - The Fed was to solve this problem by standing ready during panics to extend to the banks at the discount window loans whose proceeds could be paid out in Federal Reserve notes
@@ -81,7 +105,7 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 		- Second, the size and liquidity of the market for government securities are such that the Fed can make substantial purchases and sales there without disrupting the market or causing more than negligible price changes
 		- Today, borrowing at the discount window represents a small element in the total reserves available to member banks
 
-#### MONEY SUPPLY AND FED CONTROL OVER IT
+## MONEY SUPPLY AND FED CONTROL OVER IT
 
 - any easing or tightening by the Fed necessarily alters not only money supply growth, but interest rates as well
 
@@ -98,10 +122,9 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 
 	- Fed should seek to peg not the Fed rate but the rate of growth of money
 
-<span id="3"></span>
-## CHAPTER 3 The Instruments in Brief
+# CHAPTER 3 The Instruments in Brief
 
-#### DEALERS AND BROKERS
+## DEALERS AND BROKERS
 
 - **Dealers**
 	- Dealers make markets in money market instruments by quoting—to each other, to issuers, and to investors—bid and asked prices at which they are prepared to buy and sell
@@ -109,7 +132,7 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 - **Brokers**
 	- Brokers bring buyers and sellers together for a commission
 
-#### U.S. TREASURY SECURITIES
+## U.S. TREASURY SECURITIES
 -  **Treasury bills(T-bills)**
 	-  T-bills bear no interest.
 	-  An investor in bills earns a return because bills are issued at a discount from face value and redeemed by the Treasury at maturity for face value
@@ -152,7 +175,7 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 - **International** 
 	- Foreigners, and most importantly Asian investors, have become big buyers of Treasury securities
 
-#### FEDERAL AGENCY SECURITIES
+## FEDERAL AGENCY SECURITIES
 
 - **Two types of federal agency securities**
 	1. government-sponsored enterprises (GSEs)
@@ -181,7 +204,7 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 	- Second, only the federally related institutions backed by the full faith and credit of the U.S. government.
 	- Third, subject to state taxation.
 
-#### FEDERAL FUNDS
+## FEDERAL FUNDS
 
 - **Reserves requirement**
 	- All banks and other depository institutions are required to keep reserves on deposit at their District Federal Reserve Bank
@@ -199,7 +222,7 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 	- putting downward pressure on the federal funds rate by increases the availability of bank reserves and the money supply by **open market operation**
 	- interest rates on **long-term securities** are closely linked to expectations of the funds rate
 
-#### REPOS AND REVERSES
+## REPOS AND REVERSES
 
 - **Repurchase agreements**(RP agreements or repos)
 	- repo: selling collateral
@@ -233,19 +256,19 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 	- The Fed’s purchase of collateral in its repo transactions with the Street are called **system repos**
 	- The Fed’s sales of securities in its reverse repo transactions are called **matched sales**
 
-#### EURODOLLARS
+## EURODOLLARS
 
 - a Eurodollar deposit is simply a deposit denominated in dollars in a bank or bank branch outside the United States
 - the rate on overnight Eurodollars tends to closely track the fed funds rate
 
-#### FRAS
+## FRAS
 
 - **Forward rate agreement (FRA)**
 	- A forward rate agreement is the over-the-counter(OTC) equivalent of a Eurodollar futures contract.
 	- two parties agree to trade a specific interest rate on a Eurodollar deposit of a specified currency, maturity, and amount, begin- ning on a specified date in the future, usually between **three and six months**
 	- What distinguishes a FRA from a forward trade is that, when the future date specified in the FRA agreement arrives, no Eurodeposit changes hands, just pay the buyer the difference.
 
-#### COMMERCIAL PAPER
+## COMMERCIAL PAPER
 
 - Commercial paper is an unsecured promissory note issued for a specific amount and maturing on a specific day
 - **Maturity**
@@ -259,7 +282,7 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 
 - commercial paper are slightly higher than those on **Treasury** obligations of similar maturity
 
-#### INTEREST-RATE SWAPS
+## INTEREST-RATE SWAPS
 
 - **Coupon swap**
 	- actually it is Liability swap.
@@ -276,7 +299,7 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 - **Asset swaps**
 
 
-#### OPTIONS
+## OPTIONS
 
 - Options, like futures, are actively traded by portfolio man- agers, hedgers, speculators, and arbitrageurs
 
@@ -303,7 +326,7 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 
 - A popular option product is the swaption, which is an option on an interest-rate swap.
 	
-#### CERTIFICATES OF DEPOSIT AND DEPOSIT NOTES
+## CERTIFICATES OF DEPOSIT AND DEPOSIT NOTES
 
 - **Certificates of deposit(CDs)**
 	- A certificate of deposit (CD) is a certificate which indicates that a specified sum of money has been deposited in the issuing depository institution
@@ -332,7 +355,7 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 
 - Bank paper always trades at a spread above Treasuries of the same maturity because of some credit risk and less liquid than Treasuries.
 
-#### BANKERS' ACCEPTANCES
+## BANKERS' ACCEPTANCES
 
 - **Definition**
 	- **Draft**: A draft is a promise to pay
@@ -352,13 +375,13 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 	- BAs bear the guarantee (acceptance) of a bank rather than a corporation
 	- usually issued in denominations **over \$100,000**, and their maturities generally range from **30 to 180 days**
 
-#### LOAN PARTICIPATIONS
+## LOAN PARTICIPATIONS
 
 - **Definition**
 	- Loan participations are loans shared by a group of banks 		- when the loan might be too large for any one of the banks to make on its own
 		- bank wants to allocate its capital
 
-#### MEDIUM-TERM NOTES
+## MEDIUM-TERM NOTES
 
 - **Definition**
 	- MTNs are interest-bearing, not discount, securities, and they pay on a corporate bond basis
@@ -367,7 +390,7 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 	- Corporate bonds are underwritten, cost-effective
 	- MTNs are more flexible
 
-#### MUNICIPAL NOTES
+## MUNICIPAL NOTES
 
 - **Definition**
 	- Debt securities issued by state and local governments and their authorities are referred to as municipal securities
@@ -392,7 +415,7 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 	- depends upon its credit rating, the length of time for which it borrows, and the general level of short-term rates
 	- affected by changes in the tax code
 
-#### MORTGAGE-BACKED, PASS-THROUGH SECURITIES
+## MORTGAGE-BACKED, PASS-THROUGH SECURITIES
 
 - Mortgage-backed, pass-through securities are a hybrid debt instrument
 
@@ -431,8 +454,7 @@ The money market is a wholesale market for low-risk, highly liquid, short-term I
 	- **Private pass-throughs**
 		- the least important
 
-<span id="4"></span>
-## CHAPTER 4 Bond Valuation
+# CHAPTER 4 Bond Valuation
 
 - Bonds are issued through auctions in which yields are bid
 - Typically, interest on bonds is paid to the holder semiannually on the coupon dates

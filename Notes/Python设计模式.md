@@ -4,6 +4,18 @@ Github：[faif/python-patterns](https://github.com/faif/python-patterns)
 
 希望能用几句话总结各个设计模式。
 
+
+<!-- vim-markdown-toc GitLab -->
+
+* [Creational Patterns](#creational-patterns)
+* [Structural Patterns](#structural-patterns)
+* [Behavioral Patterns](#behavioral-patterns)
+* [Design for Testability Patterns](#design-for-testability-patterns)
+* [Fundamental Patterns](#fundamental-patterns)
+* [Others](#others)
+
+<!-- vim-markdown-toc -->
+
 ## Creational Patterns
 
 - **Abstract factory(抽象工厂)**
@@ -33,7 +45,7 @@ Github：[faif/python-patterns](https://github.com/faif/python-patterns)
     - 运用Queue，在每次用完一个对象后就推回Queue，这样可重复利用这一对象。
     - 用处：用于需要高代价多次创建某一对象时，可用队列存起来。
 
-- **Prototype（原型模式）**
+- **Prototype(原型模式)**
     - 运用解包，可以通过原型创建对象。也可用深度拷贝，保存时间快照。
     - 用处：保存时间快照。将对象存起来。
 
@@ -68,6 +80,7 @@ Github：[faif/python-patterns](https://github.com/faif/python-patterns)
 
 - **Flyweight(享元模式)**
     - 利用'__new__'将创建的对象存到字典，之后若要再创建同个对象则可直接引用。
+    - 新版本Python3.6可以用'__init_subclass__'
     - 但是要注意，他们全部都变成引用同一个对象,修改会相互影响。
     - 用处：用于如果要创建多个同样对象的话，可以减少开销，改善性能。
 
