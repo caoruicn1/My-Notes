@@ -59,6 +59,7 @@ Github：[faif/python-patterns](https://github.com/faif/python-patterns)
 
 - **Adapter(适配器模式)**
     - 用一个Adapter类将不同的但相似的类统一起来，和API对应。
+    - 其实可以用多重继承的方式，让相似的类继承基类，然后可以直接使用。
     - 用处：可以适配API而不用修改原类。
 
 - **Bridge(桥接模式)**
