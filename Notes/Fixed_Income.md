@@ -93,7 +93,7 @@
 - **Annual vs. semi-annual compounding**
     - A semi-annually compounded rate of "r" per year means "r/2" every six
       month.
-    - $$$(1+\frac{r}{2})^2 = 1+r_A$
+    - $$(1+\frac{r}{2})^2 = 1+r_A$$
 
 - **Zero rate or discount rate**
     - $$d_t \times (1+\frac{r_t}{2})^{2t} = 1$$
