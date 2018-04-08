@@ -60,7 +60,6 @@
             "copyright": "Copyright &#169; Chandler Chan",
             "timeColor": "#BF360C",
             "copyrightColor": "#cc000",
-            "utcOffset": "9",
             "isShowQRCode":false,
             "baseUri": "https://chandlercjy.gitbooks.io/chandler-s-notes/content/",
             "isShowIssues":false,

@@ -4,7 +4,7 @@
 
 <!-- vim-markdown-toc GitLab -->
 
-* [Part 1](#part-1)
+* [Part 1: Investments Fundamentals](#part-1-investments-fundamentals)
     * [Lecture 1: Risk and Return Measures](#lecture-1-risk-and-return-measures)
     * [Lecture 2: Equity markets trading and Stock-Trak](#lecture-2-equity-markets-trading-and-stock-trak)
     * [Lecture 3: Stock market indexes](#lecture-3-stock-market-indexes)
@@ -12,11 +12,14 @@
     * [Lecture 1: Portfolio Theory](#lecture-1-portfolio-theory)
     * [Lecture 2: CAPM and Multifactor Models](#lecture-2-capm-and-multifactor-models)
     * [Lecture 3: Market Efficiency](#lecture-3-market-efficiency)
+* [Part 3: Equity Portfolio Management](#part-3-equity-portfolio-management)
+    * [Lecture 1: Professional Asset Management and Equity Portfolio Performance Measures](#lecture-1-professional-asset-management-and-equity-portfolio-performance-measures)
+    * [Lecture 2: Valuation Techniques](#lecture-2-valuation-techniques)
 
 <!-- vim-markdown-toc -->
 
 
-# Part 1
+# Part 1: Investments Fundamentals
 
 ## Lecture 1: Risk and Return Measures
 
@@ -94,7 +97,7 @@
 
 - **Return on Invested Capital(ROIC)**
     - If short，then we should minus dividends.
-    - Usually Dividend means dividend per share, so we should mutiply #shares.
+    - Usually Dividend means dividend per share, so we should multiply #shares.
 
     $$\begin{align}
     ROIC &= \frac{Cap\ Gain\ or\ Loss\ on\ Position + Dividends- Commissions - Margin\
@@ -340,4 +343,218 @@
     - Attention!
         1. If Weak form not hold, so do semi-strong and strong.
         2. If semi-strong not hold, so do strong.
+
+# Part 3: Equity Portfolio Management
+
+## Lecture 1: Professional Asset Management and Equity Portfolio Performance Measures
+
+- **Passive Management**
+    - Match market performance at the lowest cost possible.
+    - Strategies:
+        1. Full Replication: buy the same weights
+        2. Sampling: buy representative sample
+        3. Quadratic Optimization or Quadratic Programming
+            - minimize return deviations from the benchmark
+
+    - Measure Tracking Errors:
+        - Tracking Error is the deviation between the managed portfolio and the
+         target index.
+        - $$TE=Standard deviation of(R_A - R_B)$$
+    - R-square: what fraction of the movement in the index’s returns can be 
+    explained by the returns of the fund.
+        - $$R^2=(\rho_{P,B})^2 = [\frac{Cov(R_P,R_B)}{\sigma_P \sigma_B}]^2$$
+
+- **Active Management**
+    - Challenges to overcome:
+        1. Management Fees
+        2. Transaction Costs
+        3. Risk Adjustments
+    - Strategies
+        1. Fundamental Strategies
+            - Top Down: Start with broad economy, then forecast
+                (1). Asset Allocation --> Equities, Bonds, Cash
+                (2). Sector Rotation --> link to business cycle
+            - Bottom Up: By valuation model
+                (1). Stock Picking --> Find undervalued stocks
+        2. Technical Strategies
+            a. Contrarian Investment Strategy
+            b. Price Momentum
+            c. Market Risk Neutral Investing
+        3. Strategies based on Anomalies
+            - Earnings momentum
+            - Firm Characteristics
+                (1). Value vs. Growth Investing
+
+- **Operating Structure of asset management companies**
+    1. Private Management Firms
+    2. Investment(Fund)Firms
+        - Valuing Investment Company Shares
+        - $$NAV=\frac{(Total\ Market\ Value\ of\
+          Portfolio)-(Liabilities)}{Total\ Fund\ Shares\ Outstanding}$$
+    - ![Companies](what/Equity_Market_12.png)
+
+- **Open-End Investment Companies**
+    - Open-end funds(mutual funds)
+        - Continue to sell and repurchase shares after their initial public
+            offerings. Open-end funds can sell or buy back shares with or without 
+            sales charges.
+        - Pros: Investors can come in and go out at any time. New shares
+         created when new money comes in; old shares deleted when money goes
+          out. Same NAV for each investor that day.
+        - Cons: Only buy or liquidate their positions at the end of the
+        trading day, cannot short, unwanted tax repercussions due
+        to capital gains distributions.
+
+- **Sharpe Ratio**
+    - $$Sharp\ Ratio = \frac{Arithmetic\ Mean\ R_P - Arithmetic\ Mean\
+      RFR}{\sigma_p}$$
+    - The Sharpe Ratio measures the excess return of a portfolio for a unit of
+     total risk, given by the standard deviation of the portfolio returns.
+
+- **Treynor Ratio**
+    - $$Treynor\ Ratio = \frac{Arithmetic\ Mean\ R_P - Arithmetic\ Mean\
+      RFR}{\beta_P}$$
+    - The Treynor Ratio measures the excess return of a portfolio for a unit
+     of systematic risk, given by Beta.
+    - Assumes the portfolio is 100\% diversified.
+
+- **Notes**
+    - Negative Treynor Ratios
+        - A negative Treynor ratio can indicate very good performance or
+        very bad performance. 
+    - Negative Sharpe Ratios
+        - A negative Sharpe ratio is meaningless. It makes managers with
+        large standard deviations look better than those with small
+        standard deviations
+    - 若个股风险被完全diversified away，两ratio排名应相同。
+    - When to use:
+        - 一个portfolio的用Sharp，
+        - 若是大portfolio中的小portoflio，即假设风险分散，可用Treynor
+
+- **Jensen's alpha**
+    - Signal "Factor" model (CAPM)
+        - Pros:解读容易
+        - Cons: 模型只考虑到系统风险，没有考虑到portfolio manager 的diversify能力。
+    - Multiple "Factor" model (FF3)
+        - $$Alpha_i = (R_{i,t} - R_f) - (B_{i1} \times [R_{m,t}-R_f] + B_{i2} 
+        \times [SMB_t] + B_{i3} \times [HMT_t])$$
+
+- **Infromation Ratio(or Appraisal Ratio)**
+    - $$IR_p = \frac{\overline{R_p} - \overline{R_b}}{\sigma_{ER}}$$
+    - 即returns differential 除以 differential的standard deviation
+    - $$IR_{p} = \frac{\alpha_p}{\sigma_e}$$
+    - Divide alpha by standard error of the regression.
+    - When to Use:
+        - 假设已有passive strategy， 要加入active
+          portfolio，可以用IR衡量添加进来后每单位alpha的benefit。
+
+- **Style Analysis**
+    1. Assume active manager is a closer indexer
+    2. Regress fund excess returns VS Benchmark excess returns
+    3. If n benchmarks, set Beta1, ...., Beta n
+    4. Constrained  Regression, Beta_i > 0, sum(Beta_i) = 1, minimize TE
+    5. What do we learn?
+        1. Beta_i : Exposure to Benchmarks
+        2. Alpha_0: Abnormal Performance
+
+## Lecture 2: Valuation Techniques
+
+- **Basic Idea**
+    - The value of an asset is the present value of its **expected cash flows**.
+    - $$V_j = \sum^{t=n}_{t=1} \frac{CF_t}{(1+k)^t}$$
+
+- **Approach 1: The dividend discount model(DDM)**
+    1. Dividends grow at constant rate(constant dividend growth model)
+        - Assume that dividends grow at a constant rate, g, per period forever.
+        - 即假设dividends增长率一直不变。
+        - $$V_0 = \frac{D_0(1+g)}{k_e -g}$$
+        - ![Portfolio_Frontier](what/Equity_Market_13.jpg)
+        - Impllications of constant-growth dividend model(PV is higher when:)
+            1.  The larger its expected dividend per share
+            2.  The lower the required rate of return (ke) 
+            3.  The higher the expected growth rate of dividends (g). 
+            4.  Stock price is expected to grow at the same rate as dividends.
+                - $$V_1 = \frac{D_2}{k_e -g}  \frac{D_1(1+g)}{k_e -g} = V_0(1+g)$$
+    2. Non-constant dividend growth
+        - Assume dividends grow at different rates for different periods of 
+        time, and then grow at a constant rate forever.
+        - 公式同上，但需要计算增长率不变前的首个dividends, 然后再进行valuation.
+
+- **Earnings will be used in**
+    1. Dividends
+    2. Reinvestment
+
+- **Estimating growth rate of dividends(g)**
+    - The determinants of growth(增长率决定因素)
+        1. Reinvestment(重投资到公司内部能增强公司潜力)
+        2. Rate of return on reinvested funds(钱投资到基金)
+    - Measure of growth rate
+        - $$ \begin{align}
+            g &= [1-\frac{Dividend\ paid}{Earnings}] \times ROE\\
+            &= PlowBack ratio \times ROE \\
+            &= [1- Dividend\ payout\ ratio] \times ROE 
+        \end{align} $$
+        - Plow back ratio: 钱回流回公司的比例
+
+- **Present Value of Growth Opportunities(PVGO)**
+    - $$\begin{align} Stock\ Price &= No-growth\ value\ per\ share + Present\ 
+    value\ of\ grwoth\ opportunities \\ &= \frac{E_i}{K} + PVGO \end{align}$$
+
+- **Approach 2: The Free Cash Flows to Firm(or Operating Free Cash Flow)**
+    - First estimate operating free cash flows and then compute the value.
+
+
+
+
+
+
+
+
+Case 1
+
+$$V_0 =\frac{D_1}{k-g}= \frac{D_1}{k}=\frac{E_1}{k} $$
+
+
+Case 2
+
+$$
+\begin{align}
+g &=(1- Div\ payout\ ratio)\times ROE \\
+&=(1-0.4)\times0.15\\
+&=0.09
+\end{align}
+$$
+
+$$V_0 = \frac{5\times0.4}{0.15-0.09} = 57.14$$
+
+
+$$57.14 = 40+PVGO$$
+$$PVGO=17.14$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Calculate Cash flow
+2. Terminal value(t10)
+    - PV of Ail FCFF's Growing at terminal growth rate(g) in perpetuity
+
+$$V = \frac{FCFF_1}{1+WACC} + \frac{FCFF_2}{(1+WACC)^2} +... + \frac{FCFF_10}{(1+WACC)^{10}}$$
+
+
+
+
+
+
+
+
 

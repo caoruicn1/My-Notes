@@ -4,6 +4,7 @@
 * [Course Notes](Notes/README2.md)
     * [Equity\_Market](Notes/Equity_Market.md)
     * [Financial\_Modeling](Notes/Financial_Modeling.md)
+    * [Fixed\_Income](Notes/Fixed_Income.md)
 * [Books Notes](Books/README.md)
     * [Expected Returns An Investor‘s Guide to Harvesting Market
     Rewards](Books/Expected_Returns_An_Investor‘s_Guide_to_Harvesting_Market_Rewards.md)
