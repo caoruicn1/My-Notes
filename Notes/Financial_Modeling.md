@@ -3,14 +3,16 @@
 
 <!-- vim-markdown-toc GitLab -->
 
-* [Returns and Risk](#returns-and-risk)
-* [Time series](#time-series)
-* [Volatility Modeling](#volatility-modeling)
+* [1. Returns and Risk](#1-returns-and-risk)
+* [2. Time series Models](#2-time-series-models)
+* [3. Volatility Modeling](#3-volatility-modeling)
+* [4. Non-Normal Distribution](#4-non-normal-distribution)
+* [5. Covariance and Correlation Models](#5-covariance-and-correlation-models)
 
 <!-- vim-markdown-toc -->
 
 
-## Returns and Risk
+# 1. Returns and Risk
 
 - **Risk**
     1. Market risk
@@ -75,7 +77,7 @@
     - By **Historical Simulation**
         - Sum(probability_n X loss_n)/probability
 
-## Time series
+# 2. Time series Models
 
 - **Autocorrelation**
     - $$\rho_{\tau} = Corr[R_t,R_{t-\tau}] =
@@ -173,7 +175,7 @@
     unit root then we say they are cointegrated.
     - 比如pairs trading strategy, arbitrage
 
-## Volatility Modeling
+# 3. Volatility Modeling
 
 - **Simple Variance Forecasting**
     - Assumption
@@ -221,4 +223,83 @@
     \end{align}$$
 
     - Parameters computed by **Maximum likelihood Estimation(MLE)**
+
+- **The Leverage Effect**
+    - A negative return increase variance by more than a positive return of
+      the same magnitude.
+    - Ways to capture:
+        1. 所以我们修改GARCH使Return权重与Return正负有关--> NGARCH (Nonlinear GARCH)
+            - $$\begin{align}
+        \sigma_{t+1}^2 &= \omega + \alpha(R_t-\theta \sigma_t)^2 + \beta
+          \sigma_t^2 \\ &= \omega + \alpha \sigma_t^2(z_t - \theta)^2+ \beta
+           \sigma_t^2 \end{align}$$
+        2. define 一个indicator函数，若return小于则为1，否则为0
+            - $$\sigma_{t+1}^2 = \omega + \alpha R_t^2 + \alpha \theta I_t
+              R_T^2 + \beta \sigma_t^2$$
+
+- **Standardize Return**
+    - $$\overline{R_t} = \frac{R_t^2}{\sigma_t^2}$$
+    - ![Historical Simulation](what/Financial_Modeling_11.png)
+
+# 4. Non-Normal Distribution
+
+- **Visualising Non-normality Using QQ Plots**
+    1. Sort all standardized returns in ascending order and call them $$z_i$$
+    2. Calculate the empirical probability of getting a value below the value i as (i-0.5)/T
+    3. Calculate the standard normal quantiles as $$\Phi^{-1}_{(i-0.5)/T}$$
+    4. Finally draw scatter plot
+        - $$\{ X_i, Y_i\} = \{ \Phi^{-1}_{(i-0.5)/T}, z_i \}$$
+    - If the data were normally distributed, then the scatterplot should
+      conform to the 45-degree line.
+
+    - 原理：
+        1. 即先将数据标准化，并从小到大依次排列,作为纵坐标：
+            - $$z_i = \frac{R - E(R)}{\sigma_R}$$
+        2. 再计算横坐标:
+            - 假设有n个值，需要取n个点作为横坐标，想像是在画直方图，
+            - 则取值为间隔的中位数， 即以下区间的中点: 
+            (0,1/n), (1/n, 2/n), ..., (n-1/n, 1)
+            - 中间点依次为(1-0.5)/n, (2-0.5)/n, ..., (i-0.5)/n.
+            - 再将这些点转化为正态分布的Z值作为横坐标
+
+- **Filtered Historical Simulation Approach**
+    - The Filtered Historical Simulation(FHS) attempts to combine the best of
+      the model-based with the best of the model-free approaches in a very
+      intuitive fashion.
+    - 即往常算VaR，是假设Return都是正态分布，然后直接用Z值和实际标准差预测VaR，
+      现在抛弃Return都是正太分布的假设，
+      然后用GARCH模型预测出来的标准差来标准化Return，
+      然后用标准化后的Return算出对应的quantile值乘以GARCH预测的标准差预测VaR.
+    - 即正态下用Z值quantile,真实sigma,计算VaR，
+      换成了用GARCH sigma 标准化实际return的quantile,GARCH sigma,计算VaR。
+    1. Estimate GARCH
+    2. Calculate $$\hat{R_t} = \frac{R_t}{\sigma_t}$$
+    3. Find quantile for $$\hat{R_t}$$
+    4. $$VaR_{FHS} = -quantile \times \sigma_{501}$$
+
+- **The Standardized t distrbution**
+    - Define:
+        - $$f_{t(d)}(x;d) = \frac{\Gamma((d+1)/2)}{\Gamma(d/2)\sqrt{d \pi}} 
+        (1+x^2/d)^{-(1+d)/2}, for\ d>0$$
+        - The distribution has only one parameter d
+        - $$E[x] = 0, when\ d>1$$
+        - $$Var[x] = d/(d-2), when\ d>2$$
+    - Standardized:
+        - $$z= \frac{x-E[x]}{\sqrt{Var[x]}} = \frac{x}{\sqrt{d/(d-2)}}$$
+        - $$f_{t(d)}(z;d) = C(d)(1+z^2/(d-2))^{-(1+d)/2}, for\ d>2$$
+        - where $$C(d) = \frac{\Gamma ((d+1)/2)}{\Gamma (d/2)\sqrt{\pi(d-2)}}$$
+        - $$E[x] = 0, Var[x] = 1$$
+
+
+# 5. Covariance and Correlation Models
+
+
+
+
+
+
+
+
+
+
 
