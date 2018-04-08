@@ -90,9 +90,53 @@
        98.99 = (\frac{4.375}{2}) \times d_{0.5}+(100+\frac{4.375}{2}) \times d_{0.5}
        \end{cases}$$
   
+- **Annual vs. semi-annual compounding**
+    - A semi-annually compounded rate of "r" per year means "r/2" every six
+      month.
+    - $$$(1+\frac{r}{2})^2 = 1+r_A$
 
+- **Zero rate or discount rate**
+    - $$d_t \times (1+\frac{r_t}{2})^{2t} = 1$$
+
+- **Value of a stream of cash flows**
+    - $$V = \sum_{j=1}^{n} K_j \times d_t = \sum_{j=1}^{n} \frac{K_j}{(1 +
+      \frac{r_{t_j}}{2})^{2t_j}}$$
+    - 注意，每个时期的$$r_t$$都不同
 
 ## 4. Yield to maturity
+
+- **Definition of yield to maturity**
+    - 之前是分别用每个时期的discount rate分别计算每个时期的cash
+      flow，现在重新定义一个能够全部都用来计算的yield
+    - $$V = \sum_{j=1}{n} \frac{K_j}{(1+y/2)^{2t_j}}$$
+    - Yield is a kind of average of the different zero rates associated with
+      the cash flows.
+
+- **Yield of a bond**
+    - $$P = \frac{c}{2}\sum_{s=1}^{2T} \frac{1}{i(1+y/2)} +
+      \frac{1}{(1+y/2)^{2T}}$$
+    - 利用等比数列公式得
+        - $$P = \frac{c}{2} [1- (\frac{1}{1+y/2})^{2T}] + \frac{1}{(1+y/2)^{2T}}$$
+        1. Note that if c=y, P=1 (the bond is priced at par)
+        2. If c>y, P>1 (the bond is priced at a premium to par) 
+        3. If c<y, P<1 (the bond is priced at a discount)
+        4. The yield on a zero is the zero rate: c=0 -> y=rT
+
+- **Value of a stream cash flows**
+    - $$V = \sum_{j=1}^{n} K_j \times d_t = \sum_{j=1}^{n} \frac{K_j}{(1 +
+      \frac{r_{t_j}}{2})^{2t_j}} = \sum_{j=1}^{n} \frac{K_j}{(1 + \frac{y}{2})^{2t_j}}$$
+
+- **The coupon effect**
+    - If the zero yield curve is upward sloping, then the bond with the higher
+     coupon puts “more weights” to shorter maturities, have a lower yield
+    - Conversely, if the yield curve is downward sloping, then the higher
+      couponbond will have a higher yield. 
+
+
+
+
+
+
 
 ## 5. Forward rates
 
