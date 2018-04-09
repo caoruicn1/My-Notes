@@ -468,7 +468,7 @@
         - Assume that dividends grow at a constant rate, g, per period forever.
         - 即假设dividends增长率一直不变。
         - $$V_0 = \frac{D_0(1+g)}{k_e -g}$$
-        - ![Portfolio_Frontier](what/Equity_Market_13.jpg)
+        - ![Portfolio_Frontier](what/Equity_Market_13.png)
         - Impllications of constant-growth dividend model(PV is higher when:)
             1.  The larger its expected dividend per share
             2.  The lower the required rate of return (ke) 
