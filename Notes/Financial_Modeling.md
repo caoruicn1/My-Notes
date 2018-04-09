@@ -293,6 +293,26 @@
 
 # 5. Covariance and Correlation Models
 
+- **Exposure Mapping**
+    1. 计算一个portfolio的Exposure，先用不同的模型表示portfolio里面的n个assets:
+        - $$R_1 = a_1 + \beta_1R_M + \sigma_1$$
+        - $$R_2 = a_2 + \beta_2R_M + \sigma_2$$
+        - ...
+        - $$R_n = a_n + \beta_nR_M + \sigma_n$$
+    2. 求每一个assets的Variance，有三种方法
+        1. $$\frac{1}{n}\sum_{i=1}^{n}R_t^2$$
+            - Cons: dependence on windows and equal weight
+        2. $$RiskMetrics\ \sigma_{t+1}^2 = (1-\lambda)R_t^2 + \lambda\sigma_t^2$$
+            - Cons: No mean-reversion
+        3. $$GARCH\ \sigma_{t+1}^2 + \omega + \alpha R_t^2 + \beta\sigma_t^2$$
+    3. 若联合起来算Portfolio的Variance，重点在Coveriance, 有三种方法
+        1. $$Cov(R_{A,t+1}, R_{B, t+1}) =\sigma_{AB,t+1} \frac{1}{n}\sum_{i=1}^{n}R_{A,t}R_{B,t}$$
+        2. $$RiskMetrics\ \sigma_{t+1}^2 = (1-\lambda)R_{A,t}R_{B,t} + \lambda\sigma_{AB,t}$$
+        3. $$GARCH\ \sigma_{t+1}^2 + \omega + \alpha R_{A,t}R_{B,t} + \beta\sigma_{AB_t}$$
+    4. 以上Covariance不知道哪个方法好，方法2和3因为每个asset之间可能产生的
+        参数不一样，会导致算出来的Var<0
+    5. 为了统一Covarialce，不如直接计算correlation
+        - $$Cov_{AB} = \rho_{AB} \sigma_A \sigma_B$$
 
 
 
