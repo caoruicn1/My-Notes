@@ -9,6 +9,7 @@
 * [4. Non-Normal Distribution](#4-non-normal-distribution)
 * [5. Covariance and Correlation Models](#5-covariance-and-correlation-models)
 * [6. Simulating the Term Structure of Risk](#6-simulating-the-term-structure-of-risk)
+* [7. Backtesting](#7-backtesting)
 
 <!-- vim-markdown-toc -->
 
@@ -17,7 +18,7 @@
 
 - **Risk**
     1. Market risk
-    2. Liqudity risk
+    2. Liquidity risk
     3. Operational risk
     4. Credit risk
     5. Business risk
@@ -69,7 +70,7 @@
 - **Expected Shortfall**
     - The ES tells us the expected value of tomorrow's loss, conditional on it
         being worse than the VaR.
-    - The Expected SHortfall computes the average of the tail outcomes weighted
+    - The Expected Shortfall computes the average of the tail outcomes weighted
         by their probabilities.
     - $$ES_{t+1}^p = -E_t[R_{PF,t+1}|R_{PF,t+1} < -VaR^p_{t+1}]$$
     - By **Normal distribution assumption**
@@ -174,7 +175,7 @@
 - **Cointegration**
     - If two variables that are both integrated have a linear combination with no 
     unit root then we say they are cointegrated.
-    - 比如pairs trading strategy, arbitrage
+    - 比如 pair trading strategy, arbitrage
 
 # 3. Volatility Modeling
 
@@ -183,7 +184,7 @@
         - $$R_{t+1} = \sigma_{t+1}z_{t+1},with\ z_{t+1} ~ i.i.d. N(0,1)$$
         - i.i.d. N(0,1):Independently and identically normally distributed with mean
         equal to zero and variance equal to 1.
-    - Puts equal weights on the past m obervations.
+    - Puts equal weights on the past m observations.
         - $$\sigma_{t+1}^2= \frac{1}{m} \sum_{\tau=1}^m R_{t+1-\tau}^2 = 
         \sum_{\tau=1}^m R_{t+1-\tau}^2$$
         - Cons: 
@@ -213,7 +214,7 @@
         &= E[\sigma_{t+1}^2]\\
         &= \omega+\alpha E[R_t^2]+\beta E[\sigma_t^2]\\
         &= \omega+\alpha \sigma^2 + \beta \sigma^2\\
-        &= \frac{\omega}{1-\alpha-beta}
+        &= \frac{\omega}{1-\alpha-\beta}
         \end{align}$$
 
     - Substitute $$\omega$$ we can get:
@@ -240,7 +241,7 @@
 
 - **Standardize Return**
     - $$\overline{R_t} = \frac{R_t^2}{\sigma_t^2}$$
-    - ![Historical Simulation](what/Financial_Modeling_11.png)
+    - ![Picture](what/Financial_Modeling_11.png)
 
 # 4. Non-Normal Distribution
 
@@ -308,7 +309,7 @@
 3. 若联合起来算Portfolio的Variance，重点在Coveriance, 有三种方法
     1. $$Cov(R_{A,t+1}, R_{B, t+1}) =\sigma_{AB,t+1} \frac{1}{n}\sum_{i=1}^{n}R_{A,t}R_{B,t}$$
     2. $$RiskMetrics\ \sigma_{t+1}^2 = (1-\lambda)R_{A,t}R_{B,t} + \lambda\sigma_{AB,t}$$
-    3. $$GARCH\ \sigma_{t+1}^2 + \omega + \alpha R_{A,t}R_{B,t} + \beta\sigma_{AB_t}$$
+    3. $$GARCH\ \sigma_{t+1}^2 = \omega + \alpha R_{A,t}R_{B,t} + \beta\sigma_{AB_t}$$
 4. 以上Covariance不知道哪个方法好，方法2和3因为每个asset之间可能产生的
     参数不一样，会导致算出来的Var<0
 5. 为了统一Covarialce，不如直接计算correlation
@@ -336,15 +337,91 @@
 - **Recall Stylized fact 9**
     - As the return-horizon increases, the unconditional return distribution
       changes and looks increasingly like the normal distribution
-    - ![Historical Simulation](what/Financial_Modeling_12.png)
+    - ![Picture](what/Financial_Modeling_12.png)
 
 - **Term Structure**
-    - ![Historical Simulation](what/Financial_Modeling_13.png)
+    - ![Picture](what/Financial_Modeling_13.png)
+
+- **Risk Term Structure in Univariate Models(单因素模型)**
+    - Risk-Metrics Variance确实可以scaled by K
+        - ![Picture](what/Financial_Modeling_15.png)
+    - GARCH model就不行
+        - 通过数学归纳法层层迭代可得以下公式
+        - ![Picture](what/Financial_Modeling_16.png)
+    - 而对于计算VaR，假如mean不为0，则
+        - ![Picture](what/Financial_Modeling_17.png)
+    - 由此引出用Monte Carlo Simulation计算VaR
 
 - **Monte Carlo Simulation**
-    - ![Historical Simulation](what/Financial_Modeling_14.png)
+    1. 假设Return符合正态分布，且拟合出一个GARCH模型，算出omega, alpha, beta.
+    2. 模拟一个由a set of random numbers from the standard normal distribution, 
+        N(0,1)组成的MC\*T矩阵，即T列，MC行,作为模拟的每一天的return
+    3. 计算cumulative return
+    4. Plot histogram of each columns and pick quantile
+        - ![Picture](what/Financial_Modeling_18.png)
+        - ![Picture](what/Financial_Modeling_14.png)
 
+- **Monte Carlo Filtered Historical Simulation(FHS)**
+    - 优点:FHS combines model-based methods of variance with model-free methods of
+      the distribution of shocks.
+    - 基本同上，区别在模拟的return是从标准化后的历史数据中随机有放回的抽取. 
+        We draw random numbers with replacement from our own database of 
+        past standardized residuals
+    - FHS can generate large losses in the forecast period, even without having
+      observed a large loss in the recorded past returns
+     
+- **The Risk Term Structure with Constant Correlations**
+- **The Risk Term Structure with Dynamic Correlations**
 
+# 7. Backtesting
 
+- **Violation**
+    - Plot the time series of $$Min\{ R_{PF,t+1} - (-VaR_{t+1}^{.01},
+      \})/sigma_{PF,t+1}$$
+    - **Hit sequence of VaR violation**
+        - $$I_{t+1} = \begin{cases} 1,
+        if\ R_{PF,t+1} < -VaR_{t+1}^p \\ 
+            0, if\ R_{PF,t+1} < -VaR_{t+1}^p \end{cases}$$
+        - 若超过VaR，返回1，否则为0
 
+- **Unconditional Converage Testing**
+    - $$H_0: \hat{\pi} = p$$
+    - $$H_1: \hat{\pi} \not= p$$
+    - $$T_0: Numbers of zeroes$$
+    - $$T_1: Numbers of ones$$
+    - $$\hat{\pi} = \frac{T_1}{T}$$
+    - $$p = coverage\ rate$$,比如算5%VaR，则p=5%
+    - Likelihood Null 
+        - $$L(p) = (1-p)^{T_0}p^{T_1}$$
+    - Likelihood Alternative
+        - $$L(\hat{pi}) = (1-\hat{\pi})^{T_0}\hat{\pi}^{T_1}$$
+    - Likelihood Ratio
+        - $$LR_{uc} = -2ln[\frac{L(p)}{L(\hat{\pi})}]$$
+    - LR will be distributed as a $$x^2$$ with one degree of freedom
+    - $$P-value \equiv 1-F_{x_1^2}(LR_{uc})$$ 
+        - 比如$$P-value = 1-F_{^2}(3.5) = 1-0.9386 = 0.0641$$ 
+    - 若LR小于3.84，则表示结果很不错，无法拒绝原假设.说明5%真的符合。
+    - We could reject a correct model(Type I error) or we could fail to
+      reject(that is, accept) an incorrect model(Type II error)
+    - Increasing the significant level implies larger Type I errors abut
+      smaller Type II errors and vice versa.
+    - In risk management, Type II errors may be very costly so that a
+      significance level of 10% may be appropriate.
+    - 经常没有足够多的observations来测试，所以最好可以通过Monte Carlo simulate
+      P-values来检验。即，原来算出LR之后，我们用它去拟合卡方分布看是否显著，
+      因为假设LR是符合卡方分布的。但其实我们可以通过Monte Carlo
+      simulation模拟出多条violation组成的hit sequence,然后分别算出LR，
+      得出了LR的分布， 然后用这个LR分布来看我们当前算 
+      得的LR是出于哪一个位置，得出相对应的quantile,即P-values.
+    - ![Picture](what/Financial_Modeling_19.png)
 
+- **Independence test**
+    - The first-order Markov property refers to the assumption that only
+      today's outcome matters for tomorrow's outcome.
+    - $$H_0: \pi_{00} = \pi_{01}$$
+    - $$H_1: \pi_{00} \not= \pi_{01}$$
+    - $$\hat{\pi} = \frac{T_1}{T}$$
+    - ![Picture](what/Financial_Modeling_20.png)
+
+- **Conditional Coverage Testing**
+    - ![Picture](what/Financial_Modeling_21.png)
