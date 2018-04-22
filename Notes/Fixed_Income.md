@@ -108,6 +108,10 @@
 - **Definition of yield to maturity**
     - 之前是分别用每个时期的discount rate分别计算每个时期的cash
       flow，现在重新定义一个能够全部都用来计算的yield
+    - Yield is the single discount rate that sets the present value of a bond's
+      cash flows equal to the market price.
+    - Yield is not a good measure of value(需要知道现金流固不固定), but is a
+      good summary(average) of interest rates.
     - $$V = \sum_{j=1}{n} \frac{K_j}{(1+y/2)^{2t_j}}$$
     - Yield is a kind of average of the different zero rates associated with
       the cash flows.
@@ -131,20 +135,149 @@
      coupon puts “more weights” to shorter maturities, have a lower yield
     - Conversely, if the yield curve is downward sloping, then the higher
       couponbond will have a higher yield. 
+    - ![Picture](what/Fixed_Income_1.png)
 
-
-
-
-
-
+- **Par rates**
+    - The par rate for a given maturity T is the coupon rate that makes a
+      T-year coupon bond sell for par.
+    - Par rate formula
+        - ![Picture](what/Fixed_Income_2.png)
 
 ## 5. Forward rates
 
+- **Ford contracts**
+    - A forward contract is an agreement to buy an asset at a pre-specified
+      date at a pre-specified price.
+        - settlement(delivery) date, delivery price
+
+- **Spot**
+    - A spot transaction is for settlement immediately.
+
+- **Motivation**
+    - Suppose today you know you will need a certain Treasury note, you can
+        1. Wait until time and buy
+        2. Arrange a forward transaction todady, lock in the price
+    - 可以假设成forward contract 为远期贷款,先把利息交了， spot为借给别人钱
+
+- **Forward price**
+    - Determined with "no arbitrage", synthesized with spot
+    - Enter into long forward contract with maturity T = Buy one unit of spot
+      today, hold until T  --> cost must be the same.
+    - $$PV(F) = S+PV(holding\ costs) - PV(holding\ benefits)$$
+
+- **Synthtic forward price for a zero**
+    - Maturity: T, pay $$F_t^T$$ at time t.
+    - $$PV(F_t^T) = Spot\ Price$$
+    - $$\frac{F_t^T}{(1+r_t / 2)^{2t}} = d_T$$
+
+- **Synthetic forward loan**
+    - The forward loan lasts for T-t years
+    - Forward rate: $$f_t^T$$
+    - 思路1：
+        - $$(1+f_t^T / 2)^{2(T-t)} = \frac{(1+r_T / 2)^{2T}}{(1+r_t/2)^{2t}}$$
+        - 即全部转化为PV，然后再相除得出rate, 注意rate为年化，且半年付息一次
+    - 思路2:
+        - $$ (1+r_t/2)^{2t} (1+f_t^T / 2)^{2(T-t)} = (1+r_T / 2)^{2T}$$
+        - 从0借到t，再从t借到T，等于从0借到T
+        - ![Picture](what/Fixed_Income_3.png)
+    - 思路3:
+        - 已知的为discount factor
+        - ![Picture](what/Fixed_Income_4.png)
+    - 总结：
+        - ![Picture](what/Fixed_Income_5.png)
+
+- **Term Premiums**
+    - Term Premium = Forward rate - Expected future spot rate
+
 ## 6. The repo market
+
+- **Repo**
+    - A repurchase agreement, or repo, is a sale of securities for cash with a
+      commitment to repurchase them at a specified price at a future date.
+    - Reverse repo.
+    - Financing a Long Position
+    - Establishing a Short Position
+
+- **Typical Market Participants**
+    - Borrowers:
+        1. Securities Dealers
+        2. Thrifts
+        3. Banks
+    - Lenders
+        1. Bank trust departments
+        2. Money market funds
+        3. Municipalities
+        4. COrporations
+    - Central banks
+
+- **Types of Collateral**
+    - Treasuries, Agencies, Mortgage-backed securities, Others
+
+- **Term of the Loan**
+    - Overnight repo
+    - Term repo
+    - Open repo(no fixed term, termininate any time)
+
+- **Ways of reducing the credit exposure**
+    - Margin(Haircut)
+    - Mark to Market on a regular basis(调整collateral levels or loan balance)
 
 ## 7. Duration
 
+- **Risk Measure**
+    - Sensitivity of Fixed income securities to interest rate changes.
+    - Dollar Duration
+    - DV01
+    - Modified Duration
+    - Macaulay Duration
+    - Effective Duration
+
+- **Dollar Duration**
+    - ![Picture](what/Fixed_Income_6.png)
+
+
+- **DV01**
+    - DV01 = Dollar Value of a Basis Point
+    - $$DV01 = \$dur \times 0.00001$$
+
+- **Parallel Shift**
+    - We assume all rates change by the same amount
+    - There is a parallel shift to the term structure.
+
+- **Duration**
+    - The duration of a bond is an approximation of the percent change in its
+      price given a 1% change in interest rates.
+    - ![Picture](what/Fixed_Income_7.png)
+
+- **Two Other Duration Measures**
+    - ![Picture](what/Fixed_Income_8.png)
+
 ## 8. Convexity
+
+- **Dollar Convexity**
+    - ![Picture](what/Fixed_Income_9.png)
+
+- **Convexity**
+    - ![Picture](what/Fixed_Income_10.png)
+
+- **Barbells and bullets**
+    - Barbell: a portfolio of a long-term and short-term zeros.
+    - Bullet: an intermediate-term zero.
+    - Let the barbell and bullet have the same value and duration.
+    - The barbell will have more convexity.
+        - Convexity is roughly the square of maturity
+        - Duration is roughly the maturity
+        - Weighted sum of squared maturities of the barbell is larger than the
+          squared maturity of the bullet.
+    - ![Picture](what/Fixed_Income_11.png)
+
+
+
+
+
+
+
+
 
 ## 9. Immunization
 
