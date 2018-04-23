@@ -121,7 +121,7 @@
 
 - **ARMA Models**
     - ARMA(1,1)
-        - $$R_t = \phi_0 + \phi_1R_{t-1} + \phi_1 \epsilon_{t-1}+ \epsilon_t$$
+        - $$R_t = \phi_0 + \phi_1R_{t-1} + \theta_1 \epsilon_{t-1}+ \epsilon_t$$
         - 推导$$E(R_t)$$
             - $$E(R_t) = \phi_0 + \phi_1E[R_{t-1}]+\theta_1E(\epsilon_{t-1})+E(\epsilon_t)$$
             - $$E(R_t) = \phi_0 + \phi_1E[R_{t-1}]+0+0$$
@@ -305,11 +305,11 @@
         - Cons: dependence on windows and equal weight
     2. $$RiskMetrics\ \sigma_{t+1}^2 = (1-\lambda)R_t^2 + \lambda\sigma_t^2$$
         - Cons: No mean-reversion
-    3. $$GARCH\ \sigma_{t+1}^2 + \omega + \alpha R_t^2 + \beta\sigma_t^2$$
-3. 若联合起来算Portfolio的Variance，重点在Coveriance, 有三种方法
+    3. $$GARCH\ \sigma_{t+1}^2 = \omega + \alpha R_t^2 + \beta\sigma_t^2$$
+3. 若联合起来算Portfolio的Variance，重点在Covariance, 有三种方法
     1. $$Cov(R_{A,t+1}, R_{B, t+1}) =\sigma_{AB,t+1} \frac{1}{n}\sum_{i=1}^{n}R_{A,t}R_{B,t}$$
-    2. $$RiskMetrics\ \sigma_{t+1}^2 = (1-\lambda)R_{A,t}R_{B,t} + \lambda\sigma_{AB,t}$$
-    3. $$GARCH\ \sigma_{t+1}^2 = \omega + \alpha R_{A,t}R_{B,t} + \beta\sigma_{AB_t}$$
+    2. $$RiskMetrics\ \sigma_{AB,t+1}^2 = (1-\lambda)R_{A,t}R_{B,t} + \lambda\sigma_{AB,t}$$
+    3. $$GARCH\ \sigma_{AB,t+1}^2 = \omega + \alpha R_{A,t}R_{B,t} + \beta\sigma_{AB_t}$$
 4. 以上Covariance不知道哪个方法好，方法2和3因为每个asset之间可能产生的
     参数不一样，会导致算出来的Var<0
 5. 为了统一Covarialce，不如直接计算correlation
@@ -377,7 +377,7 @@
 
 - **Violation**
     - Plot the time series of $$Min\{ R_{PF,t+1} - (-VaR_{t+1}^{.01},
-      \})/sigma_{PF,t+1}$$
+      \}) \sigma_{PF,t+1}$$
     - **Hit sequence of VaR violation**
         - $$I_{t+1} = \begin{cases} 1,
         if\ R_{PF,t+1} < -VaR_{t+1}^p \\ 
@@ -387,8 +387,8 @@
 - **Unconditional Converage Testing**
     - $$H_0: \hat{\pi} = p$$
     - $$H_1: \hat{\pi} \not= p$$
-    - $$T_0: Numbers of zeroes$$
-    - $$T_1: Numbers of ones$$
+    - $$T_0: Numbers\ of\ zeroes$$
+    - $$T_1: Numbers\ of\ ones$$
     - $$\hat{\pi} = \frac{T_1}{T}$$
     - $$p = coverage\ rate$$,比如算5%VaR，则p=5%
     - Likelihood Null 
@@ -418,8 +418,8 @@
 - **Independence test**
     - The first-order Markov property refers to the assumption that only
       today's outcome matters for tomorrow's outcome.
-    - $$H_0: \pi_{00} = \pi_{01}$$
-    - $$H_1: \pi_{00} \not= \pi_{01}$$
+    - $$H_0: \pi_{01} = \pi_{11}$$
+    - $$H_1: \pi_{01} \not= \pi_{11}$$
     - $$\hat{\pi} = \frac{T_1}{T}$$
     - ![Picture](what/Financial_Modeling_20.png)
 
