@@ -394,7 +394,7 @@
     - Likelihood Null 
         - $$L(p) = (1-p)^{T_0}p^{T_1}$$
     - Likelihood Alternative
-        - $$L(\hat{pi}) = (1-\hat{\pi})^{T_0}\hat{\pi}^{T_1}$$
+        - $$L(\hat{\pi}) = (1-\hat{\pi})^{T_0}\hat{\pi}^{T_1}$$
     - Likelihood Ratio
         - $$LR_{uc} = -2ln[\frac{L(p)}{L(\hat{\pi})}]$$
     - LR will be distributed as a $$x^2$$ with one degree of freedom
