@@ -20,8 +20,7 @@
         "anchor-navigation-ex",
         "edit-link",
         "page-footer",
-        "-sharing", "sharing-plus",
-        "baidu"
+        "-sharing", "sharing-plus"
     ],
 
     "pluginsConfig": {
@@ -91,9 +90,6 @@
                 "weibo", "instapaper", "linkedin",
                 "pocket", "stumbleupon"
             ]
-        },
-        "baidu": {
-            "token": "bbc51aadd8"
         }
     }
 }

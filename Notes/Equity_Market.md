@@ -586,9 +586,9 @@
 ### Topic 1: Mechanics of Options Markets
 
 - **Options**
-    - A call option gives the holder the right to buy a certain asset 
-    (underlying asset) by a certain date (maturity date) 
-    for a certain price (strike price). 
+    - A call option gives the holder the right to buy a certain asset
+    (underlying asset) by a certain date (maturity date)
+    for a certain price (strike price).
     - A put option gives the holder the right to sell a certain asset by a 
     certain date for a certain price.
     - European option: exercised only at maturity. **Index options**
@@ -661,4 +661,3 @@
 - ![Portfolio_Frontier](what/Equity_Market_16.png)
 
 ## Lecture 3: Option Trading Strategies
-
