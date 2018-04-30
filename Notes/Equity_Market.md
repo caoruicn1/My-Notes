@@ -15,6 +15,17 @@
 * [Part 3: Equity Portfolio Management](#part-3-equity-portfolio-management)
     * [Lecture 1: Professional Asset Management and Equity Portfolio Performance Measures](#lecture-1-professional-asset-management-and-equity-portfolio-performance-measures)
     * [Lecture 2: Valuation Techniques](#lecture-2-valuation-techniques)
+        * [Discounted Cash Flow Techniques](#discounted-cash-flow-techniques)
+        * [Estimate the inputs in the discouted cash flow methods](#estimate-the-inputs-in-the-discouted-cash-flow-methods)
+        * [Relative Valuation Techniques](#relative-valuation-techniques)
+* [Part 4: Investments Fundamentals](#part-4-investments-fundamentals)
+    * [Lecture 1: Basics Of Options](#lecture-1-basics-of-options)
+        * [Topic 1: Mechanics of Options Markets](#topic-1-mechanics-of-options-markets)
+        * [Topic 2: Properties of Options](#topic-2-properties-of-options)
+    * [Lecture 2: Option Valuation](#lecture-2-option-valuation)
+        * [Binomial Option Pricing](#binomial-option-pricing)
+        * [Black-Scholes model](#black-scholes-model)
+    * [Lecture 3: Option Trading Strategies](#lecture-3-option-trading-strategies)
 
 <!-- vim-markdown-toc -->
 
@@ -463,6 +474,8 @@
     - The value of an asset is the present value of its **expected cash flows**.
     - $$V_j = \sum^{t=n}_{t=1} \frac{CF_t}{(1+k)^t}$$
 
+### Discounted Cash Flow Techniques
+
 - **Approach 1: The dividend discount model(DDM)**
     1. Dividends grow at constant rate(constant dividend growth model)
         - Assume that dividends grow at a constant rate, g, per period forever.
@@ -502,59 +515,150 @@
 
 - **Approach 2: The Free Cash Flows to Firm(or Operating Free Cash Flow)**
     - First estimate operating free cash flows and then compute the value.
+    - $$V = \frac{FCFF_1}{1-WACC}+ \frac{FCFF_2}{(1-WACC)^2} +...+ \frac{FCFF_n}{(1-WACC)^n}$$
+    - OFCF:
+        - EBIT*(1-tax rate)
+        - (+)  Depreciation Expense
+        - (-)  Capital Expenditures
+        - (-)  Change in Working Capital
+    - $$V = \frac{FCFF_0 (1+g)}{WACC-g}$$
+        - $$V_j = Value\ of\ firm\ j$$
+        - $$n = number\ of\ periods\ assumed\ to\ be\ infinite$$
+        - $$FCFF_t = the\ firm's\ operating\ free\ cash\ flow\ in\ period\ t$$
+        - $$WACC_j = Firm\ j's\ weighted\ average\ cost\ of\ capital$$
 
+- **Approach 3: The Free Cash Flows to Equity Approach:**
+    - FCFE:
+        - FCFF
+        - (-)  Interest expense(1-tax rate)
+        - (-)  Principal Debt Repayments
+        - (+)  New Debt Issues
+    - FCFE can also be calculated:
+        - Net Income
+        - (+)  Depreciation Expense
+        - (-)  Capital Expenditures
+        - (-)  Change in Working Capital
+        - (-)  Principal Debt Repayments
+        - (+)  New Debt Issues
 
+### Estimate the inputs in the discouted cash flow methods
 
+- **Estimating the required rate of return for equity(k)**
+    - $$Cost\ of\ equity = Risk-free\ rate+ Expected\ risk\ premium(CAPM)$$
 
+- **Estimate the weighted average cost of capital(WACC)**
+    - $$WACC=(1-Tax\ rate)\times Cost\ of\ debt \times \frac{Debt}{Debt+Equity}
+     + Cost\ of\ equity \times (1-\frac{Debt}{Debt+Equity})$$
 
+- **Estimate growth rates**
+    - Determined by the return on equity and the proportion of earnings paid
+      out in dividends(the dividend payout ratio)
 
+### Relative Valuation Techniques
 
+- **Earnings multiplier model**
+    - Price to earnings ratio(PE)
+        - $$\begin{align}
+        PE &= \frac{P_0}{E_1} \\
+           &= \frac{D_1}{(k-g)E_1} \\
+           &= \frac{D_1/E_1}{(k-g)} \\
+           &= \frac{Expected\ Dividend \times Payout\ ratio}{(k-g)} \\
+           &= \frac{1-Plowback\ ratio}{(k-Plowback\ ratio \times ROE)} \\
+        \end{align}$$
+        - $$P_0 = \frac{E_1}{k} + PVGO$$
+            - $$\frac{P_0}{E_1} = \frac{1}{k} + \frac{PVGO}{E_1}$$
+        - Implication of P/E Ratio
+            1. P/E ratio increases with ROE
+            2. P/E ratio increases with plowback ratio, as long as ROE exceeds k.
+            3. P/E ratio decreases with stock risk.
+    - The price to cash flow ratio
+    - The price to book value ratio
+    - The price to the price sales ratio
+    - Applying the relative valuation technique
+        - Historical Multiples
+        - Industry Comparisons
+        - Market Compparisions
 
-Case 1
+# Part 4: Investments Fundamentals
 
-$$V_0 =\frac{D_1}{k-g}= \frac{D_1}{k}=\frac{E_1}{k} $$
+## Lecture 1: Basics Of Options
 
+### Topic 1: Mechanics of Options Markets
 
-Case 2
+- **Options**
+    - A call option gives the holder the right to buy a certain asset 
+    (underlying asset) by a certain date (maturity date) 
+    for a certain price (strike price). 
+    - A put option gives the holder the right to sell a certain asset by a 
+    certain date for a certain price.
+    - European option: exercised only at maturity. **Index options**
+    - American option: exercised at any time before maturity. **Stock, ETF**
 
-$$
-\begin{align}
-g &=(1- Div\ payout\ ratio)\times ROE \\
-&=(1-0.4)\times0.15\\
-&=0.09
-\end{align}
-$$
+- **Limit**
+    - **Position Limit**: 每次的仓位限制
+    - **Exercise Limit**: 一段period内的成交仓位限制
 
-$$V_0 = \frac{5\times0.4}{0.15-0.09} = 57.14$$
+- **Moneyness of Options**
+    - In the money
+    - Out of the money
+    - At the money
 
+- **Intrinsic vs. Time Value of Options**
+    - Intrinsic value of call = $$max(S_t-K,0)$$, for t from 0 to T
+    - Value of an option = Intrinsic Value + Time Value
 
-$$57.14 = 40+PVGO$$
-$$PVGO=17.14$$
+- **Options clearing house(OCC)**
+    - Issuer of all options. Works with the CBOE.
+    - OCC takes the opposite side of every option traded. Becomes the buyer 
+    for every seller and the seller for every buyer.
 
+- **Covered vs. Naked Call and Margins**
+    - **A covered call**: an investor writes a call and owns the asset.
+    - **A naked call**: an investor writes a call, but does not own the asset.
+    - 对于Naked Call会要求有Margins防止default
 
+### Topic 2: Properties of Options
 
+- **Effect on option prices**
+    - Time to expiration: 
+        - American: the longer maturity, the more value
+        - European: usually the longer maturity, the more value. But consider
+          Dividends, could be reversed.
+    - Volatility: increase, the more value
+    - Risk-free rate: increase, **call goes up, put goes down.**
+    - Dividends: Dividends reduce stock. Good for put, bad for call.
 
+- **American vs European Options**
+    - Because of Time value of money in American:
+        - C >= c
+        - P >= p
 
+- **Portfolio Example**
+    - ![Portfolio_Frontier](what/Equity_Market_14.png)
 
+- **Reasons for not Exercising a Call Early(No Dividends)**
+    - 不先行权，因为有time value and insurance value
+    - 不然就卖掉option，别行权，因为price of a call always > intrinsic value
+    - 此时European call和American call价格相等
 
+- **Put should be execise immediately**
+    - Put若赚钱应该立刻卖掉。
+    - 可以假设stock price为0时，若不行权就亏钱。
 
+## Lecture 2: Option Valuation
 
+### Binomial Option Pricing
 
+- **Option Pricing简单原理**
+    - 基本原理为将未来价值dicount到现值，即为option价格。
+      首先假设同时做空n股stock和买call， 用binomial tree可以获得T时间后，
+      上涨和下跌的后的价格为多少，若使此时上涨和下跌情况的portfolio价值相等,
+      可以求得n股为多少。此时未来的股票市值和option价值已知，现在只有股票市值
+      已知， 所以将未来T时间后的portfolio贴现，即可得option price.
+    - ![Portfolio_Frontier](what/Equity_Market_15.png)
 
+### Black-Scholes model
+- ![Portfolio_Frontier](what/Equity_Market_16.png)
 
-
-
-1. Calculate Cash flow
-2. Terminal value(t10)
-    - PV of Ail FCFF's Growing at terminal growth rate(g) in perpetuity
-
-$$V = \frac{FCFF_1}{1+WACC} + \frac{FCFF_2}{(1+WACC)^2} +... + \frac{FCFF_10}{(1+WACC)^{10}}$$
-
-
-
-
-
-
-
-
+## Lecture 3: Option Trading Strategies
 
