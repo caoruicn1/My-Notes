@@ -450,7 +450,7 @@
         - $$Alpha_i = (R_{i,t} - R_f) - (B_{i1} \times [R_{m,t}-R_f] + B_{i2} 
         \times [SMB_t] + B_{i3} \times [HMT_t])$$
 
-- **Infromation Ratio(or Appraisal Ratio)**
+- **Information Ratio(or Appraisal Ratio)**
     - $$IR_p = \frac{\overline{R_p} - \overline{R_b}}{\sigma_{ER}}$$
     - 即returns differential 除以 differential的standard deviation
     - $$IR_{p} = \frac{\alpha_p}{\sigma_e}$$
@@ -538,8 +538,8 @@
         - (+)  Depreciation Expense
         - (-)  Capital Expenditures
         - (-)  Change in Working Capital
-        - (-)  Principal Debt Repayments
-        - (+)  New Debt Issues
+        - (-)  Principal Debt Repayments(Changes of current Assets)
+        - (+)  New Debt Issues(Changes of liabilities)
 
 ### Estimate the inputs in the discouted cash flow methods
 
@@ -624,7 +624,7 @@
         - American: the longer maturity, the more value
         - European: usually the longer maturity, the more value. But consider
           Dividends, could be reversed.
-    - Volatility: increase, the more value
+    - Volatility: increase, the more value --> 从insurance value入手
     - Risk-free rate: increase, **call goes up, put goes down.**
     - Dividends: Dividends reduce stock. Good for put, bad for call.
 
@@ -638,6 +638,11 @@
 
 - **Reasons for not Exercising a Call Early(No Dividends)**
     - 不先行权，因为有time value and insurance value
+        - time value: the option holder is able to earn interest on the strike
+          price for a longer period of time.
+        - insurance value: delaying exercise also provides insurance against
+          the stock price falling below the strike price by the expiration
+          date.
     - 不然就卖掉option，别行权，因为price of a call always > intrinsic value
     - 此时European call和American call价格相等
 
