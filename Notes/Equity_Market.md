@@ -107,7 +107,7 @@
     \end{align}$$
 
 - **Return on Invested Capital(ROIC)**
-    - If short，then we should minus dividends.
+    - If short,then we should minus dividends.
     - Usually Dividend means dividend per share, so we should multiply #shares.
 
     $$\begin{align}
@@ -289,7 +289,7 @@
             - ![Portfolio_Frontier](what/Equity_Market_8.png)
 
     - Security market line(SML)
-        - Alpha等于Expected return减去CAPM算的return，为正表示underprice.
+        - Alpha等于Expected return减去CAPM算的return,为正表示underprice.
         - ![Portfolio_Frontier](what/Equity_Market_7.png)
 
     - Total Risk, Systematic Risk and Firm-specific risk
@@ -342,7 +342,7 @@
         - Anamalies:
             1. Size effect(小市值更赚钱)
             2. Book-to-market effect(Value vs. Growth) (value股low
-               volatility，positive relation between BV/MV and returns)
+               volatility,positive relation between BV/MV and returns)
             3. Post earnings announcement drift
             4. Calender effect
     3. Strong form efficiency
@@ -437,15 +437,15 @@
         - A negative Sharpe ratio is meaningless. It makes managers with
         large standard deviations look better than those with small
         standard deviations
-    - 若个股风险被完全diversified away，两ratio排名应相同。
+    - 若个股风险被完全diversified away,两ratio排名应相同。
     - When to use:
-        - 一个portfolio的用Sharp，
-        - 若是大portfolio中的小portoflio，即假设风险分散，可用Treynor
+        - 一个portfolio的用Sharp,
+        - 若是大portfolio中的小portoflio,即假设风险分散,可用Treynor
 
 - **Jensen's alpha**
     - Signal "Factor" model (CAPM)
         - Pros:解读容易
-        - Cons: 模型只考虑到系统风险，没有考虑到portfolio manager 的diversify能力。
+        - Cons: 模型只考虑到系统风险,没有考虑到portfolio manager 的diversify能力。
     - Multiple "Factor" model (FF3)
         - $$Alpha_i = (R_{i,t} - R_f) - (B_{i1} \times [R_{m,t}-R_f] + B_{i2} 
         \times [SMB_t] + B_{i3} \times [HMT_t])$$
@@ -456,8 +456,8 @@
     - $$IR_{p} = \frac{\alpha_p}{\sigma_e}$$
     - Divide alpha by standard error of the regression.
     - When to Use:
-        - 假设已有passive strategy， 要加入active
-          portfolio，可以用IR衡量添加进来后每单位alpha的benefit。
+        - 假设已有passive strategy, 要加入active
+          portfolio,可以用IR衡量添加进来后每单位alpha的benefit。
 
 - **Style Analysis**
     1. Assume active manager is a closer indexer
@@ -491,7 +491,7 @@
     2. Non-constant dividend growth
         - Assume dividends grow at different rates for different periods of 
         time, and then grow at a constant rate forever.
-        - 公式同上，但需要计算增长率不变前的首个dividends, 然后再进行valuation.
+        - 公式同上,但需要计算增长率不变前的首个dividends, 然后再进行valuation.
 
 - **Earnings will be used in**
     1. Dividends
@@ -637,29 +637,29 @@
     - ![Portfolio_Frontier](what/Equity_Market_14.png)
 
 - **Reasons for not Exercising a Call Early(No Dividends)**
-    - 不先行权，因为有time value and insurance value
+    - 不先行权,因为有time value and insurance value
         - time value: the option holder is able to earn interest on the strike
           price for a longer period of time.
         - insurance value: delaying exercise also provides insurance against
           the stock price falling below the strike price by the expiration
           date.
-    - 不然就卖掉option，别行权，因为price of a call always > intrinsic value
+    - 不然就卖掉option,别行权,因为price of a call always > intrinsic value
     - 此时European call和American call价格相等
 
 - **Put should be execise immediately**
     - Put若赚钱应该立刻卖掉。
-    - 可以假设stock price为0时，若不行权就亏钱。
+    - 可以假设stock price为0时,若不行权就亏钱。
 
 ## Lecture 2: Option Valuation
 
 ### Binomial Option Pricing
 
 - **Option Pricing简单原理**
-    - 基本原理为将未来价值dicount到现值，即为option价格。
-      首先假设同时做空n股stock和买call， 用binomial tree可以获得T时间后，
-      上涨和下跌的后的价格为多少，若使此时上涨和下跌情况的portfolio价值相等,
-      可以求得n股为多少。此时未来的股票市值和option价值已知，现在只有股票市值
-      已知， 所以将未来T时间后的portfolio贴现，即可得option price.
+    - 基本原理为将未来价值dicount到现值,即为option价格。
+      首先假设同时做空n股stock和买call, 用binomial tree可以获得T时间后,
+      上涨和下跌的后的价格为多少,若使此时上涨和下跌情况的portfolio价值相等,
+      可以求得n股为多少。此时未来的股票市值和option价值已知,现在只有股票市值
+      已知, 所以将未来T时间后的portfolio贴现,即可得option price.
     - ![Portfolio_Frontier](what/Equity_Market_15.png)
 
 ### Black-Scholes model

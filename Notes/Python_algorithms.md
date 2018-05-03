@@ -1,6 +1,6 @@
 # Python Algorithms Notes
 
-Github: [Python_algorithms](https://github.com/keon/algorithms)
+Github:[Python_algorithms](https://github.com/keon/algorithms)
 
 <!-- vim-markdown-toc GitLab -->
 
@@ -32,28 +32,30 @@ Github: [Python_algorithms](https://github.com/keon/algorithms)
 ## Array
 
 - **delete_nth**
-    - Goal:返回列表，允许重复n次
-    - Method:用defaultdict计数，用for循环返回result
+    - Goal:返回列表,允许重复n次
+    - Method:用defaultdict计数,用for循环返回result
+    - Method:用collections的Counter
 
 - **flatten**
     - Goal:平铺array中的array
-    - Method:用isinstance判断时候Iterable,递归返回，生成result列表
+    - Method:用isinstance判断时候Iterable,递归返回,生成result列表
     - Method:返回迭代器
 
 - **garage**
-    - Goal:初始序列车位，只能通过一个空车位移动成最终指定序列
-    - Method:先获取空车位的位置，判断该位置是否和最终序列相同，若不相同，
-      就获取该位置车辆，在初始序列将空位和此车辆调换。最后检查是否全部位置相同,
-      可以判断空车位和最终序列相同时，其他位置是否相同，若不相同，
+    - Goal:初始序列车位,只能通过一个空车位移动成最终指定序列
+    - Method:先获取空车位的位置,判断该位置是否和最终序列相同,若不相同,
+      就获取该位置车辆,在初始序列将空位和此车辆调换。最后检查是否全部位置相同,
+      可以判断空车位和最终序列相同时,其他位置是否相同,若不相同,
       则将空车位和不一样的位置互换。
 
 - **josephus_problem**
-    - Goal:
-    - Method:
+    - Goal:每次间隔n人抽取出来,直到抽完
+    - Method:用切片和pop
 
 - **longest_non_repeat**
-    - Goal:
-    - Method:
+    - Goal:寻找在字符串中重复次数最多的字母
+    - Method:用一个temp列表计数
+    - Method:用collections的Counter
 
 - **merge_intervals**
     - Goal:
