@@ -1,34 +1,33 @@
 # Equity Market
 
-
-
 <!-- vim-markdown-toc GitLab -->
 
 * [Part 1: Investments Fundamentals](#part-1-investments-fundamentals)
-    * [Lecture 1: Risk and Return Measures](#lecture-1-risk-and-return-measures)
-    * [Lecture 2: Equity markets trading and Stock-Trak](#lecture-2-equity-markets-trading-and-stock-trak)
-    * [Lecture 3: Stock market indexes](#lecture-3-stock-market-indexes)
+  * [Lecture 1: Risk and Return Measures](#lecture-1-risk-and-return-measures)
+  * [Lecture 2: Equity markets trading and Stock-Trak](#lecture-2-equity-markets-trading-and-stock-trak)
+  * [Lecture 3: Stock market indexes](#lecture-3-stock-market-indexes)
 * [Part 2: Portfolio Theory and Market Efficiency](#part-2-portfolio-theory-and-market-efficiency)
-    * [Lecture 1: Portfolio Theory](#lecture-1-portfolio-theory)
-    * [Lecture 2: CAPM and Multifactor Models](#lecture-2-capm-and-multifactor-models)
-    * [Lecture 3: Market Efficiency](#lecture-3-market-efficiency)
+  * [Lecture 1: Portfolio Theory](#lecture-1-portfolio-theory)
+  * [Lecture 2: CAPM and Multifactor Models](#lecture-2-capm-and-multifactor-models)
+  * [Lecture 3: Market Efficiency](#lecture-3-market-efficiency)
 * [Part 3: Equity Portfolio Management](#part-3-equity-portfolio-management)
-    * [Lecture 1: Professional Asset Management and Equity Portfolio Performance Measures](#lecture-1-professional-asset-management-and-equity-portfolio-performance-measures)
-    * [Lecture 2: Valuation Techniques](#lecture-2-valuation-techniques)
-        * [Discounted Cash Flow Techniques](#discounted-cash-flow-techniques)
-        * [Estimate the inputs in the discouted cash flow methods](#estimate-the-inputs-in-the-discouted-cash-flow-methods)
-        * [Relative Valuation Techniques](#relative-valuation-techniques)
+  * [Lecture 1: Professional Asset Management and Equity Portfolio Performance Measures](#lecture-1-professional-asset-management-and-equity-portfolio-performance-measures)
+  * [Lecture 2: Valuation Techniques](#lecture-2-valuation-techniques)
+    * [Discounted Cash Flow Techniques](#discounted-cash-flow-techniques)
+    * [Estimate the inputs in the discouted cash flow methods](#estimate-the-inputs-in-the-discouted-cash-flow-methods)
+    * [Relative Valuation Techniques](#relative-valuation-techniques)
 * [Part 4: Investments Fundamentals](#part-4-investments-fundamentals)
-    * [Lecture 1: Basics Of Options](#lecture-1-basics-of-options)
-        * [Topic 1: Mechanics of Options Markets](#topic-1-mechanics-of-options-markets)
-        * [Topic 2: Properties of Options](#topic-2-properties-of-options)
-    * [Lecture 2: Option Valuation](#lecture-2-option-valuation)
-        * [Binomial Option Pricing](#binomial-option-pricing)
-        * [Black-Scholes model](#black-scholes-model)
-    * [Lecture 3: Option Trading Strategies](#lecture-3-option-trading-strategies)
+  * [Lecture 1: Basics Of Options](#lecture-1-basics-of-options)
+    * [Topic 1: Mechanics of Options Markets](#topic-1-mechanics-of-options-markets)
+    * [Topic 2: Properties of Options](#topic-2-properties-of-options)
+  * [Lecture 2: Option Valuation](#lecture-2-option-valuation)
+    * [Binomial Option Pricing](#binomial-option-pricing)
+    * [Black-Scholes model](#black-scholes-model)
+  * [Lecture 3: Option Trading Strategies](#lecture-3-option-trading-strategies)
 
 <!-- vim-markdown-toc -->
 
+<!-- prettier-ignore-start -->
 
 # Part 1: Investments Fundamentals
 
@@ -48,28 +47,28 @@
     5. Country Risk
 
 - **Holding Period Yiekd(HPY)**
-    - Discrete compounding 
-   
+    - Discrete compounding
+
     $$HPY_D=\frac{END}{Begin}-1$$
 
     $$HPY_D=[\frac{END}{Begin}]^\frac{1}{n}-1$$
-  
+
     - continuous compounding
-    
+
     $$HPY_C=\ln \frac{END}{Begin}$$
 
     $$HPY_C=\ln [\frac{END}{Begin}] \times \frac{1}{n}$$
- 
-    - Relationship 
+
+    - Relationship
     $$[e^{HPR}]^n = \frac{END}{Begin}$$
 
 - **Measuring Multi-period historical returns**
-    1. Arithmetic Mean(AM) 
+    1. Arithmetic Mean(AM)
         - Good Measure of Expected Return Next Period.
     $$AM=\frac{\sum^{N}_{i=1}HPY_i}{N}$$
 
-    2. Geometric Mean(GM) 
-        - Compounded Annual Growth Rate 
+    2. Geometric Mean(GM)
+        - Compounded Annual Growth Rate
         - Good Measure for long term Performance.
     $$GM = [[1+HPY_1]\times [1+HPY_2] \times ... \times [1+HPY_N]]^\frac{1}{N}-1$$
 
@@ -82,7 +81,7 @@
 
     - Coefficient of Variation (risk per unit of return)
 
-    $$CV = \frac{StdDeviation}{AM} = \frac{\sigma}{/mu}$$ 
+    $$CV = \frac{StdDeviation}{AM} = \frac{\sigma}{/mu}$$
 
 - **The Normal Distribution**
     - Skewness is a measure of symmetry. 看mean两边哪些值多
@@ -102,7 +101,7 @@
     $$\begin{align}
     Margin \% &= \frac{Total\ Value\ of\ Security-Loan\ Value\ at\
     Purchase}{Total\ Value\ of\ Security}\\
-    &= \frac{Value\ of\ equity\ in\ account}{Total\ Value\ of\ Security}\\ 
+    &= \frac{Value\ of\ equity\ in\ account}{Total\ Value\ of\ Security}\\
     &= \frac{利润+初始保证金}{总value}
     \end{align}$$
 
@@ -112,7 +111,7 @@
 
     $$\begin{align}
     ROIC &= \frac{Cap\ Gain\ or\ Loss\ on\ Position + Dividends- Commissions - Margin\
-    Internet}{Beg\ Ammount\ Inversted} \\ 
+    Internet}{Beg\ Ammount\ Inversted} \\
     &= \frac{总利润-commission-interest}{总成本}
     \end{align}$$
 
@@ -138,7 +137,7 @@
     $$Index_i = \frac{\sum^n_{i=1}P_{i,t}}{n}$$
 
     $$Index_i = \frac{\sum^n_{i=1}P_{i,t}}{Adj.Divisor_t}$$
-    
+
     2. Market Value-weighted (larger firms’ stocks carry more weight)
         - S&P500
         - Not affected by stock splits
@@ -150,8 +149,8 @@
     3. Equal-weighted (all stocks have equal weight, also called Unweighted Index)
         - Biased  towards  returns  of  small companies relative to value weighted indices.
         - Rebalance every day!!
-            1. Calculate each stock’s return for that day 
-            2. Use  either  an  arithmetic  mean  or  geometric  mean  to calculate the average return. 
+            1. Calculate each stock’s return for that day
+            2. Use  either  an  arithmetic  mean  or  geometric  mean  to calculate the average return.
             3. Multiply  last  day’s  index  value  by  (1  +  the  average  return) from step 2.
 
     - ![Portfolio_Frontier](what/Equity_Market_10.png)
@@ -168,20 +167,20 @@
     - Variance
 
     $$\sigma_p^2 = \omega_a^2 \sigma_a^2 + \omega_b^2 \sigma_b^2 + 2\omega_a
-    \omega_b cov_{ab}$$ 
+    \omega_b cov_{ab}$$
 
     $$\sigma_p^2 = \omega_a^2 \sigma_a^2 + \omega_b^2 \sigma_b^2 + 2\omega_a
     \omega_b \sigma_a \sigma_b \rho_{a,b}$$
 
     $$\sigma_p^2 =\begin{bmatrix}\omega_1,\omega_2,\omega_3 \end{bmatrix}
     \begin{bmatrix} \sigma_{11}&\sigma_{12}&\sigma_{13} \\
-                    \sigma_{21}&\sigma_{22}&\sigma_{23} \\ 
-                    \sigma_{31}&\sigma_{32}&\sigma_{33} \end{bmatrix} 
+                    \sigma_{21}&\sigma_{22}&\sigma_{23} \\
+                    \sigma_{31}&\sigma_{32}&\sigma_{33} \end{bmatrix}
     \begin{bmatrix}\omega_1 \\ \omega_2 \\ \omega_3 \end{bmatrix}$$
 
     - Covariance
 
-    $$Cov_{i,j} = \frac{\sum^T_{t=1}(R_{i,t}-E(R_i))\times(R_{i,t}-E(R_j))}{T}$$ 
+    $$Cov_{i,j} = \frac{\sum^T_{t=1}(R_{i,t}-E(R_i))\times(R_{i,t}-E(R_j))}{T}$$
 
     - Correlation Coefficient
         - The lower the  correlation coefficient between assets, the
@@ -227,13 +226,13 @@
 
 - **Three typical portfolio**
     1. **Global Minimum variance portfolio**
-        - $$Minimize\ \sigma_p^2, By\ changing\ \omega_1, \omega_2 , Subject\ 
-        to\ \sum_{i=1}^n \omega_i=1$$ 
+        - $$Minimize\ \sigma_p^2, By\ changing\ \omega_1, \omega_2 , Subject\
+        to\ \sum_{i=1}^n \omega_i=1$$
         - ![GMP](what/Equity_Market_1.png)
     2. **Maximize Sharp ratio**
         - Optimal risky N risky assets + risk free assetj
-        - $$Maximize\ \frac{E(R_p)-R_f}{\sigma_p}, By\ changing\ \omega_1, 
-        \omega_2 , Subject\ to\ \sum_{i=1}^n \omega_i=1$$ 
+        - $$Maximize\ \frac{E(R_p)-R_f}{\sigma_p}, By\ changing\ \omega_1,
+        \omega_2 , Subject\ to\ \sum_{i=1}^n \omega_i=1$$
     3. **Given expected return**
 
 - **Investor Utility**
@@ -265,14 +264,14 @@
     - Assumptions
         - Perfect Capital Markets:
             1. Investors cannot affect prices by their individual trades
-            2. Unlimited risk-free borrowing and lending 
+            2. Unlimited risk-free borrowing and lending
             3. No taxes or transaction costs
-        - Investors have homogeneous expectations 
-        - Investors have the same investment horizon (one period) and are 
-        mean-variance optimizers as in Markowitz 
-        - Investors are risk averse and choose portfolios that maximize expected 
+        - Investors have homogeneous expectations
+        - Investors have the same investment horizon (one period) and are
+        mean-variance optimizers as in Markowitz
+        - Investors are risk averse and choose portfolios that maximize expected
         utility
-        - All assets are publicly traded (short positions are allowed) 
+        - All assets are publicly traded (short positions are allowed)
         - Investors form portfolios from a common universe of publicly traded
         financial assets.
     - Important Result
@@ -296,7 +295,7 @@
         - $$R_i = E(R_i)+e_i$$
         - $$\sigma_i^2 = \beta_i^2\sigma_M^2 + \sigma^2(e_i)$$
         - Total Risk= Systematic Risk + Firm-specific Risk
-        
+
     - Critiques of the CAPM
         1. True Market Portfolio can never be observed.
         2. Borrowing constrains
@@ -307,7 +306,7 @@
 
 - **Multifactor Models**
     1. The Arbitrage Pricing Theory(APT) of Ross(1976)
-    2. Fama-French three-factor model - Fama and French(1992,1996) 
+    2. Fama-French three-factor model - Fama and French(1992,1996)
         - $$E[r_i]=r_f+\beta_{iM} \times E[r_M-r_f]+\beta_{iSMB}E[SMB]+
           \beta_{iHML}E[HML]$$
         - Assumption:
@@ -350,7 +349,7 @@
         - All available information:
             - All public and private information
         - Hard to test private information
-    
+
     - Attention!
         1. If Weak form not hold, so do semi-strong and strong.
         2. If semi-strong not hold, so do strong.
@@ -371,7 +370,7 @@
         - Tracking Error is the deviation between the managed portfolio and the
          target index.
         - $$TE=Standard deviation of(R_A - R_B)$$
-    - R-square: what fraction of the movement in the index’s returns can be 
+    - R-square: what fraction of the movement in the index’s returns can be
     explained by the returns of the fund.
         - $$R^2=(\rho_{P,B})^2 = [\frac{Cov(R_P,R_B)}{\sigma_P \sigma_B}]^2$$
 
@@ -407,7 +406,7 @@
 - **Open-End Investment Companies**
     - Open-end funds(mutual funds)
         - Continue to sell and repurchase shares after their initial public
-            offerings. Open-end funds can sell or buy back shares with or without 
+            offerings. Open-end funds can sell or buy back shares with or without
             sales charges.
         - Pros: Investors can come in and go out at any time. New shares
          created when new money comes in; old shares deleted when money goes
@@ -432,7 +431,7 @@
 - **Notes**
     - Negative Treynor Ratios
         - A negative Treynor ratio can indicate very good performance or
-        very bad performance. 
+        very bad performance.
     - Negative Sharpe Ratios
         - A negative Sharpe ratio is meaningless. It makes managers with
         large standard deviations look better than those with small
@@ -447,7 +446,7 @@
         - Pros:解读容易
         - Cons: 模型只考虑到系统风险,没有考虑到portfolio manager 的diversify能力。
     - Multiple "Factor" model (FF3)
-        - $$Alpha_i = (R_{i,t} - R_f) - (B_{i1} \times [R_{m,t}-R_f] + B_{i2} 
+        - $$Alpha_i = (R_{i,t} - R_f) - (B_{i1} \times [R_{m,t}-R_f] + B_{i2}
         \times [SMB_t] + B_{i3} \times [HMT_t])$$
 
 - **Information Ratio(or Appraisal Ratio)**
@@ -484,12 +483,12 @@
         - ![Portfolio_Frontier](what/Equity_Market_13.png)
         - Impllications of constant-growth dividend model(PV is higher when:)
             1.  The larger its expected dividend per share
-            2.  The lower the required rate of return (ke) 
-            3.  The higher the expected growth rate of dividends (g). 
+            2.  The lower the required rate of return (ke)
+            3.  The higher the expected growth rate of dividends (g).
             4.  Stock price is expected to grow at the same rate as dividends.
                 - $$V_1 = \frac{D_2}{k_e -g}  \frac{D_1(1+g)}{k_e -g} = V_0(1+g)$$
     2. Non-constant dividend growth
-        - Assume dividends grow at different rates for different periods of 
+        - Assume dividends grow at different rates for different periods of
         time, and then grow at a constant rate forever.
         - 公式同上,但需要计算增长率不变前的首个dividends, 然后再进行valuation.
 
@@ -505,12 +504,12 @@
         - $$ \begin{align}
             g &= [1-\frac{Dividend\ paid}{Earnings}] \times ROE\\
             &= PlowBack ratio \times ROE \\
-            &= [1- Dividend\ payout\ ratio] \times ROE 
+            &= [1- Dividend\ payout\ ratio] \times ROE
         \end{align} $$
         - Plow back ratio: 钱回流回公司的比例
 
 - **Present Value of Growth Opportunities(PVGO)**
-    - $$\begin{align} Stock\ Price &= No-growth\ value\ per\ share + Present\ 
+    - $$\begin{align} Stock\ Price &= No-growth\ value\ per\ share + Present\
     value\ of\ grwoth\ opportunities \\ &= \frac{E_i}{K} + PVGO \end{align}$$
 
 - **Approach 2: The Free Cash Flows to Firm(or Operating Free Cash Flow)**
@@ -589,7 +588,7 @@
     - A call option gives the holder the right to buy a certain asset
     (underlying asset) by a certain date (maturity date)
     for a certain price (strike price).
-    - A put option gives the holder the right to sell a certain asset by a 
+    - A put option gives the holder the right to sell a certain asset by a
     certain date for a certain price.
     - European option: exercised only at maturity. **Index options**
     - American option: exercised at any time before maturity. **Stock, ETF**
@@ -609,7 +608,7 @@
 
 - **Options clearing house(OCC)**
     - Issuer of all options. Works with the CBOE.
-    - OCC takes the opposite side of every option traded. Becomes the buyer 
+    - OCC takes the opposite side of every option traded. Becomes the buyer
     for every seller and the seller for every buyer.
 
 - **Covered vs. Naked Call and Margins**
@@ -620,7 +619,7 @@
 ### Topic 2: Properties of Options
 
 - **Effect on option prices**
-    - Time to expiration: 
+    - Time to expiration:
         - American: the longer maturity, the more value
         - European: usually the longer maturity, the more value. But consider
           Dividends, could be reversed.
@@ -666,3 +665,4 @@
 - ![Portfolio_Frontier](what/Equity_Market_16.png)
 
 ## Lecture 3: Option Trading Strategies
+<!-- prettier-ignore-end -->

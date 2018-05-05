@@ -1,5 +1,4 @@
-# Financial Modeling 
-
+# Financial Modeling
 
 <!-- vim-markdown-toc GitLab -->
 
@@ -13,7 +12,7 @@
 
 <!-- vim-markdown-toc -->
 
-
+<!-- prettier-ignore-start -->
 # 1. Returns and Risk
 
 - **Risk**
@@ -22,6 +21,7 @@
     3. Operational risk
     4. Credit risk
     5. Business risk
+
 
 - **Asset Returns**
     - $$R_{t+1} = \frac{S_{t+1}}{S_t}-1$$
@@ -64,7 +64,7 @@
         - Pros: easy and model-free
         - Cons: Not clear how to choose the data sample length
             - ![Historical Simulation](what/Financial_Modeling_1.png)
-        - The HS VaR reacts too slowly to increases in volatility as well as to 
+        - The HS VaR reacts too slowly to increases in volatility as well as to
             decreases in volatility.
 
 - **Expected Shortfall**
@@ -116,8 +116,8 @@
     - ACF
         - The ACF for MA(q) is non-zero for the first q lags and then drops
         abruptly to zero.
-        - ![MAModel](what/Financial_Modeling_6.png) 
-        - ![MAModel](what/Financial_Modeling_7.png) 
+        - ![MAModel](what/Financial_Modeling_6.png)
+        - ![MAModel](what/Financial_Modeling_7.png)
 
 - **ARMA Models**
     - ARMA(1,1)
@@ -140,7 +140,7 @@
         - ![ARMA](what/Financial_Modeling_9.png)
 
 - **Random Walk Model**
-    - Define: $$R_t = \ln(S_t) - ln(S_{t-1})=s_t-s_{t-1}$$ 
+    - Define: $$R_t = \ln(S_t) - ln(S_{t-1})=s_t-s_{t-1}$$
     - Random walk: $$s_t = s_{t-1} + \epsilon_t$$
     - $$E_t(s_{t+\tau}) = s_t$$
     - $$Var_t(s_{t+\tau}) = \tau\sigma_\epsilon^2$$
@@ -173,7 +173,7 @@
         $$(s_{1t}-s_{1t-1}) = a + b(s_{2t}-s_{2t-1})+e_t$$,然后再跑回归，再检查残差项。
 
 - **Cointegration**
-    - If two variables that are both integrated have a linear combination with no 
+    - If two variables that are both integrated have a linear combination with no
     unit root then we say they are cointegrated.
     - 比如 pair trading strategy, arbitrage
 
@@ -185,9 +185,9 @@
         - i.i.d. N(0,1):Independently and identically normally distributed with mean
         equal to zero and variance equal to 1.
     - Puts equal weights on the past m observations.
-        - $$\sigma_{t+1}^2= \frac{1}{m} \sum_{\tau=1}^m R_{t+1-\tau}^2 = 
+        - $$\sigma_{t+1}^2= \frac{1}{m} \sum_{\tau=1}^m R_{t+1-\tau}^2 =
         \sum_{\tau=1}^m R_{t+1-\tau}^2$$
-        - Cons: 
+        - Cons:
             1. 无法定义$$E(sigma_t^2)$$
             2. 极值R影响过大
     - Puts weights decline exponentially
@@ -201,16 +201,16 @@
 
 - **The GARCH Variance Model**
     - The simplest generalized autoregressive conditional hetroskedasticity(GARCH)
-    model of dynamic variance: 
+    model of dynamic variance:
 
     $$\sigma_{t+1}^2 = \omega + \alpha R_t^2 + \beta \sigma_t^2, with\
     \alpha+\beta<1$$
 
-    - The RiskMetrics model can be viewed as a special case: 
+    - The RiskMetrics model can be viewed as a special case:
     $$\alpha=1-\lambda, \beta=\lambda, s.t. \alpha+\beta=1, \omega=0$$
 
     - Now we can define **variance!**
-        - $$\begin{align} \sigma^2 
+        - $$\begin{align} \sigma^2
         &= E[\sigma_{t+1}^2]\\
         &= \omega+\alpha E[R_t^2]+\beta E[\sigma_t^2]\\
         &= \omega+\alpha \sigma^2 + \beta \sigma^2\\
@@ -218,8 +218,8 @@
         \end{align}$$
 
     - Substitute $$\omega$$ we can get:
-    
-    $$\begin{align}\sigma_{t+1}^2 
+
+    $$\begin{align}\sigma_{t+1}^2
     &= (1-\alpha-\beta)\sigma^2 + \alpha R_t^2 + \beta \sigma_t^2\\
     &= \sigma^2 + \alpha(R_t^2-\sigma^2)+\beta(\sigma_t^2-\sigma^2)\\
     \end{align}$$
@@ -259,7 +259,7 @@
             - $$z_i = \frac{R - E(R)}{\sigma_R}$$
         2. 再计算横坐标:
             - 假设有n个值，需要取n个点作为横坐标，想像是在画直方图，
-            - 则取值为间隔的中位数， 即以下区间的中点: 
+            - 则取值为间隔的中位数， 即以下区间的中点:
             (0,1/n), (1/n, 2/n), ..., (n-1/n, 1)
             - 中间点依次为(1-0.5)/n, (2-0.5)/n, ..., (i-0.5)/n.
             - 再将这些点转化为正态分布的Z值作为横坐标
@@ -281,7 +281,7 @@
 
 - **The Standardized t distrbution**
     - Define:
-        - $$f_{t(d)}(x;d) = \frac{\Gamma((d+1)/2)}{\Gamma(d/2)\sqrt{d \pi}} 
+        - $$f_{t(d)}(x;d) = \frac{\Gamma((d+1)/2)}{\Gamma(d/2)\sqrt{d \pi}}
         (1+x^2/d)^{-(1+d)/2}, for\ d>0$$
         - The distribution has only one parameter d
         - $$E[x] = 0, when\ d>1$$
@@ -321,7 +321,7 @@
     2. $$\overline{q_{ij}} = \frac{1}{T} \sum_{t=1}^{T} \frac{R_{At} R_{Bt}}{\sigma_{At} \sigma_{Bt}}
     = \frac{1}{T} \sum_{t=1}^{T}Z_{At} Z_{Bt}$$
     3. long run correlation:$$\overline{q_{ij}} = \frac{\omega}{1-\alpha - \beta}$$
-    4. $$\begin{align} q_{ij,t+1} 
+    4. $$\begin{align} q_{ij,t+1}
     & = \omega + \alpha (Z_{At} Z_{Bt}) + \beta q_{ij,t} \\
     & = (1-\alpha - \beta)\overline{q_{ij}} + \alpha Z_{At} Z_{Bt}+\beta
     q_{ij, t} \\
@@ -354,7 +354,7 @@
 
 - **Monte Carlo Simulation**
     1. 假设Return符合正态分布，且拟合出一个GARCH模型，算出omega, alpha, beta.
-    2. 模拟一个由a set of random numbers from the standard normal distribution, 
+    2. 模拟一个由a set of random numbers from the standard normal distribution,
         N(0,1)组成的MC\*T矩阵，即T列，MC行,作为模拟的每一天的return
     3. 计算cumulative return
     4. Plot histogram of each columns and pick quantile
@@ -364,12 +364,12 @@
 - **Monte Carlo Filtered Historical Simulation(FHS)**
     - 优点:FHS combines model-based methods of variance with model-free methods of
       the distribution of shocks.
-    - 基本同上，区别在模拟的return是从标准化后的历史数据中随机有放回的抽取. 
-        We draw random numbers with replacement from our own database of 
+    - 基本同上，区别在模拟的return是从标准化后的历史数据中随机有放回的抽取.
+        We draw random numbers with replacement from our own database of
         past standardized residuals
     - FHS can generate large losses in the forecast period, even without having
       observed a large loss in the recorded past returns
-     
+
 - **The Risk Term Structure with Constant Correlations**
 - **The Risk Term Structure with Dynamic Correlations**
 
@@ -380,7 +380,7 @@
       \}) \sigma_{PF,t+1}$$
     - **Hit sequence of VaR violation**
         - $$I_{t+1} = \begin{cases} 1,
-        if\ R_{PF,t+1} < -VaR_{t+1}^p \\ 
+        if\ R_{PF,t+1} < -VaR_{t+1}^p \\
             0, if\ R_{PF,t+1} < -VaR_{t+1}^p \end{cases}$$
         - 若超过VaR，返回1，否则为0
 
@@ -391,15 +391,15 @@
     - $$T_1: Numbers\ of\ ones$$
     - $$\hat{\pi} = \frac{T_1}{T}$$
     - $$p = coverage\ rate$$,比如算5%VaR，则p=5%
-    - Likelihood Null 
+    - Likelihood Null
         - $$L(p) = (1-p)^{T_0}p^{T_1}$$
     - Likelihood Alternative
         - $$L(\hat{\pi}) = (1-\hat{\pi})^{T_0}\hat{\pi}^{T_1}$$
     - Likelihood Ratio
         - $$LR_{uc} = -2ln[\frac{L(p)}{L(\hat{\pi})}]$$
     - LR will be distributed as a $$x^2$$ with one degree of freedom
-    - $$P-value \equiv 1-F_{x_1^2}(LR_{uc})$$ 
-        - 比如$$P-value = 1-F_{^2}(3.5) = 1-0.9386 = 0.0641$$ 
+    - $$P-value \equiv 1-F_{x_1^2}(LR_{uc})$$
+        - 比如$$P-value = 1-F_{^2}(3.5) = 1-0.9386 = 0.0641$$
     - 若LR小于3.84，则表示结果很不错，无法拒绝原假设.说明5%真的符合。
     - We could reject a correct model(Type I error) or we could fail to
       reject(that is, accept) an incorrect model(Type II error)
@@ -411,7 +411,7 @@
       P-values来检验。即，原来算出LR之后，我们用它去拟合卡方分布看是否显著，
       因为假设LR是符合卡方分布的。但其实我们可以通过Monte Carlo
       simulation模拟出多条violation组成的hit sequence,然后分别算出LR，
-      得出了LR的分布， 然后用这个LR分布来看我们当前算 
+      得出了LR的分布， 然后用这个LR分布来看我们当前算
       得的LR是出于哪一个位置，得出相对应的quantile,即P-values.
     - ![Picture](what/Financial_Modeling_19.png)
 
@@ -425,3 +425,5 @@
 
 - **Conditional Coverage Testing**
     - ![Picture](what/Financial_Modeling_21.png)
+
+<!-- prettier-ignore-end -->

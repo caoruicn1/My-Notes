@@ -4,3 +4,4 @@ _book
 *.html
 
 .mypy_cache
+package-lock.json

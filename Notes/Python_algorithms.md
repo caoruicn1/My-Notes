@@ -28,1000 +28,1189 @@ Github:[Python_algorithms](https://github.com/keon/algorithms)
 
 <!-- vim-markdown-toc -->
 
-
 ## Array
 
-- **delete_nth**
-    - Goal:返回列表,允许重复n次
-    - Method:用defaultdict计数,用for循环返回result
-    - Method:用collections的Counter
+* **delete_nth**
 
-- **flatten**
-    - Goal:平铺array中的array
-    - Method:用isinstance判断时候Iterable,递归返回,生成result列表
-    - Method:返回迭代器
+  * Goal:返回列表,允许重复 n 次
+  * Method:用 defaultdict 计数,用 for 循环返回 result
+  * Method:用 collections 的 Counter
 
-- **garage**
-    - Goal:初始序列车位,只能通过一个空车位移动成最终指定序列
-    - Method:先获取空车位的位置,判断该位置是否和最终序列相同,若不相同,
-      就获取该位置车辆,在初始序列将空位和此车辆调换。最后检查是否全部位置相同,
-      可以判断空车位和最终序列相同时,其他位置是否相同,若不相同,
-      则将空车位和不一样的位置互换。
+* **flatten**
 
-- **josephus_problem**
-    - Goal:每次间隔n人抽取出来,直到抽完
-    - Method:用切片和pop
+  * Goal:平铺 array 中的 array
+  * Method:用 isinstance 判断时候 Iterable,递归返回,生成 result 列表
+  * Method:返回迭代器
 
-- **longest_non_repeat**
-    - Goal:寻找在字符串中重复次数最多的字母
-    - Method:用一个temp列表计数
-    - Method:用collections的Counter
+* **garage**
 
-- **merge_intervals**
-    - Goal:
-    - Method:
+  * Goal:初始序列车位,只能通过一个空车位移动成最终指定序列
+  * Method:先获取空车位的位置,判断该位置是否和最终序列相同,若不相同,
+    就获取该位置车辆,在初始序列将空位和此车辆调换。最后检查是否全部位置相同,
+    可以判断空车位和最终序列相同时,其他位置是否相同,若不相同,
+    则将空车位和不一样的位置互换。
 
-- **missing_ranges**
-    - Goal:
-    - Method:
+* **josephus_problem**
 
-- **plus_one**
-    - Goal:
-    - Method:
+  * Goal:每次间隔 n 人抽取出来,直到抽完
+  * Method:用切片和 pop
 
-- **rotate_array**
-    - Goal:
-    - Method:
+* **longest_non_repeat**
 
-- **summary_ranges**
-    - Goal:
-    - Method:
+  * Goal:寻找在字符串中重复次数最多的字母
+  * Method:用一个 temp 列表计数
+  * Method:用 collections 的 Counter
 
-- **three_sum**
-    - Goal:
-    - Method:
+* **merge_intervals**
 
-- **two_sum**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **move_zeros_to_end**
-    - Goal:
-    - Method:
+* **missing_ranges**
 
+  * Goal:
+  * Method:
+
+* **plus_one**
+
+  * Goal:
+  * Method:
+
+* **rotate_array**
+
+  * Goal:
+  * Method:
+
+* **summary_ranges**
+
+  * Goal:
+  * Method:
+
+* **three_sum**
+
+  * Goal:
+  * Method:
+
+* **two_sum**
+
+  * Goal:
+  * Method:
+
+* **move_zeros_to_end**
+  * Goal:
+  * Method:
 
 ## Backtrack
 
-- **general_solution.md**
-    - Goal:
-    - Method:
+* **general_solution.md**
 
-- **anagram**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **array_sum_combinations**
-    - Goal:
-    - Method:
+* **anagram**
 
-- **combination_sum**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **expression_add_operators**
-    - Goal:
-    - Method:
+* **array_sum_combinations**
 
-- **factor_combinations**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **generate_abbreviations**
-    - Goal:
-    - Method:
+* **combination_sum**
 
-- **generate_parenthesis**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **letter_combination**
-    - Goal:
-    - Method:
+* **expression_add_operators**
 
-- **palindrome_partitioning**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **pattern_match**
-    - Goal:
-    - Method:
+* **factor_combinations**
 
-- **permute**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **permute_unique**
-    - Goal:
-    - Method:
+* **generate_abbreviations**
 
-- **subsets**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **subsets_unique**
-    - Goal:
-    - Method:
+* **generate_parenthesis**
 
+  * Goal:
+  * Method:
+
+* **letter_combination**
+
+  * Goal:
+  * Method:
+
+* **palindrome_partitioning**
+
+  * Goal:
+  * Method:
+
+* **pattern_match**
+
+  * Goal:
+  * Method:
+
+* **permute**
+
+  * Goal:
+  * Method:
+
+* **permute_unique**
+
+  * Goal:
+  * Method:
+
+* **subsets**
+
+  * Goal:
+  * Method:
+
+* **subsets_unique**
+  * Goal:
+  * Method:
 
 ## Bfs
 
-- **shortest_distance_from_all_buildings**
-    - Goal:
-    - Method:
+* **shortest_distance_from_all_buildings**
 
-- **word_ladder**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
+* **word_ladder**
+  * Goal:
+  * Method:
 
 ## Bit
 
-- **bytes_int_conversion**
-    - Goal:
-    - Method:
+* **bytes_int_conversion**
 
-- **count_ones**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **find_missing_number**
-    - Goal:
-    - Method:
+* **count_ones**
 
-- **power_of_two**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **reverse_bits**
-    - Goal:
-    - Method:
+* **find_missing_number**
 
-- **single_number**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **single_number2**
-    - Goal:
-    - Method:
+* **power_of_two**
 
-- **single_number3**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **subsets**
-    - Goal:
-    - Method:
+* **reverse_bits**
 
-- **add_bitwise_operator**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **bit_operation**
-    - Goal:
-    - Method:
+* **single_number**
 
-- **swap_pair**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **find_difference**
-    - Goal:
-    - Method:
+* **single_number2**
 
-- **has_alternative_bit**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **insert_bit**
-    - Goal:
-    - Method:
+* **single_number3**
 
-- **remove_bit**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
+* **subsets**
+
+  * Goal:
+  * Method:
+
+* **add_bitwise_operator**
+
+  * Goal:
+  * Method:
+
+* **bit_operation**
+
+  * Goal:
+  * Method:
+
+* **swap_pair**
+
+  * Goal:
+  * Method:
+
+* **find_difference**
+
+  * Goal:
+  * Method:
+
+* **has_alternative_bit**
+
+  * Goal:
+  * Method:
+
+* **insert_bit**
+
+  * Goal:
+  * Method:
+
+* **remove_bit**
+  * Goal:
+  * Method:
 
 ## Calculator
 
-- **math_parser**
-    - Goal:
-    - Method:
-
+* **math_parser**
+  * Goal:
+  * Method:
 
 ## Dfs
 
-- **all_factors**
-    - Goal:
-    - Method:
+* **all_factors**
 
-- **count_islands**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **pacific_atlantic**
-    - Goal:
-    - Method:
+* **count_islands**
 
-- **sudoku_solver**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **walls_and_gates**
-    - Goal:
-    - Method:
+* **pacific_atlantic**
 
+  * Goal:
+  * Method:
+
+* **sudoku_solver**
+
+  * Goal:
+  * Method:
+
+* **walls_and_gates**
+  * Goal:
+  * Method:
 
 ## Dp
 
-- **buy_sell_stock**
-    - Goal:
-    - Method:
+* **buy_sell_stock**
 
-- **climbing_stairs**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **coin_change**
-    - Goal:
-    - Method:
+* **climbing_stairs**
 
-- **combination_sum**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **egg_drop**
-    - Goal:
-    - Method:
+* **coin_change**
 
-- **house_robber**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **job_scheduling**
-    - Goal:
-    - Method:
+* **combination_sum**
 
-- **knapsack**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **longest_increasing**
-    - Goal:
-    - Method:
+* **egg_drop**
 
-- **matrix_chain_order**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **max_product_subarray**
-    - Goal:
-    - Method:
+* **house_robber**
 
-- **max_subarray**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **min_cost_path**
-    - Goal:
-    - Method:
+* **job_scheduling**
 
-- **num_decodings**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **regex_matching**
-    - Goal:
-    - Method:
+* **knapsack**
 
-- **rod_cut**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **word_break**
-    - Goal:
-    - Method:
+* **longest_increasing**
 
+  * Goal:
+  * Method:
+
+* **matrix_chain_order**
+
+  * Goal:
+  * Method:
+
+* **max_product_subarray**
+
+  * Goal:
+  * Method:
+
+* **max_subarray**
+
+  * Goal:
+  * Method:
+
+* **min_cost_path**
+
+  * Goal:
+  * Method:
+
+* **num_decodings**
+
+  * Goal:
+  * Method:
+
+* **regex_matching**
+
+  * Goal:
+  * Method:
+
+* **rod_cut**
+
+  * Goal:
+  * Method:
+
+* **word_break**
+  * Goal:
+  * Method:
 
 ## Graph
 
-- **strongly_connected**
-    - Goal:
-    - Method:
+* **strongly_connected**
 
-- **clone_graph**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **cycle_detection**
-    - Goal:
-    - Method:
+* **clone_graph**
 
-- **find_all_cliques**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **find_path**
-    - Goal:
-    - Method:
+* **cycle_detection**
 
-- **graph**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **markov_chain**
-    - Goal:
-    - Method:
+* **find_all_cliques**
 
-- **minimum_spanning_tree**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **satisfiability**
-    - Goal:
-    - Method:
+* **find_path**
 
-- **tarjan**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **traversal**
-    - Goal:
-    - Method:
+* **graph**
 
+  * Goal:
+  * Method:
+
+* **markov_chain**
+
+  * Goal:
+  * Method:
+
+* **minimum_spanning_tree**
+
+  * Goal:
+  * Method:
+
+* **satisfiability**
+
+  * Goal:
+  * Method:
+
+* **tarjan**
+
+  * Goal:
+  * Method:
+
+* **traversal**
+  * Goal:
+  * Method:
 
 ## Heap
 
-- **merge_sorted_k_lists**
-    - Goal:
-    - Method:
+* **merge_sorted_k_lists**
 
-- **skyline**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **sliding_window_max**
-    - Goal:
-    - Method:
+* **skyline**
 
-- **binary_heap**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
+* **sliding_window_max**
+
+  * Goal:
+  * Method:
+
+* **binary_heap**
+  * Goal:
+  * Method:
 
 ## Linkedlist
 
-- **add_two_numbers**
-    - Goal:
-    - Method:
+* **add_two_numbers**
 
-- **copy_random_pointer**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **delete_node**
-    - Goal:
-    - Method:
+* **copy_random_pointer**
 
-- **first_cyclic_node**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **is_cyclic**
-    - Goal:
-    - Method:
+* **delete_node**
 
-- **is_palindrome**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **kth_to_last**
-    - Goal:
-    - Method:
+* **first_cyclic_node**
 
-- **linkedlist**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **remove_duplicates**
-    - Goal:
-    - Method:
+* **is_cyclic**
 
-- **reverse**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **rotate_list**
-    - Goal:
-    - Method:
+* **is_palindrome**
 
-- **swap_in_pairs**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **is_sorted**
-    - Goal:
-    - Method:
+* **kth_to_last**
 
-- **remove_range**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
+* **linkedlist**
+
+  * Goal:
+  * Method:
+
+* **remove_duplicates**
+
+  * Goal:
+  * Method:
+
+* **reverse**
+
+  * Goal:
+  * Method:
+
+* **rotate_list**
+
+  * Goal:
+  * Method:
+
+* **swap_in_pairs**
+
+  * Goal:
+  * Method:
+
+* **is_sorted**
+
+  * Goal:
+  * Method:
+
+* **remove_range**
+  * Goal:
+  * Method:
 
 ## Map
 
-- **hashtable**
-    - Goal:
-    - Method:
+* **hashtable**
 
-- **separate_chaining_hashtable**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **longest_common_subsequence**
-    - Goal:
-    - Method:
+* **separate_chaining_hashtable**
 
-- **randomized_set**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **valid_sudoku**
-    - Goal:
-    - Method:
+* **longest_common_subsequence**
 
+  * Goal:
+  * Method:
+
+* **randomized_set**
+
+  * Goal:
+  * Method:
+
+* **valid_sudoku**
+  * Goal:
+  * Method:
 
 ## Maths
 
-- **base_conversion**
-    - Goal:
-    - Method:
+* **base_conversion**
 
-- **extended_gcd**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **gcd/lcm**
-    - Goal:
-    - Method:
+* **extended_gcd**
 
-- **generate_strobogrammtic**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **is_strobogrammatic**
-    - Goal:
-    - Method:
+* **gcd/lcm**
 
-- **next_bigger**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **next_perfect_square**
-    - Goal:
-    - Method:
+* **generate_strobogrammtic**
 
-- **nth_digit**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **prime_check**
-    - Goal:
-    - Method:
+* **is_strobogrammatic**
 
-- **primes_sieve_of_eratosthenes**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **pythagoras**
-    - Goal:
-    - Method:
+* **next_bigger**
 
-- **rabin_miller**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **rsa**
-    - Goal:
-    - Method:
+* **next_perfect_square**
 
-- **sqrt_precision_factor**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **summing_digits**
-    - Goal:
-    - Method:
+* **nth_digit**
 
+  * Goal:
+  * Method:
+
+* **prime_check**
+
+  * Goal:
+  * Method:
+
+* **primes_sieve_of_eratosthenes**
+
+  * Goal:
+  * Method:
+
+* **pythagoras**
+
+  * Goal:
+  * Method:
+
+* **rabin_miller**
+
+  * Goal:
+  * Method:
+
+* **rsa**
+
+  * Goal:
+  * Method:
+
+* **sqrt_precision_factor**
+
+  * Goal:
+  * Method:
+
+* **summing_digits**
+  * Goal:
+  * Method:
 
 ## Matrix
 
-- **sudoku_validator**
-    - Goal:
-    - Method:
+* **sudoku_validator**
 
-- **bomb_enemy**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **copy_transform**
-    - Goal:
-    - Method:
+* **bomb_enemy**
 
-- **count_paths**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **matrix_rotation.txt**
-    - Goal:
-    - Method:
+* **copy_transform**
 
-- **rotate_image**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **search_in_sorted_matrix**
-    - Goal:
-    - Method:
+* **count_paths**
 
-- **sparse_dot_vector**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **sparse_mul**
-    - Goal:
-    - Method:
+* **matrix_rotation.txt**
 
-- **spiral_traversal**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
+* **rotate_image**
+
+  * Goal:
+  * Method:
+
+* **search_in_sorted_matrix**
+
+  * Goal:
+  * Method:
+
+* **sparse_dot_vector**
+
+  * Goal:
+  * Method:
+
+* **sparse_mul**
+
+  * Goal:
+  * Method:
+
+* **spiral_traversal**
+  * Goal:
+  * Method:
 
 ## Queues
 
-- **max_sliding_window**
-    - Goal:
-    - Method:
+* **max_sliding_window**
 
-- **moving_average**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **queue**
-    - Goal:
-    - Method:
+* **moving_average**
 
-- **reconstruct_queue**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **zigzagiterator**
-    - Goal:
-    - Method:
+* **queue**
 
+  * Goal:
+  * Method:
+
+* **reconstruct_queue**
+
+  * Goal:
+  * Method:
+
+* **zigzagiterator**
+  * Goal:
+  * Method:
 
 ## Search
 
-- **binary_search**
-    - Goal:
-    - Method:
+* **binary_search**
 
-- **first_occurance**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **last_occurance**
-    - Goal:
-    - Method:
+* **first_occurance**
 
-- **search_insert**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **two_sum**
-    - Goal:
-    - Method:
+* **last_occurance**
 
-- **search_range**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **find_min_rotate**
-    - Goal:
-    - Method:
+* **search_insert**
 
-- **search_rotate**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
+* **two_sum**
+
+  * Goal:
+  * Method:
+
+* **search_range**
+
+  * Goal:
+  * Method:
+
+* **find_min_rotate**
+
+  * Goal:
+  * Method:
+
+* **search_rotate**
+  * Goal:
+  * Method:
 
 ## Set
 
-- **randomized_set**
-    - Goal:
-    - Method:
+* **randomized_set**
 
-- **set_covering**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
+* **set_covering**
+  * Goal:
+  * Method:
 
 ## Sort
 
-- **bubble_sort**
-    - Goal:
-    - Method:
+* **bubble_sort**
 
-- **comb_sort**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **counting_sort**
-    - Goal:
-    - Method:
+* **comb_sort**
 
-- **heap_sort**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **insertion_sort**
-    - Goal:
-    - Method:
+* **counting_sort**
 
-- **meeting_rooms**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **merge_sort**
-    - Goal:
-    - Method:
+* **heap_sort**
 
-- **quick_sort**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **selection_sort**
-    - Goal:
-    - Method:
+* **insertion_sort**
 
-- **sort_colors**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **topsort**
-    - Goal:
-    - Method:
+* **meeting_rooms**
 
-- **wiggle_sort**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
+* **merge_sort**
+
+  * Goal:
+  * Method:
+
+* **quick_sort**
+
+  * Goal:
+  * Method:
+
+* **selection_sort**
+
+  * Goal:
+  * Method:
+
+* **sort_colors**
+
+  * Goal:
+  * Method:
+
+* **topsort**
+
+  * Goal:
+  * Method:
+
+* **wiggle_sort**
+  * Goal:
+  * Method:
 
 ## Stack
 
-- **longest_abs_path**
-    - Goal:
-    - Method:
+* **longest_abs_path**
 
-- **simplify_path**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **stack**
-    - Goal:
-    - Method:
+* **simplify_path**
 
-- **valid_parenthesis**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **stutter**
-    - Goal:
-    - Method:
+* **stack**
 
-- **switch_pairs**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **is_consecutive**
-    - Goal:
-    - Method:
+* **valid_parenthesis**
 
-- **remove_min**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **is_sorted**
-    - Goal:
-    - Method:
+* **stutter**
 
+  * Goal:
+  * Method:
+
+* **switch_pairs**
+
+  * Goal:
+  * Method:
+
+* **is_consecutive**
+
+  * Goal:
+  * Method:
+
+* **remove_min**
+
+  * Goal:
+  * Method:
+
+* **is_sorted**
+  * Goal:
+  * Method:
 
 ## Strings
 
-- **fizzbuzz**
-    - Goal:
-    - Method:
+* **fizzbuzz**
 
-- **delete_reoccurring_characters**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **strip_url_params**
-    - Goal:
-    - Method:
+* **delete_reoccurring_characters**
 
-- **validate_coordinates**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **domain_extractor**
-    - Goal:
-    - Method:
+* **strip_url_params**
 
-- **merge_string_checker**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **add_binary**
-    - Goal:
-    - Method:
+* **validate_coordinates**
 
-- **breaking_bad**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **decode_string**
-    - Goal:
-    - Method:
+* **domain_extractor**
 
-- **encode_decode**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **group_anagrams**
-    - Goal:
-    - Method:
+* **merge_string_checker**
 
-- **int_to_roman**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **is_palindrome**
-    - Goal:
-    - Method:
+* **add_binary**
 
-- **license_number**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **make_sentence**
-    - Goal:
-    - Method:
+* **breaking_bad**
 
-- **multiply_strings**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **one_edit_distance**
-    - Goal:
-    - Method:
+* **decode_string**
 
-- **rabin_karp**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **reverse_string**
-    - Goal:
-    - Method:
+* **encode_decode**
 
-- **reverse_vowel**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **reverse_words**
-    - Goal:
-    - Method:
+* **group_anagrams**
 
-- **roman_to_int**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **word_squares**
-    - Goal:
-    - Method:
+* **int_to_roman**
 
+  * Goal:
+  * Method:
+
+* **is_palindrome**
+
+  * Goal:
+  * Method:
+
+* **license_number**
+
+  * Goal:
+  * Method:
+
+* **make_sentence**
+
+  * Goal:
+  * Method:
+
+* **multiply_strings**
+
+  * Goal:
+  * Method:
+
+* **one_edit_distance**
+
+  * Goal:
+  * Method:
+
+* **rabin_karp**
+
+  * Goal:
+  * Method:
+
+* **reverse_string**
+
+  * Goal:
+  * Method:
+
+* **reverse_vowel**
+
+  * Goal:
+  * Method:
+
+* **reverse_words**
+
+  * Goal:
+  * Method:
+
+* **roman_to_int**
+
+  * Goal:
+  * Method:
+
+* **word_squares**
+  * Goal:
+  * Method:
 
 ## Tree
 
-- **bst**
-    - Goal:
-    - Method:
+* **bst**
 
-- **array2bst**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **bst_closest_value**
-    - Goal:
-    - Method:
+* **array2bst**
 
-- **BSTIterator**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **delete_node**
-    - Goal:
-    - Method:
+* **bst_closest_value**
 
-- **is_bst**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **kth_smallest**
-    - Goal:
-    - Method:
+* **BSTIterator**
 
-- **lowest_common_ancestor**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **predecessor**
-    - Goal:
-    - Method:
+* **delete_node**
 
-- **serialize_deserialize**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **successor**
-    - Goal:
-    - Method:
+* **is_bst**
 
-- **unique_bst**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **depth_sum**
-    - Goal:
-    - Method:
+* **kth_smallest**
 
-- **count_left_node**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **num_empty**
-    - Goal:
-    - Method:
+* **lowest_common_ancestor**
 
-- **height**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **red_black_tree**
-    - Goal:
-    - Method:
+* **predecessor**
 
-- **red_black_tree**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **segment_tree**
-    - Goal:
-    - Method:
+* **serialize_deserialize**
 
-- **segment_tree**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **traversal**
-    - Goal:
-    - Method:
+* **successor**
 
-- **inorder**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **level_order**
-    - Goal:
-    - Method:
+* **unique_bst**
 
-- **zigzag**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **trie**
-    - Goal:
-    - Method:
+* **depth_sum**
 
-- **add_and_search**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **trie**
-    - Goal:
-    - Method:
+* **count_left_node**
 
-- **binary_tree_paths**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **bintree2list**
-    - Goal:
-    - Method:
+* **num_empty**
 
-- **deepest_left**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **invert_tree**
-    - Goal:
-    - Method:
+* **height**
 
-- **is_balanced**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **is_subtree**
-    - Goal:
-    - Method:
+* **red_black_tree**
 
-- **is_symmetric**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **longest_consecutive**
-    - Goal:
-    - Method:
+* **red_black_tree**
 
-- **lowest_common_ancestor**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **max_height**
-    - Goal:
-    - Method:
+* **segment_tree**
 
-- **max_path_sum**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **min_height**
-    - Goal:
-    - Method:
+* **segment_tree**
 
-- **path_sum**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **path_sum2**
-    - Goal:
-    - Method:
+* **traversal**
 
-- **pretty_print**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
-- **same_tree**
-    - Goal:
-    - Method:
+* **inorder**
 
-- **tree**
-    - Goal:
-    - Method:
+  * Goal:
+  * Method:
 
+* **level_order**
+
+  * Goal:
+  * Method:
+
+* **zigzag**
+
+  * Goal:
+  * Method:
+
+* **trie**
+
+  * Goal:
+  * Method:
+
+* **add_and_search**
+
+  * Goal:
+  * Method:
+
+* **trie**
+
+  * Goal:
+  * Method:
+
+* **binary_tree_paths**
+
+  * Goal:
+  * Method:
+
+* **bintree2list**
+
+  * Goal:
+  * Method:
+
+* **deepest_left**
+
+  * Goal:
+  * Method:
+
+* **invert_tree**
+
+  * Goal:
+  * Method:
+
+* **is_balanced**
+
+  * Goal:
+  * Method:
+
+* **is_subtree**
+
+  * Goal:
+  * Method:
+
+* **is_symmetric**
+
+  * Goal:
+  * Method:
+
+* **longest_consecutive**
+
+  * Goal:
+  * Method:
+
+* **lowest_common_ancestor**
+
+  * Goal:
+  * Method:
+
+* **max_height**
+
+  * Goal:
+  * Method:
+
+* **max_path_sum**
+
+  * Goal:
+  * Method:
+
+* **min_height**
+
+  * Goal:
+  * Method:
+
+* **path_sum**
+
+  * Goal:
+  * Method:
+
+* **path_sum2**
+
+  * Goal:
+  * Method:
+
+* **pretty_print**
+
+  * Goal:
+  * Method:
+
+* **same_tree**
+
+  * Goal:
+  * Method:
+
+* **tree**
+  * Goal:
+  * Method:
 
 ## Union-find
 
-- **count_islands**
-    - Goal:
-    - Method:
-
+* **count_islands**
+  * Goal:
+  * Method:
