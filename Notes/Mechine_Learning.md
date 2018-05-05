@@ -1,17 +1,75 @@
-# Mechine Learnling
+# Mechine Learning
 
-- Book:  [《机器学习》--周志华](https://book.douban.com/subject/26708119/?from=tag)
-- Python code: [Hands_on_ML](https://github.com/Chandlercjy/Hands_on_ML)
+*   Book:
+    [《机器学习》--周志华](https://book.douban.com/subject/26708119/?from=tag)
+*   Python code: [Hands_on_ML](https://github.com/Chandlercjy/Hands_on_ML)
+
+## 目录
+
+<!-- vim-markdown-toc GitLab -->
+
+*   [损失函数与优化算法](#损失函数与优化算法)
+*   [线性回归](#线性回归)
+*   [决策树](#决策树)
+
+<!-- vim-markdown-toc -->
+
+## 损失函数与优化算法
+
+*   **重要**:所有损失函数都可以用优化算法计算
+
+*   **求解损失函数的优化算法**
+
+    1.  梯度下降法
+        *   通过构建损失函数，求其梯度，然后根据步长 alpha 不断迭代更新参数
+            theta.
+        *   ![picture](what/Mechine_Learning_2.png)
+
+*   **损失函数的定义方法:**
+
+    1.  均方误差(Error of mean square)
+    2.  最大后验概率(Maximum posterior probability)
+    3.  交叉熵损失函数(Cross entropy loss)
+    4.  极大似然估计(Maximum likelihood estimate)
+
+        *   极大似然函数也是构造损失函数的一种方式, 所以求极大似然函数的最大值,
+            本质上就是求成本函数的最小值, 达到最小值时的参数即为所求参数。
+
+            *   在一元情况下, 极大似然函数可以通过使二次导等于零, 从而求得参数的
+                计算公式, 非常简便地算出参数值。
+
+            *   在多元(n)情况下, 极大似然函数二次导等于零会产生 n 个方程, 此时要
+                写出求 n 个参数的计算公式非常困难, 所以要乖乖用优化算法计算。
+
+        *   极大似然估计通过假设概率密度函数的不同, 可以推导出各种成本函数。
+
+## 线性回归
+
+*   **概念解析**:
+
+    *   损失函数(loss function): 单个样本的误差
+    *   成本函数(cost function): 整个训练集的平均误差
+    *   目标函数与优化算法:
+        *   最大似然(MLE), 最大后验(MAP)等都是构造目标函数的方法, 构造出这个目标
+            函数后, 我们可以用各种优化方法来找到它的极值.
+
+*   **线性回归问题中的最小二乘法**:
+
+    *   对于线性回归问题, 我们采用极大似然来构造一个目标函数, 然后用梯度下降或者
+        直接用向量的投影来直接算出最优解的表达式(最小二乘法)
+    *   但是最小二乘法其实只是一种特殊情况, 当目标函数比较复杂的时候无法使用, 当
+        变量 X 的列数多于行数导致 XTX 不是满秩矩阵时也无法使用。
 
 ## 决策树
 
-- 理解信息熵由来:
-    - ![picture](what/Mechine_Learning_1.png)
-- 理解信息熵越小,纯度越高
-    - 信息熵越大,featues中种类就越多,不确定程度就越高。
-    - 信息熵表示随机变量的不确定程度，而引入features之后，
-    通过知道results而求出的条件熵，可以得知features解释了多少不确定程度，
-    所以相减得出的信息增益表示剩余还有多少不确定性。若信息增益为0，
-    表示features完全解释了results，否则表示还需要其他features来解释，
-    所以需要选择信息增益大的作为节点继续拆分。
+*   **理解信息熵由来**:
 
+    *   ![picture](what/Mechine_Learning_1.png)
+
+*   **理解信息熵越小, 纯度越高**
+    *   信息熵越大, featues 中种类就越多, 不确定程度就越高。
+    *   信息熵表示随机变量的不确定程度, 而引入 features 之后, 通过知道 results
+        而求出的条件熵, 可以得知 features 解释了多少不确定程度, 所以相减得出的信
+        息增益表示剩余还有多少不确定性。若信息增益为 0, 表示 features 完全解释了
+        results, 否则表示还需要其他 features 来解释, 所以需要选择信息增益大的作
+        为节点继续拆分。
