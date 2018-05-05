@@ -1,8 +1,9 @@
 # Mechine Learning
 
-*   Book:
-    [《机器学习》--周志华](https://book.douban.com/subject/26708119/?from=tag)
-*   Python code: [Hands_on_ML](https://github.com/Chandlercjy/Hands_on_ML)
+*   Study Source:
+    *   [《机器学习》--周志华](https://book.douban.com/subject/26708119/?from=tag)
+    *   [Coursera-ML-AndrewNg-Notes](https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes)
+*   Python Code: [Hands_on_ML](https://github.com/Chandlercjy/Hands_on_ML)
 
 ## 目录
 
@@ -16,35 +17,35 @@
 
 ## 损失函数与优化算法
 
-*   **重要**:所有损失函数都可以用优化算法计算
+*   **重要**: 所有损失函数都可以用优化算法计算
 
 *   **求解损失函数的优化算法**
 
     1.  梯度下降法
 
         *   梯度下降是用来求函数最小值的算法。
-        *   名词解释：
-            *   batch gradient descent:批量梯度下降
-            *   learning rate:学习率$$\alpha$$
-        *   原理：通过构建损失函数, 求其梯度, 然后根据步长 alpha 不断迭代更新参
+        *   名词解释:
+            *   batch gradient descent: 批量梯度下降
+            *   learning rate: 学习率$$\alpha$$
+        *   原理: 通过构建损失函数, 求其梯度, 然后根据步长 alpha 不断迭代更新参
             数 theta。背后思想是开始时随机选择一个参数组合 theta, 计算代价函数,
             然后寻找下一个能让代价函数值下降最多的参数组合, 知道找到一个局部最小
             值 (local minimum)。
-        *   注意要点：
+        *   注意要点:
 
             1.  因为并没有尝试所有的参数组合, 所以不能确定 得到的局 部最小值是否
                 是全局最小值(global minimum)。选择不同的初始参数组合, 可能会找到
                 不同的局部最小值。
-            2.  学习率 alpha 如果太小, 会移动太慢, 若太大可能无法收敛。此外, 当
-                接近局部最低点时, 导数绝对值越来越小, 所以下降步伐也越来越小, 所
-                以实际上没必要另外减小 alpha.
-
+            2.  学习率 alpha 如果太小, 会移动太慢导致迭代次数过高, 若太大可能无
+                法收敛。此外, 当接近局部最低点时, 导数绝对值越来越小, 所以下降步
+                伐也越来越小, 所以实际上没必要另外减小 alpha.
+            3.  采用多项式回归模型，运行梯度下降算法前，特征缩放非常有必要。
 
         *   ![picture](what/Mechine_Learning_3.png)
         *   ![picture](what/Mechine_Learning_2.png)
         *   ![picture](what/Mechine_Learning_4.png)
 
-*   **损失函数的定义方法:**
+*   **损失函数的定义方法**
 
     1.  均方误差(Error of mean square)
     2.  最大后验概率(Maximum posterior probability)
@@ -64,7 +65,7 @@
 
 ## 线性回归
 
-*   **概念解析**:
+*   **概念解析**
 
     *   损失函数(loss function): 单个样本的误差
     *   代价函数(cost function): 整个训练集的平均误差
@@ -72,16 +73,18 @@
         *   最大似然(MLE), 最大后验(MAP)等都是构造目标函数的方法, 构造出这个目标
             函数后, 我们可以用各种优化方法来找到它的极值.
 
-*   **线性回归问题中的最小二乘法**:
+*   **线性回归问题中的最小二乘法**
 
+    *   $$\theta = (X^TX)^{-1} X^Ty$$
     *   对于线性回归问题, 我们采用极大似然来构造一个目标函数, 然后用梯度下降或者
         直接用向量的投影来直接算出最优解的表达式(最小二乘法)
     *   但是最小二乘法其实只是一种特殊情况, 当目标函数比较复杂的时候无法使用, 当
-        变量 X 的列数多于行数导致 XTX 不是满秩矩阵时也无法使用。
+        变量 X 的列数多于行数导致 XTX 不是满秩矩阵时也无法使用(即不可逆，通常是
+        因为特征之间不独立，也有可能是特征数量大于训练集的数量)。
 
 ## 决策树
 
-*   **理解信息熵由来**:
+*   **理解信息熵由来**
 
     *   ![picture](what/Mechine_Learning_1.png)
 
