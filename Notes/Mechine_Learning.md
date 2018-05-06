@@ -10,42 +10,60 @@
 
 <!-- vim-markdown-toc GitLab -->
 
-*   [损失函数与优化算法](#损失函数与优化算法)
-*   [线性回归(Linear Regression)](#线性回归linear-regression)
-*   [决策树(Desicion Tree)](#决策树desicion-tree)
-*   [逻辑回归(Logistic Regression)](#逻辑回归logistic-regression)
+*   [1. 统计学习方法概论 Statistical learning](#1-统计学习方法概论-statistical-learning)
+    *   [策略 Strategy](#策略-strategy)
+        *   [损失函数 loss function](#损失函数-loss-function)
+        *   [风险函数 risk function](#风险函数-risk-function)
+    *   [模型 model](#模型-model)
+    *   [算法 Algorithms](#算法-algorithms)
+    *   [模型评估与模型选择](#模型评估与模型选择)
+*   [2. 各种模型](#2-各种模型)
+    *   [线性回归 Linear Regression](#线性回归-linear-regression)
+    *   [决策树 Desicion Tree](#决策树-desicion-tree)
+    *   [逻辑回归 Logistic Regression](#逻辑回归-logistic-regression)
 
 <!-- vim-markdown-toc -->
 
-## 损失函数与优化算法
+# 1. 统计学习方法概论 Statistical learning
 
-*   **重要**: 所有损失函数都可以用优化算法计算
+*   **基本概念**
 
-*   **求解损失函数的优化算法**
+    *   监督学习(supervised learnling), 非监督学习(unsupervised learnling)
+    *   输入空间(input space), 输出空间(output space), 特征空间(feature vector)
+    *   假设空间(Hypothesis space), 联合概率分布
 
-    1.  梯度下降法
+*   **统计模型三要素**
 
-        *   梯度下降是用来求函数最小值的算法。
-        *   名词解释:
-            *   batch gradient descent: 批量梯度下降
-            *   learning rate: 学习率$$\alpha$$
-        *   原理: 通过构建损失函数, 求其梯度, 然后根据步长 alpha 不断迭代更新参
-            数 theta。背后思想是开始时随机选择一个参数组合 theta, 计算代价函数,
-            然后寻找下一个能让代价函数值下降最多的参数组合, 知道找到一个局部最小
-            值 (local minimum)。
-        *   注意要点:
+    *   模型(model)
+        *   决策函数
+        *   判别函数
+    *   策略(strategy)
+        *   损失函数(loss function)和风险函数(risk function)
+        *   期望风险最小化与结构风险最小化
+    *   算法(algorithm)
 
-            1.  因为并没有尝试所有的参数组合, 所以不能确定 得到的局 部最小值是否
-                是全局最小值(global minimum)。选择不同的初始参数组合, 可能会找到
-                不同的局部最小值。
-            2.  学习率 alpha 如果太小, 会移动太慢导致迭代次数过高, 若太大可能无
-                法收敛。此外, 当接近局部最低点时, 导数绝对值越来越小, 所以下降步
-                伐也越来越小, 所以实际上没必要另外减小 alpha.
-            3.  采用多项式回归模型, 运行梯度下降算法前, 特征缩放非常有必要。
+## 策略 Strategy
 
-        *   ![picture](what/Mechine_Learning_3.png)
-        *   ![picture](what/Mechine_Learning_2.png)
-        *   ![picture](what/Mechine_Learning_4.png)
+### 损失函数 loss function
+
+*   **常用损失函数(loss function)**
+
+    *   0-1 损失函数(0-1 loss function)
+
+        $$L(Y, f(X)) = \begin{cases} 1, Y \not=f(X) \\ 0, Y=f(X) \end{cases} $$
+
+    *   平方损失函数(quadratic loss function)
+
+        $$L(Y, f(X)) = (Y-f(X))^2$$
+
+    *   绝对损失函数(absolute loss function)
+
+        $$L(Y, f(X)) = |(Y-f(X))|$$
+
+    *   对数损失函数(logarithmic loss function)或对数似然函数(log-likelihood
+        loss function)
+
+        $$L(Y, P(Y|X)) = -logP(Y|X)$$
 
 *   **损失函数的定义方法**
 
@@ -65,7 +83,123 @@
 
         *   极大似然估计通过假设概率密度函数的不同, 可以推导出各种代价函数。
 
-## 线性回归(Linear Regression)
+### 风险函数 risk function
+
+*   **类别**
+
+    *   期望风险(expected loss):联合分布的期望损失
+
+        <!-- prettier-ignore -->
+        $$R_{exp}(f) = E_p[L(Y, f(X))] = \int_{x*y}L(y, f(x))P(x, y)dxdy$$
+
+    *   经验风险(empirical risk):训练样本集的平均损失
+
+        <!-- prettier-ignore -->
+        $$R_{emp}(f) = \frac{1}{N}\sum^N_{i=1} L(y_i, f(x_i))$$
+
+    *   根据大数定律, 当样本容量 N 趋于无穷时, 经验风险趋于期望风险。
+
+*   **经验风险最小化(empirical risk minimization, ERM)**
+
+    <!-- prettier-ignore -->
+    $$\frac{1}{N}\sum^N_{i=1} L(y_i, f(x_i))$$
+
+*   **结构风险最小化(structural risk minimization, SRM)**
+
+    <!-- prettier-ignore -->
+    $$R_{srm}(f) = \frac{1}{N}\sum^N_{i=1} L(y_i, f(x_i)) + \lambda J(f)$$
+
+*   **理解经验风险最小化与结构风险最小化关系**
+
+    *   样本容量大用经验风险最小化, 样本容量小用结构风险最小化。
+    *   当样本容量大的时候, 经验最小化可以保证很好的学习效果。
+        *   比如, 极大似然估计就是经验风险最小化的例子。当模型是条件概率分布, 损
+            失函数是对数损失函数时, 经验风险最小化等价于极大似然估计。
+    *   结构风险最小化是为了防止过拟合而提出的策略。等价于在经验风险加上表示模型
+        复杂度的正则化项(regularizer)或罚项(penalty term)。
+        *   比如, 贝叶斯估计中的最大后验概率估计就是结构风险最小化的一个例子。当
+            模型是条件概率分布、损失函数是对数损失函数、模型复杂度由模型的先验概
+            率表示时, 结构风险最小化等价于最大后验概率估计。
+
+## 模型 model
+
+*   **理解生成模型与判别模型的区别**
+
+    *   [生成模型与判别模型](https://blog.csdn.net/zouxy09/article/details/8195017)
+
+    *   决策函数
+    *   判别函数
+
+## 算法 Algorithms
+
+*   **理解优化算法与损失函数的关系**
+
+    *   ![picture](what/Mechine_Learning_6.png)
+
+*   **梯度下降法**
+
+    *   梯度下降是用来求函数最小值的算法。
+    *   名词解释:
+        *   batch gradient descent: 批量梯度下降
+        *   learning rate: 学习率$$\alpha$$
+    *   原理: 通过构建损失函数, 求其梯度, 然后根据步长 alpha 不断迭代更新参数
+        theta。背后思想是开始时随机选择一个参数组合 theta, 计算代价函数, 然后寻
+        找下一个能让代价函数值下降最多的参数组合, 知道找到一个局部最小值 (local
+        minimum)。
+    *   注意要点:
+
+        1.  因为并没有尝试所有的参数组合, 所以不能确定 得到的局 部最小值是否是全
+            局最小值(global minimum)。选择不同的初始参数组合, 可能会找到不同的局
+            部最小值。
+        2.  学习率 alpha 如果太小, 会移动太慢导致迭代次数过高, 若太大可能无法收
+            敛。此外, 当接近局部最低点时, 导数绝对值越来越小, 所以下降步伐也越来
+            越小, 所以实际上没必要另外减小 alpha.
+        3.  采用多项式回归模型, 运行梯度下降算法前, 特征缩放非常有必要。
+
+    *   ![picture](what/Mechine_Learning_3.png)
+    *   ![picture](what/Mechine_Learning_2.png)
+    *   ![picture](what/Mechine_Learning_4.png)
+
+## 模型评估与模型选择
+
+*   **模型评估**
+
+    *   基于训练误差(training error)和测试误差(test error)对模型进行评估和选择。
+    *   预测能力越高, 训练误差越小, 模型复杂度越高, 测试误差先减小后增大, 导致过
+        拟合(over-fitting)
+    *   ![picture](what/Mechine_Learning_7.png)
+
+*   **模型选择**
+
+    1.  正则化(regularization)
+
+        *   即用结构风险最小化策略
+
+        <!-- prettier-ignore -->
+        $$R_{srm}(f) = \frac{1}{N}\sum^N_{i=1} L(y_i, f(x_i)) + \lambda J(f)$$
+
+        *   正则化项可以取不同的形式, 比如参数向量的 L1, L2 范数。
+
+    2.  交叉验证
+        1.  简单交叉验证(cross validation):
+            *   将数据随机分成两部分(70%训练, 30%测试 ), 选择测试误差最小模型。
+        2.  S 折交叉验证:(S-fold cross validation):
+            *   将数据集随机切成 S 个互不相交的子集, 然后选取其中一个子集作为测
+                试集。重复 S 次得出 S 个模型, 然后选择平均测试误差最小的模型。
+        3.  留一交叉验证:(leave-one-out cross validation)
+            *   S 折的特殊情形 S=N, 即子集只包含一个样本, 而不是多个样本。每次只
+                留下一个样本做测试集。
+
+*   **泛化能力**
+
+    *   泛化误差(generalization error)其实就是模型的期望风险。
+
+        <!-- prettier-ignore -->
+        $$R_{exp}(f) = E_p[L(Y, f(X))] = \int_{x*y}L(y, f(x))P(x, y)dxdy$$
+
+# 2. 各种模型
+
+## 线性回归 Linear Regression
 
 *   **概念解析**
 
@@ -87,7 +221,7 @@
         问题可以通过删除多余特征解决。
     *   ![picture](what/Mechine_Learning_5.png)
 
-## 决策树(Desicion Tree)
+## 决策树 Desicion Tree
 
 *   **理解信息熵由来**
 
@@ -101,6 +235,6 @@
         results。所以需要选择信息增益大的作为节点继续拆分, 因为还有很多不确定性,
         所以需要继续拆分。
 
-## 逻辑回归(Logistic Regression)
+## 逻辑回归 Logistic Regression
 
 *   逻辑回归算法是分类算法。
