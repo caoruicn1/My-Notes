@@ -2,6 +2,7 @@
 
 *   Study Source:
     *   [《机器学习》--周志华](https://book.douban.com/subject/26708119/?from=tag)
+    *   [《统计学习方法》--李航](https://book.douban.com/subject/10590856/)
     *   [Coursera-ML-AndrewNg-Notes](https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes)
 *   Python Code: [Hands_on_ML](https://github.com/Chandlercjy/Hands_on_ML)
 
@@ -10,8 +11,9 @@
 <!-- vim-markdown-toc GitLab -->
 
 *   [损失函数与优化算法](#损失函数与优化算法)
-*   [线性回归](#线性回归)
-*   [决策树](#决策树)
+*   [线性回归(Linear Regression)](#线性回归linear-regression)
+*   [决策树(Desicion Tree)](#决策树desicion-tree)
+*   [逻辑回归(Logistic Regression)](#逻辑回归logistic-regression)
 
 <!-- vim-markdown-toc -->
 
@@ -39,7 +41,7 @@
             2.  学习率 alpha 如果太小, 会移动太慢导致迭代次数过高, 若太大可能无
                 法收敛。此外, 当接近局部最低点时, 导数绝对值越来越小, 所以下降步
                 伐也越来越小, 所以实际上没必要另外减小 alpha.
-            3.  采用多项式回归模型，运行梯度下降算法前，特征缩放非常有必要。
+            3.  采用多项式回归模型, 运行梯度下降算法前, 特征缩放非常有必要。
 
         *   ![picture](what/Mechine_Learning_3.png)
         *   ![picture](what/Mechine_Learning_2.png)
@@ -63,7 +65,7 @@
 
         *   极大似然估计通过假设概率密度函数的不同, 可以推导出各种代价函数。
 
-## 线性回归
+## 线性回归(Linear Regression)
 
 *   **概念解析**
 
@@ -73,16 +75,19 @@
         *   最大似然(MLE), 最大后验(MAP)等都是构造目标函数的方法, 构造出这个目标
             函数后, 我们可以用各种优化方法来找到它的极值.
 
-*   **线性回归问题中的最小二乘法**
+*   **最小二乘法(Least squares, 又叫 Normal Equation)**
 
     *   $$\theta = (X^TX)^{-1} X^Ty$$
     *   对于线性回归问题, 我们采用极大似然来构造一个目标函数, 然后用梯度下降或者
         直接用向量的投影来直接算出最优解的表达式(最小二乘法)
     *   但是最小二乘法其实只是一种特殊情况, 当目标函数比较复杂的时候无法使用, 当
-        变量 X 的列数多于行数导致 XTX 不是满秩矩阵时也无法使用(即不可逆，通常是
-        因为特征之间不独立，也有可能是特征数量大于训练集的数量)。
+        变量 X 的列数多于行数导致 XTX 不是满秩矩阵时也无法使用(即不可逆, 通常是
+        因为特征之间不独立, 也有可能是特征数量大于训练集的数量)。
+    *   如果主要特征变量数目不大, 最小二乘法也是很好的, 具体要看情况。而不可逆的
+        问题可以通过删除多余特征解决。
+    *   ![picture](what/Mechine_Learning_5.png)
 
-## 决策树
+## 决策树(Desicion Tree)
 
 *   **理解信息熵由来**
 
@@ -93,5 +98,9 @@
     *   信息熵表示随机变量的不确定程度, 而引入 features 之后, 通过知道 results
         而求出的条件熵, 可以得知 features 解释了多少不确定程度, 所以相减得出的信
         息增益表示剩余还有多少不确定性。若信息增益为 0, 表示 features 完全解释了
-        results, 否则表示还需要其他 features 来解释, 所以需要选择信息增益大的作
-        为节点继续拆分。
+        results。所以需要选择信息增益大的作为节点继续拆分, 因为还有很多不确定性,
+        所以需要继续拆分。
+
+## 逻辑回归(Logistic Regression)
+
+*   逻辑回归算法是分类算法。
