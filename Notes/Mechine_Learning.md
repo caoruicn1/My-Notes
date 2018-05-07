@@ -11,16 +11,17 @@
 <!-- vim-markdown-toc GitLab -->
 
 *   [1. 统计学习方法概论 Statistical learning](#1-统计学习方法概论-statistical-learning)
-    *   [策略 Strategy](#策略-strategy)
+    *   [1.1 策略 Strategy](#11-策略-strategy)
         *   [损失函数 loss function](#损失函数-loss-function)
         *   [风险函数 risk function](#风险函数-risk-function)
-    *   [模型 model](#模型-model)
-    *   [算法 Algorithms](#算法-algorithms)
-    *   [模型评估与模型选择](#模型评估与模型选择)
+    *   [1.2 模型 model](#12-模型-model)
+    *   [1.3 算法 Algorithms](#13-算法-algorithms)
+    *   [1.4 模型评估与模型选择](#14-模型评估与模型选择)
+    *   [1.5 数据预处理](#15-数据预处理)
 *   [2. 各种模型](#2-各种模型)
-    *   [线性回归 Linear Regression](#线性回归-linear-regression)
-    *   [决策树 Desicion Tree](#决策树-desicion-tree)
-    *   [逻辑回归 Logistic Regression](#逻辑回归-logistic-regression)
+    *   [2.1 线性回归 Linear Regression](#21-线性回归-linear-regression)
+    *   [2.2 逻辑回归 Logistic Regression](#22-逻辑回归-logistic-regression)
+    *   [2.3 决策树 Desicion Tree](#23-决策树-desicion-tree)
 
 <!-- vim-markdown-toc -->
 
@@ -31,6 +32,8 @@
     *   监督学习(supervised learnling), 非监督学习(unsupervised learnling)
     *   输入空间(input space), 输出空间(output space), 特征空间(feature vector)
     *   假设空间(Hypothesis space), 联合概率分布
+    *   损失函数(loss function): 单个样本的误差
+    *   代价函数(cost function): 整个训练集的平均误差
 
 *   **统计模型三要素**
 
@@ -42,7 +45,7 @@
         *   期望风险最小化与结构风险最小化
     *   算法(algorithm)
 
-## 策略 Strategy
+## 1.1 策略 Strategy
 
 ### 损失函数 loss function
 
@@ -87,15 +90,16 @@
 
 *   **类别**
 
-    *   期望风险(expected loss):联合分布的期望损失
-
-        <!-- prettier-ignore -->
-        $$R_{exp}(f) = E_p[L(Y, f(X))] = \int_{x*y}L(y, f(x))P(x, y)dxdy$$
 
     *   经验风险(empirical risk):训练样本集的平均损失
 
         <!-- prettier-ignore -->
         $$R_{emp}(f) = \frac{1}{N}\sum^N_{i=1} L(y_i, f(x_i))$$
+
+    *   期望风险(expected loss):联合分布的期望损失。即样本值乘以出现概率。
+
+        <!-- prettier-ignore -->
+        $$R_{exp}(f) = E_p[L(Y, f(X))] = \int_{x*y}L(y, f(x))P(x, y)dxdy$$
 
     *   根据大数定律, 当样本容量 N 趋于无穷时, 经验风险趋于期望风险。
 
@@ -109,6 +113,14 @@
     <!-- prettier-ignore -->
     $$R_{srm}(f) = \frac{1}{N}\sum^N_{i=1} L(y_i, f(x_i)) + \lambda J(f)$$
 
+*   **理解经验风险和期望风险区别**
+
+    *   经验风险是局部的, 基于训练集所有样本点损失函数最小化的。
+    *   期望风险是全局的, 是基于所有样本点的损失函数最小化的。
+    *   经验风险函数是现实的, 可求的；
+    *   期望风险函数是理想化的, 不可求的；
+    *   基本思想是用局部最优代替全局最优。
+
 *   **理解经验风险最小化与结构风险最小化关系**
 
     *   样本容量大用经验风险最小化, 样本容量小用结构风险最小化。
@@ -121,7 +133,7 @@
             模型是条件概率分布、损失函数是对数损失函数、模型复杂度由模型的先验概
             率表示时, 结构风险最小化等价于最大后验概率估计。
 
-## 模型 model
+## 1.2 模型 model
 
 *   **理解生成模型与判别模型的区别**
 
@@ -130,10 +142,12 @@
     *   决策函数
     *   判别函数
 
-## 算法 Algorithms
+## 1.3 算法 Algorithms
 
 *   **理解优化算法与损失函数的关系**
 
+    *   最大似然(MLE), 最大后验(MAP)等都是构造目标函数的方法, 构造出这个目标函数
+        后, 我们可以用各种优化方法来找到它的极值.
     *   ![picture](what/Mechine_Learning_6.png)
 
 *   **梯度下降法**
@@ -160,7 +174,7 @@
     *   ![picture](what/Mechine_Learning_2.png)
     *   ![picture](what/Mechine_Learning_4.png)
 
-## 模型评估与模型选择
+## 1.4 模型评估与模型选择
 
 *   **模型评估**
 
@@ -197,17 +211,29 @@
         <!-- prettier-ignore -->
         $$R_{exp}(f) = E_p[L(Y, f(X))] = \int_{x*y}L(y, f(x))P(x, y)dxdy$$
 
+## 1.5 数据预处理
+
+*   **归一化(标准化)方法**
+
+    1.  Min-max 标准化(Min-Max Normalization), 使结果值映射到[0, 1]之间
+
+        $$X^\* = \frac{x-min}{max-min}$$
+
+    2.  Z-score 标准化方法, 转化后数据符合标准正态分布, N(0, 1)
+
+        $$x^\* = \frac{x - \mu}{\sigma}$$
+
+*   **归一化的重要性**
+    *   数据归一化后, 最优解的寻优过程明显会变得平缓, 更容易正确的收敛到最优解。
+    *   ![picture](what/Mechine_Learning_9.png)
+
 # 2. 各种模型
 
-## 线性回归 Linear Regression
+## 2.1 线性回归 Linear Regression
 
-*   **概念解析**
+*   **基本原理**
 
-    *   损失函数(loss function): 单个样本的误差
-    *   代价函数(cost function): 整个训练集的平均误差
-    *   目标函数与优化算法:
-        *   最大似然(MLE), 最大后验(MAP)等都是构造目标函数的方法, 构造出这个目标
-            函数后, 我们可以用各种优化方法来找到它的极值.
+    *   ![picture](what/Mechine_Learning_10.png)
 
 *   **最小二乘法(Least squares, 又叫 Normal Equation)**
 
@@ -221,7 +247,23 @@
         问题可以通过删除多余特征解决。
     *   ![picture](what/Mechine_Learning_5.png)
 
-## 决策树 Desicion Tree
+## 2.2 逻辑回归 Logistic Regression
+
+*   **二元分类**
+
+    *   与线性回归非常相似, 只是假设函数不同。
+    *   Y 的输出值永远为 0 或 1, 表示两种分类。
+    *   引入 S 形函数(Sigmoid function)
+
+        <!-- prettier-ignore -->
+        $$g(z) = \frac{1}{1+e^{-z}}$$
+        $$h_{\theta}(x)=g(\theta^T x)$$
+
+    *   ![picture](what/Mechine_Learning_8.png)
+    *   推导过程:
+        *   ![picture](what/Mechine_Learning_11.png)
+
+## 2.3 决策树 Desicion Tree
 
 *   **理解信息熵由来**
 
@@ -234,7 +276,3 @@
         息增益表示剩余还有多少不确定性。若信息增益为 0, 表示 features 完全解释了
         results。所以需要选择信息增益大的作为节点继续拆分, 因为还有很多不确定性,
         所以需要继续拆分。
-
-## 逻辑回归 Logistic Regression
-
-*   逻辑回归算法是分类算法。
