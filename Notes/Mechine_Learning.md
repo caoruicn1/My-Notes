@@ -229,11 +229,11 @@
 
     1.  Min-max 标准化(Min-Max Normalization), 使结果值映射到[0, 1]之间
 
-        $$X^\* = \frac{x-min}{max-min}$$
+        $$X_n = \frac{x-min}{max-min}$$
 
     2.  Z-score 标准化方法, 转化后数据符合标准正态分布, N(0, 1)
 
-        $$x^\* = \frac{x - \mu}{\sigma}$$
+        $$x_n = \frac{x - \mu}{\sigma}$$
 
 *   **归一化的重要性**
     *   数据归一化后, 最优解的寻优过程明显会变得平缓, 更容易正确的收敛到最优解。
@@ -266,21 +266,26 @@
     *   理解要点:
         *   与线性回归非常相似, 只是假设函数不同。
         *   Y 的输出值永远为 0 或 1, 表示两种分类。
-        *   **代价函数的输出值表示 Y 等于 1 时的概率是多少。**
+        *   **预测函数的输出值表示 Y 等于 1 时的概率是多少。**
     *   注意:无法用解析解求解。
     *   S 形函数(Sigmoid function):将变量映射为[0,1]之间
 
         $$g(z) = \frac{1}{1+e^{-z}}$$
 
-    *   代价函数:
-          <!-- prettier-ignore -->
-        $$h\_{\theta}(x)=g(\theta^T x)$$
+    *   预测函数:
+
+        <!-- prettier-ignore -->
+        $$h_{\theta}(x)=g(\theta^T x)$$
+
+    *   代价函数由极大似然法推导:
+
+        *   ![picture](what/Mechine_Learning_13.png)
+
     *   理解代价函数的意义:
         *   ![picture](what/Mechine_Learning_12.png)
-    *   总体思路
+    *   总体思路(注: 本来极大似然后应取 cost 函数最大值用梯度上升,但下图取负以便
+        用梯度下降):
         *   ![picture](what/Mechine_Learning_8.png)
-    *   梯度下降推导过程:
-        *   ![picture](what/Mechine_Learning_11.png)
 
 ## 2.3 决策树 Desicion Tree
 
