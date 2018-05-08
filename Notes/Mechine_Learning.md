@@ -136,7 +136,7 @@
 
 *   **理解生成模型与判别模型的区别**
 
-    *   [生成模型与判别模型](https://blog.csdn.net/zouxy09/article/details/8195017)
+    *   [点击查看参考资料](https://blog.csdn.net/zouxy09/article/details/8195017)
 
     *   决策函数
     *   判别函数
@@ -149,7 +149,7 @@
         后, 我们可以用各种优化方法来找到它的极值.
     *   ![picture](what/Mechine_Learning_6.png)
 
-*   **梯度下降法**
+*   **梯度下降法(Gradient descent)**
 
     *   梯度下降是用来求函数最小值的算法。
     *   名词解释:
@@ -172,6 +172,19 @@
     *   ![picture](what/Mechine_Learning_3.png)
     *   ![picture](what/Mechine_Learning_2.png)
     *   ![picture](what/Mechine_Learning_4.png)
+
+*   **随机梯度下降(Stochastic gradient descent)**
+    *   [点击查看参考资料](https://blog.csdn.net/zouxy09/article/details/20319673)
+    *   出现原因: 梯度下降法在每次更新回归系数的时候需要遍历整个数据集(即计算整
+        个数据集的回归方差), 所以数据量大的话复杂度太高。由此引出随机梯度下降。
+    *   随机梯度下降特点:随机梯度下降每次更新回归系数只用一个样本点的误差。
+        *   导致问题:一些误差太大的点会导致参数更新偏离太远。因为学习率 alpha 一
+            直不变, 即每一个误差对参数调整影响的权重都相同。
+        *   解决方法:
+            1.  每次迭代的时候更新 alpha 的值, alpha 越来越小, 缓解波动频率, 但
+                是如果 alpha 接近 0 的话又几乎没调整, 所以 alpha 应大于一个稍微
+                大点的常数。
+            2.  每次迭代随机选择样本来计算样本点误差, 减少周期性波动。
 
 ## 1.4 模型评估与模型选择
 
@@ -250,16 +263,23 @@
 
 *   **二元分类**
 
-    *   与线性回归非常相似, 只是假设函数不同。
-    *   Y 的输出值永远为 0 或 1, 表示两种分类。
-    *   引入 S 形函数(Sigmoid function)
+    *   理解要点:
+        *   与线性回归非常相似, 只是假设函数不同。
+        *   Y 的输出值永远为 0 或 1, 表示两种分类。
+        *   **代价函数的输出值表示 Y 等于 1 时的概率是多少。**
+    *   注意:无法用解析解求解。
+    *   S 形函数(Sigmoid function):将变量映射为[0,1]之间
 
-        <!-- prettier-ignore -->
         $$g(z) = \frac{1}{1+e^{-z}}$$
-        $$h_{\theta}(x)=g(\theta^T x)$$
 
-    *   ![picture](what/Mechine_Learning_8.png)
-    *   推导过程:
+    *   代价函数:
+          <!-- prettier-ignore -->
+        $$h\_{\theta}(x)=g(\theta^T x)$$
+    *   理解代价函数的意义:
+        *   ![picture](what/Mechine_Learning_12.png)
+    *   总体思路
+        *   ![picture](what/Mechine_Learning_8.png)
+    *   梯度下降推导过程:
         *   ![picture](what/Mechine_Learning_11.png)
 
 ## 2.3 决策树 Desicion Tree
