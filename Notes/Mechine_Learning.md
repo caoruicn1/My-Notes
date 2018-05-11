@@ -29,6 +29,8 @@
     *   [6.2 逻辑回归 Logistic Regression](#62-逻辑回归-logistic-regression)
     *   [6.3 决策树 Desicion Tree](#63-决策树-desicion-tree)
     *   [6.3 神经网络](#63-神经网络)
+    *   [6.4 感知机](#64-感知机)
+    *   [6.5 k 近邻法](#65-k近邻法)
 *   [7 机器学习系统的设计](#7-机器学习系统的设计)
 
 <!-- vim-markdown-toc -->
@@ -444,6 +446,45 @@
     *   注意事项:
         1.  往回求偏导注意用链式法则
         2.  忽略正则项
+
+## 6.4 感知机
+
+*   **背景**
+
+    *   是神经网络和支持向量机的基础。
+    *   感知机是一种线性分类模型，属于判别模型。
+    *   y = -1 或者 1
+
+*   **基本原理**
+
+    *   存在一个超平面，能够刚好把点全部分为正负两类。损失函数为所有点到超平面距
+        离之和, 同样采用梯度下降法求最小值即可(下图梯度符号为加是因为负负得正)。
+    *   符号函数：
+
+        $$sign(x) = \begin{cases}+1,\ x\geq 0 \\ -1,\ x<0\end{cases}$$
+
+    *   Hypothsis 函数:
+
+        $$h(x)=sign(w·x_i+b)$$
+
+    *   ![picture](what/Mechine_Learning_20.png)
+
+*   **点到超平面的距离推导理解**
+
+    *   ![picture](what/Mechine_Learning_21.png)
+
+*   **损失函数推导理解**
+
+    *   ![picture](what/Mechine_Learning_22.png)
+
+*   **感知机的对偶形式(为了加快计算)**
+    *   ![picture](what/Mechine_Learning_23.png)
+
+<!-- prettier-ignore -->
+* **Gram矩阵**
+    $$G = [x_i \times x_j]_{N\times N}$$
+
+## 6.5 k 近邻法
 
 # 7 机器学习系统的设计
 
