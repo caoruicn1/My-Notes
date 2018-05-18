@@ -6,34 +6,34 @@
 <!-- vim-markdown-toc GitLab -->
 
 * [Part I: A Practical Guide to Trading System Development and Evaluation](#part-i-a-practical-guide-to-trading-system-development-and-evaluation)
-	* [Chapter 1: What is a trading system?](#chapter-1-what-is-a-trading-system)
-		* [1.1 Hypothetic-ductive method has five stages:](#11-hypothetic-ductive-method-has-five-stages)
-	* [Chapter 2: Design, test, optimisation and evaluation of a trading system](#chapter-2-design-test-optimisation-and-evaluation-of-a-trading-system)
-		* [2.1 Design](#21-design)
-		* [2.2 Test](#22-test)
-		* [2.3 The forecasting power of a trading system](#23-the-forecasting-power-of-a-trading-system)
-		* [2.4 Evaluation of a trading system](#24-evaluation-of-a-trading-system)
+    * [Chapter 1: What is a trading system?](#chapter-1-what-is-a-trading-system)
+        * [1.1 Hypothetic-ductive method has five stages:](#11-hypothetic-ductive-method-has-five-stages)
+    * [Chapter 2: Design, test, optimisation and evaluation of a trading system](#chapter-2-design-test-optimisation-and-evaluation-of-a-trading-system)
+        * [2.1 Design](#21-design)
+        * [2.2 Test](#22-test)
+        * [2.3 The forecasting power of a trading system](#23-the-forecasting-power-of-a-trading-system)
+        * [2.4 Evaluation of a trading system](#24-evaluation-of-a-trading-system)
 * [Part II: Trading System Development and Evaluation of a Real Case](#part-ii-trading-system-development-and-evaluation-of-a-real-case)
-	* [Chapter 3: How to develop a trading system step-by-step](#chapter-3-how-to-develop-a-trading-system-step-by-step)
-		* [3.1 The birth of a trading system](#31-the-birth-of-a-trading-system)
-		* [3.2 the importance of commissions and slippage.](#32-the-importance-of-commissions-and-slippage)
-		* [3.3 Optimisation and stability graphs.](#33-optimisation-and-stability-graphs)
-		* [3.4 Inserting an intraday time filter](#34-inserting-an-intraday-time-filter)
-		* [3.5 Determination of appropriate exits – risk management](#35-determination-of-appropriate-exits-risk-management)
-		* [3.6 Summary: Step-by-step development of a trading system](#36-summary-step-by-step-development-of-a-trading-system)
-	* [Chapter 4: Two methods for evaluating the system’s predictive power](#chapter-4-two-methods-for-evaluating-the-systems-predictive-power)
-		* [4.1 Timescale analysis](#41-timescale-analysis)
-		* [4.2 Monte Carlo analysis](#42-monte-carlo-analysis)
-	* [Chapter 5: The factors around your system](#chapter-5-the-factors-around-your-system)
-		* [5.1 The market’s long/short bias](#51-the-markets-longshort-bias)
-		* [5.2 Out-of-sample deterioration](#52-out-of-sample-deterioration)
-		* [5.3 The market data bias](#53-the-market-data-bias)
-		* [5.4 Optimisation and over-fitting](#54-optimisation-and-over-fitting)
-	* [Chapter 6: Periodic re-optimisation and walk forward analysis](#chapter-6-periodic-re-optimisation-and-walk-forward-analysis)
-		* [6.2 Anchored vs. rolling walk forward analysis(WFA)](#62-anchored-vs-rolling-walk-forward-analysiswfa)
-	* [Chapter 7: Position sizing](#chapter-7-position-sizing)
+    * [Chapter 3: How to develop a trading system step-by-step](#chapter-3-how-to-develop-a-trading-system-step-by-step)
+        * [3.1 The birth of a trading system](#31-the-birth-of-a-trading-system)
+        * [3.2 the importance of commissions and slippage.](#32-the-importance-of-commissions-and-slippage)
+        * [3.3 Optimisation and stability graphs.](#33-optimisation-and-stability-graphs)
+        * [3.4 Inserting an intraday time filter](#34-inserting-an-intraday-time-filter)
+        * [3.5 Determination of appropriate exits – risk management](#35-determination-of-appropriate-exits-risk-management)
+        * [3.6 Summary: Step-by-step development of a trading system](#36-summary-step-by-step-development-of-a-trading-system)
+    * [Chapter 4: Two methods for evaluating the system’s predictive power](#chapter-4-two-methods-for-evaluating-the-systems-predictive-power)
+        * [4.1 Timescale analysis](#41-timescale-analysis)
+        * [4.2 Monte Carlo analysis](#42-monte-carlo-analysis)
+    * [Chapter 5: The factors around your system](#chapter-5-the-factors-around-your-system)
+        * [5.1 The market’s long/short bias](#51-the-markets-longshort-bias)
+        * [5.2 Out-of-sample deterioration](#52-out-of-sample-deterioration)
+        * [5.3 The market data bias](#53-the-market-data-bias)
+        * [5.4 Optimisation and over-fitting](#54-optimisation-and-over-fitting)
+    * [Chapter 6: Periodic re-optimisation and walk forward analysis](#chapter-6-periodic-re-optimisation-and-walk-forward-analysis)
+        * [6.2 Anchored vs. rolling walk forward analysis(WFA)](#62-anchored-vs-rolling-walk-forward-analysiswfa)
+    * [Chapter 7: Position sizing](#chapter-7-position-sizing)
 * [Part III: Systematic Portfolio Trading](#part-iii-systematic-portfolio-trading)
-	* [Chapter 8: Dynamic portfolio construction](#chapter-8-dynamic-portfolio-construction)
+    * [Chapter 8: Dynamic portfolio construction](#chapter-8-dynamic-portfolio-construction)
 * [Conclusion](#conclusion)
 
 <!-- vim-markdown-toc -->
@@ -77,13 +77,13 @@
 
 ### 2.2 Test
 
-*   Importance of Market data
+*   **Importance of Market data**
 
     1.  Same expiration contracts
     2.  Continuous contracts
     3.  Perpetual contracts
 
-*   自由度 Degrees of freedom
+*   **自由度 Degrees of freedom**
 
     *   参数越少, 数据越多, 效果越好。
 
@@ -129,8 +129,8 @@
 
     *   Rolling walk forward: out-of-sample (OOS) = 20%:
         *   Run #1 |--------- In-sample 80% -------------- | OOS 20% |
-        *   Run #2 -----------|---------- In-sample 80% ------------ | OOS 20% |
-        *   Run #3 ------------|---------- In-sample 80% --------------------- |
+        *   Run #2 ----------|--------- In-sample 80% -------------- | OOS 20% |
+        *   Run #3 ---------------------|---------- In-sample 80% ------------ |
             OOS 20% |
     *   Anchored walk forward: out-of-sample (OOS) = 20%:
         *   Run #1 |------------In-sample 80% --------------- | OOS 20% |
@@ -511,7 +511,7 @@
             *   Ralph Vince, fixed fractional lots = constant \* account-size
             *   Ryan Jones, fixed ratio lots = constant \*
                 squareroot(account-size)
-            *   Fixed fractional 新增头寸随着资金量增大而增大的,而 Fixed ratio
+            *   Fixed fractional 新增头寸随着资金量增大而增大的, 而 Fixed ratio
                 随着资金量的增大, 新增头寸增大速度先快后慢。
         *   ![Picture](what/Trading_Systems_14.png)
 
@@ -526,25 +526,25 @@
     *   如果策略对多个市场有效, 应该多个市场同时一起交易。
     *   用不同周期的 moving average equity line crossover 来确认是否停止交易。
     *   通过标准化策略在不同市场的回撤风险来决定资金分配。但是可能需要经常
-        rebalance，因为用 WFA 方法 re-optimization，回撤风险会不断变化。
+        rebalance, 因为用 WFA 方法 re-optimization, 回撤风险会不断变化。
 
 # Conclusion
 
-*   网上有很多公开的成功策略，但是知道了策略后却并不能复制别人的成功。一个好的交
-    易员应该同时拥有很多应对当前市场的策略，而不只是一个赚钱的策略。所以，重点不
-    在策略代码，而在于策略怎样调试，使策略符合当前的市场环境，什么时候策略失效了
-    ，什么时候可以启动另一个策略。写代码能力，数学背景和创新能力等确实对量化交易
-    有帮助，但是最重要的是自己对市场、交易和系统的感觉,这种感觉需要持续不断的毅
+*   网上有很多公开的成功策略, 但是知道了策略后却并不能复制别人的成功。一个好的交
+    易员应该同时拥有很多应对当前市场的策略, 而不只是一个赚钱的策略。所以, 重点不
+    在策略代码, 而在于策略怎样调试, 使策略符合当前的市场环境, 什么时候策略失效了
+    , 什么时候可以启动另一个策略。写代码能力, 数学背景和创新能力等确实对量化交易
+    有帮助, 但是最重要的是自己对市场、交易和系统的感觉, 这种感觉需要持续不断的毅
     力和决心。构建、开发、评估交易系统 takes years. 成功的道路从来都不是一帆风顺
     。所以不要轻信强大的交易平台或者一点点代码就能使你获得成功。It will take a
     lot of hard work and a little bit of chance.
 
-*   Rule complexity: 参数不要多，模型越简单越好。
-*   Testing: 不要专注一个市场，在没有测试所有市场前不要轻易判断策略没用。
-*   Optimisation: 周期性 re-optimise 策略，保持与市场同步。
+*   Rule complexity: 参数不要多, 模型越简单越好。
+*   Testing: 不要专注一个市场, 在没有测试所有市场前不要轻易判断策略没用。
+*   Optimisation: 周期性 re-optimise 策略, 保持与市场同步。
 *   Monte Carlo analysis: 注意别过度测试导致过拟合。
 *   Portfolio building: 经验比规则重要。
-*   Dynamic risk management: 不要依靠固定规则来决定是否停止交易，应该动态决定。
+*   Dynamic risk management: 不要依靠固定规则来决定是否停止交易, 应该动态决定。
     比如用 Moving average equity line crossover.
 *   Money management: always keep your risk exposure less than 1% from the entry
     point per every trade, better to be 0.5% is you are able to afford such a
