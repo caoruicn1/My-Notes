@@ -9,10 +9,6 @@
     * [1. Introduction](#1-introduction)
         * [1.1 Historical Performance](#11-historical-performance)
         * [1.2 Financial and behavioral theories: A brief history of ideas](#12-financial-and-behavioral-theories-a-brief-history-of-ideas)
-        * [1.3 Forward-looking indicators](#13-forward-looking-indicators)
-        * [1.4 View-based expected returns](#14-view-based-expected-returns)
-        * [1.5 General comments about the book](#15-general-comments-about-the-book)
-        * [1.6 Notes](#16-notes)
     * [2. Whetting the appetite: Historical averages and forward-looking returns](#2-whetting-the-appetite-historical-averages-and-forward-looking-returns)
         * [2.1 Historical performance since 1990](#21-historical-performance-since-1990)
         * [2.2 Sample-specific results: Dealing with the pitfalls](#22-sample-specific-results-dealing-with-the-pitfalls)
@@ -197,12 +193,19 @@
 
 ## 1. Introduction
 
+*   **Expected returns 需要考虑**
+
+    1.  历史平均收益
+    2.  行为金融学
+    3.  Forward-looking market indicators 比如债券收益率
+    4.  Discretionary views
+
 *   **Three Perspectives on investments and their expected returns**
-    1.  ASSET CLASSES
+    1.  资产类型 ASSET CLASSES
         *   Equities, Government Bonds, Credits
-    2.  STRATEGY STYLES
+    2.  策略风格 STRATEGY STYLES
         *   Value, carry, momentum, and volatility styles
-    3.  RISK FACTORS
+    3.  风险因素 RISK FACTORS
         *   Growth, Inflation, Illiquidity, Tail risks (Volatility, Correlation,
             Return asymmetries)
 
@@ -210,14 +213,14 @@
 
 *   **为何用 historical returns 来预测不可靠？**
 
-    *   Any sample period may be biased, 不具有代表性。
-    *   Distant historical data may be irrelevant.
-    *   Expected returns may vary over time in a cyclical fashion.
-    *   Investors Upward biased. 投资者倾向于价格会上涨。
+    *   数据可能不具有代表性。
+    *   太久远的数据和当前市场情况可能关系不大。
+    *   收益期望可能会周期性变化。
+    *   投资者倾向于上涨。
 
 *   **Findings about historical performance**
 
-    *   长期来看，Stock markets outperformed fixed income markets.
+    *   长期来看, Stock markets outperformed fixed income markets.
     *   Among fixed income markets, long-term bonds outperformed short-dated
         bonds.
     *   Illiquid assets offer higher long-run returns.
@@ -249,31 +252,22 @@
     *   Discount cash flows to the present value
     *   Asset-pricing theory: 主要讨论如何确定 discount rates or required
         returns.
-    *   Capital Asset Pricing Model (CAPM): 风险完全由 market beta 决定，所以
+    *   Capital Asset Pricing Model (CAPM): 风险完全由 market beta 决定, 所以
         Investors can boosts retuns by bearing more beta risk.
-    *   假设 Expected returns 为 constant，则 long-run average is a good
+    *   假设 Expected returns 为 constant, 则 long-run average is a good
         estimate.
 
 *   **Highlight core ideas**
-    *   Two ways to earn: 1.bear risks, 2.pursue active management(reap peers)
-    *   The interrelations between factors matter. 负相关更好，可 diversify.
-    *   Rewards 来自多方面，mispricing，compensation for risk.
-    *   风险与收益相关性 ambiguous，因为 all volatility is not equal. 每个 asset
-        背负不同的 risk，只有 systematic risks 才能算 premium， The reward for
-        volatility can differ depending on which of several systematic factors
-        is the source of the volatility.
-    *   Assets or factors that perform poorly in "bad times" warrant high
-        required returns.
-        *   ![Return in bad time](what/Expected_return_1.png)
-    *   Expected rewards on all return sources can vary over time
-
-### 1.3 Forward-looking indicators
-
-### 1.4 View-based expected returns
-
-### 1.5 General comments about the book
-
-### 1.6 Notes
+    *   盈利来源
+        1.  承担风险
+        2.  收割同行
+        3.  错误定价
+    *   负相关可分散风险。
+    *   不同资产面临的风险是多种多样的, 应具体分析。直接将收益来源都归因到风险是
+        不对的。
+    *   Expected rewards on all return sources can vary over time. 这意味着关注
+        平均收益率没什么用。
+    *   投资者盈利来源应该来自多种风险，不要只偏向一某一方面。
 
 ## 2. Whetting the appetite: Historical averages and forward-looking returns
 
