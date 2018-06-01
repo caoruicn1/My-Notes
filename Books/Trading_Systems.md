@@ -308,7 +308,7 @@
 
 *   **Looking for profit targets: Maximum Favourable Excursion (MFE)**
 
-    *   MFE: 每笔交易往盈利方向的最大幅度
+    *   MFE: 每笔交易往盈利方向的最大幅度（run-up）
     *   MFE Graph, 散点图, 横坐标为 Run-up(%), 纵坐标为 Profit(Loss) in (%)
         *   ![Picture](what/Trading_Systems_7.png)
     *   在 win diagonal 上的表示在最大盈利的时候出场。Perfect！
