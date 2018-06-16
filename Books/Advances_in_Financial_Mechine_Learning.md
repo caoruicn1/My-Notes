@@ -7,6 +7,7 @@ Book:
 
 *   [Part 1 Data analysis](#part-1-data-analysis)
     *   [Chapter 2 Financial Data](#chapter-2-financial-data)
+    *   [CHAPTER 3 Labeling](#chapter-3-labeling)
 
 <!-- vim-markdown-toc -->
 
@@ -61,6 +62,7 @@ Book:
         *   Volume/Dollar Runs Bars
 
 *   **Dealing with Multi-product Series**
+
     *   The ETF Trick
         *   Spread 策略难点
             1.  spread 是由一系列随时间变化的权重表示的，所以就算价格不变
@@ -74,3 +76,22 @@ Book:
         *   用 PCA 计算 Risks 对应的权重，通过不断更新 weight 保持 portfolio 的
             Risk 不变。
         *   ![Picture](what/Advances_in_Financial_Machine_Learning_4.png)
+    *   Single Future Roll?!
+
+*   **Sampling Features**
+    *   机器学习算法对于原始数据的预测效率并不高，但是如果是预测特定条件下之后的
+        情况，准确率会高很多。
+    *   Sampling for Reduction
+    *   Event-Based Sampling
+        *   The CUMSUM Filter: 用来探测均值 shift.注意滚动窗口 filter size, 并只
+            取 S>h 的点。
+            *   ![Picture](what/Advances_in_Financial_Machine_Learning_5.png)
+
+## CHAPTER 3 Labeling
+
+*   **The fixed-time horizon method**
+    *   用固定时长的 bar 来做标签通常是错误的。
+    *   可以用另外两种方法代替：
+        1.  用 rolling exponentially weighted standard deviation of returns 动态
+            选择窗口。
+        2.  用 volume or dollar bars，他们的方差接近 constant.
