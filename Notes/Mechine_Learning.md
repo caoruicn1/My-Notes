@@ -10,31 +10,32 @@
 
 <!-- vim-markdown-toc GitLab -->
 
-*   [1 概论 Statistical learning](#1-概论-statistical-learning)
-    *   [1.1 策略 Strategy](#11-策略-strategy)
-        *   [1.1.1 损失函数 loss function](#111-损失函数-loss-function)
-        *   [1.1.2 风险函数 risk function](#112-风险函数-risk-function)
-        *   [1.1.3 代价函数 cost function](#113-代价函数-cost-function)
-    *   [1.2 模型 model](#12-模型-model)
-    *   [1.3 算法 Algorithms](#13-算法-algorithms)
-*   [2 优化算法](#2-优化算法)
-    *   [2.1 梯度下降法(Gradient descent)](#21-梯度下降法gradient-descent)
-    *   [2.2 随机梯度下降(Stochastic gradient descent)](#22-随机梯度下降stochastic-gradient-descent)
-*   [3 损失函数构造算法](#3-损失函数构造算法)
-    *   [3.1 极大似然估计(Maximium Likelihood)](#31-极大似然估计maximium-likelihood)
-    *   [3.2 期望最大化(EM)算法(Expectation Maximiazation)](#32-期望最大化em算法expectation-maximiazation)
-*   [4 模型评估与模型选择](#4-模型评估与模型选择)
-*   [5 数据预处理](#5-数据预处理)
-*   [6 各种模型](#6-各种模型)
-    *   [6.1 线性回归 Linear Regression](#61-线性回归-linear-regression)
-    *   [6.2 逻辑回归 Logistic Regression](#62-逻辑回归-logistic-regression)
-    *   [6.3 决策树 Desicion Tree](#63-决策树-desicion-tree)
-    *   [6.3 神经网络](#63-神经网络)
-    *   [6.4 感知机](#64-感知机)
-    *   [6.5 k 近邻法](#65-k-近邻法)
-    *   [6.6 支持向量机 Support Vector Machines](#66-支持向量机-support-vector-machines)
-    *   [6.7 朴素贝叶斯法](#67-朴素贝叶斯法)
-*   [7 机器学习系统的设计](#7-机器学习系统的设计)
+* [1 概论 Statistical learning](#1-概论-statistical-learning)
+    * [1.1 策略 Strategy](#11-策略-strategy)
+        * [1.1.1 损失函数 loss function](#111-损失函数-loss-function)
+        * [1.1.2 风险函数 risk function](#112-风险函数-risk-function)
+        * [1.1.3 代价函数 cost function](#113-代价函数-cost-function)
+    * [1.2 模型 model](#12-模型-model)
+    * [1.3 算法 Algorithms](#13-算法-algorithms)
+* [2 优化算法](#2-优化算法)
+    * [2.1 梯度下降法(Gradient descent)](#21-梯度下降法gradient-descent)
+    * [2.2 随机梯度下降(Stochastic gradient descent)](#22-随机梯度下降stochastic-gradient-descent)
+    * [2.3 增量梯度下降](#23-增量梯度下降)
+* [3 损失函数构造算法](#3-损失函数构造算法)
+    * [3.1 极大似然估计(Maximium Likelihood)](#31-极大似然估计maximium-likelihood)
+    * [3.2 期望最大化(EM)算法(Expectation Maximiazation)](#32-期望最大化em算法expectation-maximiazation)
+* [4 模型评估与模型选择](#4-模型评估与模型选择)
+* [5 数据预处理](#5-数据预处理)
+* [6 各种模型](#6-各种模型)
+    * [6.1 线性回归 Linear Regression](#61-线性回归-linear-regression)
+    * [6.2 逻辑回归 Logistic Regression](#62-逻辑回归-logistic-regression)
+    * [6.3 决策树 Desicion Tree](#63-决策树-desicion-tree)
+    * [6.3 神经网络](#63-神经网络)
+    * [6.4 感知机](#64-感知机)
+    * [6.5 k 近邻法](#65-k-近邻法)
+    * [6.6 支持向量机 Support Vector Machines](#66-支持向量机-support-vector-machines)
+    * [6.7 朴素贝叶斯法](#67-朴素贝叶斯法)
+* [7 机器学习系统的设计](#7-机器学习系统的设计)
 
 <!-- vim-markdown-toc -->
 
@@ -195,7 +196,7 @@
 
 *   [点击查看参考资料](https://blog.csdn.net/zouxy09/article/details/20319673)
 *   出现原因: 梯度下降法在每次更新回归系数的时候需要遍历整个数据集(即计算整个数
-    据集的回归方差), 所以数据量大的话复杂度太高。由此引出随机梯度下降。
+    据集的回归方差的平均值), 所以数据量大的话复杂度太高。由此引出随机梯度下降。
 *   随机梯度下降特点:随机梯度下降每次更新回归系数只用一个样本点的误差。
     *   导致问题:一些误差太大的点会导致参数更新偏离太远。因为学习率 alpha 一直不
         变, 即每一个误差对参数调整影响的权重都相同。
@@ -204,6 +205,16 @@
             果 alpha 接近 0 的话又几乎没调整, 所以 alpha 应大于一个稍微大点的常
             数。
         2.  每次迭代随机选择样本来计算样本点误差, 减少周期性波动。
+
+## 2.3 增量梯度下降
+
+*   原理：和随机梯度下降一样，每次只选取一个点的误差进行更新，但点是当前 theta
+    的点，而不是随机寻找的点。即，在普通梯度下降方法基础上不求和求平均，而是直接
+    求那个点的误差。
+
+<!-- prettier-ignore -->
+*   $$\theta_j = \theta_j + \alpha(y^{(i)} - h_{\theta}(x^{(i)}))x_j^{(i)}$$
+*   缺点:普通梯度下降能够不断收敛，而增量梯度下降可能不断在收敛处徘徊。
 
 # 3 损失函数构造算法
 
@@ -238,7 +249,6 @@
     &=\sum_i log\ \sum_{z^{(i)}} p(x^{(i)}, z^{(i)};\theta) \\
     &=\sum_i log\ \sum_{z^{(i)}} Q_i(z^{(i)})\frac{p(x^{(i)}, z^{(i)};\theta)}{Q_iz^{(i)}} \\
     &=\geq \sum_i \sum_{z^{(i)}}Q_i(z^{(i)})\frac{p(x^{(i)}, z^{(i)};\theta)}{Q_iz^{(i)}}
-
     \end{align}
     $$
 
