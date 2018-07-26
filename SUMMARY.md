@@ -13,6 +13,7 @@
 *   [Expected Returns An Investor‘s Guide to Harvesting Market Rewards](Books/Expected_Returns_An_Investor‘s_Guide_to_Harvesting_Market_Rewards.md)
 *   [重构-改善既有代码设计](Books/重构_改善既有代码设计.md)
 *   [Trading Systems](Books/Trading_Systems.md)
+*   [Effective C++](Notes/Effective_CPP.md)
 
 ## Study Notes
 

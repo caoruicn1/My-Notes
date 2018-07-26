@@ -10,32 +10,32 @@
 
 <!-- vim-markdown-toc GitLab -->
 
-* [1 概论 Statistical learning](#1-概论-statistical-learning)
-    * [1.1 策略 Strategy](#11-策略-strategy)
-        * [1.1.1 损失函数 loss function](#111-损失函数-loss-function)
-        * [1.1.2 风险函数 risk function](#112-风险函数-risk-function)
-        * [1.1.3 代价函数 cost function](#113-代价函数-cost-function)
-    * [1.2 模型 model](#12-模型-model)
-    * [1.3 算法 Algorithms](#13-算法-algorithms)
-* [2 优化算法](#2-优化算法)
-    * [2.1 梯度下降法(Gradient descent)](#21-梯度下降法gradient-descent)
-    * [2.2 随机梯度下降(Stochastic gradient descent)](#22-随机梯度下降stochastic-gradient-descent)
-    * [2.3 增量梯度下降](#23-增量梯度下降)
-* [3 损失函数构造算法](#3-损失函数构造算法)
-    * [3.1 极大似然估计(Maximium Likelihood)](#31-极大似然估计maximium-likelihood)
-    * [3.2 期望最大化(EM)算法(Expectation Maximiazation)](#32-期望最大化em算法expectation-maximiazation)
-* [4 模型评估与模型选择](#4-模型评估与模型选择)
-* [5 数据预处理](#5-数据预处理)
-* [6 各种模型](#6-各种模型)
-    * [6.1 线性回归 Linear Regression](#61-线性回归-linear-regression)
-    * [6.2 逻辑回归 Logistic Regression](#62-逻辑回归-logistic-regression)
-    * [6.3 决策树 Desicion Tree](#63-决策树-desicion-tree)
-    * [6.3 神经网络](#63-神经网络)
-    * [6.4 感知机](#64-感知机)
-    * [6.5 k 近邻法](#65-k-近邻法)
-    * [6.6 支持向量机 Support Vector Machines](#66-支持向量机-support-vector-machines)
-    * [6.7 朴素贝叶斯法](#67-朴素贝叶斯法)
-* [7 机器学习系统的设计](#7-机器学习系统的设计)
+*   [1 概论 Statistical learning](#1-概论-statistical-learning)
+    *   [1.1 策略 Strategy](#11-策略-strategy)
+        *   [1.1.1 损失函数 loss function](#111-损失函数-loss-function)
+        *   [1.1.2 风险函数 risk function](#112-风险函数-risk-function)
+        *   [1.1.3 代价函数 cost function](#113-代价函数-cost-function)
+    *   [1.2 模型 model](#12-模型-model)
+    *   [1.3 算法 Algorithms](#13-算法-algorithms)
+*   [2 优化算法](#2-优化算法)
+    *   [2.1 梯度下降法(Gradient descent)](#21-梯度下降法gradient-descent)
+    *   [2.2 随机梯度下降(Stochastic gradient descent)](#22-随机梯度下降stochastic-gradient-descent)
+    *   [2.3 增量梯度下降](#23-增量梯度下降)
+*   [3 损失函数构造算法](#3-损失函数构造算法)
+    *   [3.1 极大似然估计(Maximium Likelihood)](#31-极大似然估计maximium-likelihood)
+    *   [3.2 期望最大化(EM)算法(Expectation Maximiazation)](#32-期望最大化em算法expectation-maximiazation)
+*   [4 模型评估与模型选择](#4-模型评估与模型选择)
+*   [5 数据预处理](#5-数据预处理)
+*   [6 各种模型](#6-各种模型)
+    *   [6.1 线性回归 Linear Regression](#61-线性回归-linear-regression)
+    *   [6.2 逻辑回归 Logistic Regression](#62-逻辑回归-logistic-regression)
+    *   [6.3 决策树 Desicion Tree](#63-决策树-desicion-tree)
+    *   [6.3 神经网络](#63-神经网络)
+    *   [6.4 感知机](#64-感知机)
+    *   [6.5 k 近邻法](#65-k-近邻法)
+    *   [6.6 支持向量机 Support Vector Machines](#66-支持向量机-support-vector-machines)
+    *   [6.7 朴素贝叶斯法](#67-朴素贝叶斯法)
+*   [7 机器学习系统的设计](#7-机器学习系统的设计)
 
 <!-- vim-markdown-toc -->
 
@@ -594,8 +594,7 @@
     *   可能问题:陷入局部最小化。可以多次随机初始化聚类中心点后，多次运行
         k-mean,取代价函数最小的结果。
 
--   **三要素**
-
+*   **三要素**
     1.  距离度量:根据情况进行选择, 一般用 L2
         <!-- prettier-ignore -->
         1.  一般$$L_p$$距离:
@@ -603,7 +602,7 @@
         2.  p=2时, 成为欧氏距离(Euclidean distance)
         3.  p=1时, 称为曼哈顿距离(Manhattan distance)
         4.  p=∞ 时, 为各个坐标距离的最大值, 即
-            $$L_p(x_i, x_j)=max_l |x_i^{(l)}-x_j^{(l)}|
+            $$L_p(x_i, x_j)=max_l |x_i^{(l)}-x_j^{(l)}|$$
     2.  k 值的选择:k 值越小, 模型越复杂, 越容易过拟合。
     3.  分类决策规则:常用经验风险最小化
 
